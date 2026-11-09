@@ -1,4 +1,4 @@
-"""Chunked parallel resumable download of approved MP-RIR files (S4, S7, S8) with Zenodo MD5 verification."""
+"""Chunked parallel resumable download of the selected MP-RIR files (S4, S7, S8) with Zenodo MD5 verification."""
 import hashlib, subprocess, sys, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path

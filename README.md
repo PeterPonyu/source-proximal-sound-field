@@ -13,11 +13,11 @@ regions, and the homogeneous process models the rest of the room's field. This r
 comparators, the runners and analyses of every study in the paper, their per-problem results and run receipts, and the
 two scripts that regenerate every number, table and figure of the paper from those results.
 
-This is version 1.1.0, published on 9 November 2026 as [doi:10.5281/zenodo.24075698](https://doi.org/10.5281/zenodo.24075698). It adds the review-4 analyses to version 1.0.0 ([doi:10.5281/zenodo.24067792](https://doi.org/10.5281/zenodo.24067792)).
+This is version 1.1.0, published on 9 November 2026 as [doi:10.5281/zenodo.24075698](https://doi.org/10.5281/zenodo.24075698). It adds two post hoc analyses to version 1.0.0, a single-point and order decomposition and a point-plus-dipole baseline ([doi:10.5281/zenodo.24067792](https://doi.org/10.5281/zenodo.24067792)).
 
 ## Layout
 
-Files keep the paths they have in the author's repository, so the registered code keeps the SHA-256 listed in
+Files keep the paths they have in the project repository, so the registered code keeps the SHA-256 listed in
 `FROZEN-INPUTS.json`. Below, `acoustic/` stands for the study root `archive/2026-11-05-taslp/acoustic/`.
 
 | Path | What it holds |
@@ -29,14 +29,14 @@ Files keep the paths they have in the author's repository, so the registered cod
 | `acoustic/run_prox*.py`, `analyze_prox*.py` | the adaptations of the two published source-region methods (`TB-PROX`, `TB-PROX-S2`) |
 | `acoustic/studies/TB-M3-MIRACLE/` | the anechoic study on MIRACLE: extraction, runner, analysis and coverage check |
 | `acoustic/studies/<study>/` | per study: per-problem results (`rows.jsonl`), summaries, run receipts and side analyses |
-| `acoustic/posthoc/` | post hoc analyses: refits, reproductions of the published configurations, a Gaussian source density, an order cap of eight, fixed orders, the Cramér–Rao check, margins and geometry; review-4 single-point/order decomposition and the point-plus-dipole baseline |
+| `acoustic/posthoc/` | post hoc analyses: refits, reproductions of the published configurations, a Gaussian source density, an order cap of eight, fixed orders, the Cramér–Rao check, margins and geometry, the single-point and order decomposition, and the point-plus-dipole baseline |
 | `acoustic/studies/AUDITS/` | numerical checks of the ball kernel |
 | `acoustic/V2-dev/` | development runs on the development dataset, which selected the estimator |
 | `acoustic/B3-measured/` | preparation of the measured datasets and their integrity records |
 | `acoustic/comparators/ribeiro2024/` | bridge to the published adaptive-kernel code of Ribeiro et al. (Julia) |
 | `acoustic/remote/` | capsule build, data download, cross-machine check and return verification for runs on a rented machine |
 | `acoustic/B0-setup/`, `acoustic/B1-estimators/`, `acoustic/run_sim.py`, `acoustic/run_measured.py` | setup checks, reproduction checks of a published estimator, and the runners of the two earlier single-frequency studies, whose results are not released |
-| `archive/2026-10-2*/acoustic-estimator-robustness/` | three modules of the author's earlier acoustic code that the library imports: the modal room model, image-source walls and relocation controls |
+| `archive/2026-10-2*/acoustic-estimator-robustness/` | three modules of earlier acoustic code from the same project that the library imports: the modal room model, image-source walls and relocation controls |
 | `papers/acoustic-source-proximal/tools/` | `make_numbers_v2.py` writes every number and table of the paper; `make_figures_v2.py` draws every figure and checks its fonts and layout |
 | `REGISTRATION.md` | every registered protocol and analysis plan, with the time of its commit and its SHA-256 |
 
@@ -70,7 +70,7 @@ registration history or a capsule made from that history. Downloading the datase
 The public checksum listing documents the inputs; it does not replace the registration-history check. The registered
 runners and their checks are preserved unchanged. Manuscript LaTeX sources are not included in this package.
 
-Review-4 saved outputs are included and suffice for regenerating their manuscript numbers. Rerunning
+The saved outputs of the decomposition and dipole analyses are included and suffice for regenerating their numbers in the paper. Rerunning
 `acoustic/posthoc/review4/saved.py` additionally needs the full MeshRIR extract for its low-frequency power diagnostic;
 `acoustic/posthoc/review4/dipole.py` needs both MIRACLE scenario extracts. The preparation scripts in the table below
 create these extracts. These post hoc reruns are separate from the saved-result regeneration commands above.
@@ -89,9 +89,9 @@ extract this repository keeps only the microphone and loudspeaker positions, whi
 `acoustic/B3-measured/integrity_check.py` read MP-RIR from a fixed local path (`DATA`); set it to your copy.
 
 Each runner's docstring gives its command line. The registered runners first check their frozen inputs, against the
-registration commit in the author's repository or against the checksum list of a capsule
+registration commit in the project repository or against the checksum list of a capsule
 (`acoustic/common/release.py`, `acoustic/remote/make_capsule.py`); the post hoc scripts have no such check. The bridge in
-`acoustic/comparators/ribeiro2024/` runs the authors' Julia library, `skoyamalab/PhysicsConstrainedNeuralKernel` (MIT),
+`acoustic/comparators/ribeiro2024/` runs the original authors' Julia library, `skoyamalab/PhysicsConstrainedNeuralKernel` (MIT),
 at commit `7a1e5c9b9187bef00c864942a4587b2eb6b71e23` with Julia 1.11.9; `Project.toml` and `Manifest.toml` pin the Julia
 packages. The docstrings name the protocols and plans in `PROTOCOLS/` and `PLAN*.md`, which are listed in
 `REGISTRATION.md` by commit time and SHA-256.
