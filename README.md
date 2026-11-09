@@ -13,6 +13,8 @@ regions, and the homogeneous process models the rest of the room's field. This r
 comparators, the runners and analyses of every study in the paper, their per-problem results and run receipts, and the
 two scripts that regenerate every number, table and figure of the paper from those results.
 
+This is version 1.1.0, published on 9 November 2026 as [doi:10.5281/zenodo.24075698](https://doi.org/10.5281/zenodo.24075698). It adds the review-4 analyses to version 1.0.0 ([doi:10.5281/zenodo.24067792](https://doi.org/10.5281/zenodo.24067792)).
+
 ## Layout
 
 Files keep the paths they have in the author's repository, so the registered code keeps the SHA-256 listed in
@@ -27,7 +29,7 @@ Files keep the paths they have in the author's repository, so the registered cod
 | `acoustic/run_prox*.py`, `analyze_prox*.py` | the adaptations of the two published source-region methods (`TB-PROX`, `TB-PROX-S2`) |
 | `acoustic/studies/TB-M3-MIRACLE/` | the anechoic study on MIRACLE: extraction, runner, analysis and coverage check |
 | `acoustic/studies/<study>/` | per study: per-problem results (`rows.jsonl`), summaries, run receipts and side analyses |
-| `acoustic/posthoc/` | post hoc analyses: refits, reproductions of the published configurations, a Gaussian source density, an order cap of eight, fixed orders, the Cramér–Rao check, margins and geometry |
+| `acoustic/posthoc/` | post hoc analyses: refits, reproductions of the published configurations, a Gaussian source density, an order cap of eight, fixed orders, the Cramér–Rao check, margins and geometry; review-4 single-point/order decomposition and the point-plus-dipole baseline |
 | `acoustic/studies/AUDITS/` | numerical checks of the ball kernel |
 | `acoustic/V2-dev/` | development runs on the development dataset, which selected the estimator |
 | `acoustic/B3-measured/` | preparation of the measured datasets and their integrity records |
@@ -61,6 +63,17 @@ earlier studies. The second writes the figures and a font and layout report to `
 With these package versions both outputs are byte-identical to those of the paper.
 
 ## Rerunning the studies
+
+This package supports regeneration from saved results. It does not support the registered study reruns as shipped:
+the frozen-input checks also require withheld protocols and study documents, full dataset extracts, and the original
+registration history or a capsule made from that history. Downloading the datasets alone does not satisfy those checks.
+The public checksum listing documents the inputs; it does not replace the registration-history check. The registered
+runners and their checks are preserved unchanged. Manuscript LaTeX sources are not included in this package.
+
+Review-4 saved outputs are included and suffice for regenerating their manuscript numbers. Rerunning
+`acoustic/posthoc/review4/saved.py` additionally needs the full MeshRIR extract for its low-frequency power diagnostic;
+`acoustic/posthoc/review4/dipole.py` needs both MIRACLE scenario extracts. The preparation scripts in the table below
+create these extracts. These post hoc reruns are separate from the saved-result regeneration commands above.
 
 The datasets are not redistributed. `acoustic/remote/fetch_data.sh` downloads the files and checks their MD5:
 

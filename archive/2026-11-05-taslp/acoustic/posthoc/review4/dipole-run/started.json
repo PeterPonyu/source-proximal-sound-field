@@ -1,0 +1,23 @@
+{
+ "tasks": 1536,
+ "workers": 16,
+ "commit": "2d18b165bf54553377322175403694d63504496b",
+ "started": "2026-11-08T22:38:54-0800",
+ "machine": {
+  "node": "zeyufu-ROG-Strix-SCAR-18-G835LX-G835LX",
+  "cpu": "",
+  "numpy": "2.2.6"
+ },
+ "extracts": {
+  "A1": "e3c36c2ce15cefedd8eb65bfeea4c60b468241b85fd1e216def70c5423b923ba",
+  "R2": "d8b94fc29242673fe9c39c8daeb992b060b9c436f55d3e5531528ce24945c540"
+ },
+ "inputs": {
+  "common/estimators.py": "3c6bbc9aa746fe4a438150b5d835796114e97768e5a3f52acfcd9fa3087d9e60",
+  "common/v2.py": "4473270dd4bc451f5ecf301f6e9771367c45df358fdbcdaf9c2c1af889bc71c7",
+  "common/problems_v2.py": "3cb8ab5e23441074011cbc620d6ab5b8ab28b66e912293665fcdfb8531b032bf",
+  "studies/TB-M3-MIRACLE/run_m3.py": "4b31dc6f5dfcc68fcb0adaa58529c1b8c0fc568ea973e738dea13aab4570a07f",
+  "posthoc/review4/dipole.py": "3b69173b195c762ce44262655ba7d29d1c80802ed517190ebd63e519d7804fee",
+  "posthoc/review4/PLAN.md": "52a27e3dcc25ba18c2223347a50b80b4eac581c2ef9b8c27aa196751e1eace67"
+ }
+}

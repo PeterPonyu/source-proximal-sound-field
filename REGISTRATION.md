@@ -36,3 +36,4 @@ Paths are relative to `archive/2026-11-05-taslp/acoustic/`. The two studies of t
 | 2026-11-07 12:54 | `posthoc/review3/PLAN-C2-DIAGNOSTIC.md` | `d3717eb` | `48afbceea5de4d8ea1eae5486c89ff9280cb5163669a75461cfc922a37f1f209` | no |
 | 2026-11-07 12:59 | `posthoc/review3/PLAN-F-CAP8.md` | `f906c35` | `6b8d41576d653ade4978fae9a199170c289f049fa0eb45a9a1e5459218f92798` | no |
 | 2026-11-07 13:08 | `studies/TB-M3-MIRACLE/PROTOCOL.md` | `916cf1e` | `3c3037b856bbc56f006fb32bb264a2f35c4feb41aa20939072b85e5949ce1889` | no |
+| 2026-11-09 06:35 | `posthoc/review4/PLAN.md` | `f78265c` | `52a27e3dcc25ba18c2223347a50b80b4eac581c2ef9b8c27aa196751e1eace67` | no |

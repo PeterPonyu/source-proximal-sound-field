@@ -1089,6 +1089,41 @@ if 'cap8-summary.json' not in _pending:
         'raising the cap did not change the accuracy at this resolution' if _rd == {'s'} else
         f"the cap of five {_cv[_reading(_cs, 'b', 'w', 's')]} in simulation and {_cv[_reading(_cm, 'b', 'w', 's')]} on the room grid")
 
+# ------------------------------------------------------------------ review 4 (post hoc; posthoc/review4/PLAN.md, DEVIATIONS.md)
+_R4 = S / 'posthoc' / 'review4'
+R4S = json.loads((_R4 / 'saved.json').read_text())
+R4B = json.loads((_R4 / 'dipole-summary.json').read_text())
+R3D = json.loads((S / 'posthoc' / 'review3' / 'reproduction-diagnostic-summary.json').read_text())['shared']
+assert R4B['rows'] == 1536 and R4B['errors'] == 0 and R4B['skipped_no_two_stage'] == 0, (R4B['rows'], R4B['errors'])
+assert R4B['refit_point_vs_stored_max_rel'] < 1e-4, R4B['refit_point_vs_stored_max_rel']
+_A1 = R4S['A1_single_point_decomposition']
+for _b in ('125', '250', '500', '1000'):                       # D1: proposed minus the single-point band-shared fit
+    _x = _A1['room']['per_band'][_b]['pooled']['j_cv_ext-minus-j_K1']
+    put(f'r4-k1-{_b}', num(_x['mean'])); put(f'r4-k1-{_b}-iv', iv(_x))
+for _sc in ('A1', 'R2'):                                       # D2: magnitudes of pooled improvements (all negative)
+    _ab = _A1[f'anechoic_{_sc}']['all_bands']
+    for _k, _key in (('order', 'j_K5-minus-j_K1'), ('centre', 'j_K1-minus-two_stage_point'), ('full', 'j_cv_ext-minus-j_K5')):
+        assert _ab[_key]['high'] < 0, (_sc, _key)
+        put(f'r4-{_sc}-{_k}', num(-_ab[_key]['mean'], sign=False)); put(f'r4-{_sc}-{_k}-iv', iv(_ab[_key]))
+    for _b in ('250', '500', '1000'):
+        _f = R4B[_sc]['per_band'][_b]['fraction_of_K5_gap_closed_by_dipole']
+        put(f'r4-dp-{_sc}-{_b}', f'{100 * _f:.0f}' if _f >= 0.01 else f'{100 * _f:.1f}')
+_fr = R4B['reading']['fractions_1kHz']
+assert not (_fr['A1'] >= 0.5 and _fr['R2'] >= 0.5) and _fr['A1'] >= 0.25 and _fr['R2'] < 0.25, _fr   # wording: partial in A1, negligible in R2
+put('r4-dp-closed-max-R2', f"{100 * max(R4B['R2']['per_band'][b]['fraction_of_K5_gap_closed_by_dipole'] for b in ('250', '500', '1000')):.0f}")
+assert R3D['failing'] == R3D['failing_with_point'] == R3D['failing_first_weight_within_a_decade_of_bound']   # D3
+put('r4-diag-fail', cnt(R3D['failing'])); put('r4-diag-mm', f"{1000 * R3D['max_dist_m_all_bins']:.1f}")
+put('r4-diag-collapsed', 'one' if R3D['failing_collapsed'] == 1 else cnt(R3D['failing_collapsed']))
+_E = R4S['A2_effect_size_by_M']['room']                        # D4
+put('r4-mle48', iv(_E['pooled_M_le_48'])); put('r4-mge96', iv(_E['pooled_M_ge_96']))
+put('r4-wins-gt05', cnt(_E['wins_with_mean_below_minus_0p5_dB'])); put('r4-wins', cnt(_E['wins']))
+assert _E['wins'] == RM['M1']['wins'], (_E['wins'], RM['M1']['wins'])   # same rule, recounted from the rows
+_SB = R4S['A5_selection_bias']                                 # D5 (supplement)
+for _g, _t in (('room', 'room'), ('anechoic_A1', 'A1'), ('anechoic_R2', 'R2')):
+    put(f'r4-sel-{_t}', num(_SB[_g]['mean_out_minus_in_over_cells_db'], 3))
+put('r4-sel-cellmax', num(max(abs(c['mean_over_splits']) for v in _SB.values() for c in v['per_cell'].values()
+                             if c['mean_over_splits'] is not None), 2, sign=False))
+
 # ------------------------------------------------------------------ spelled-out win/tie/loss counts for prose (key + '-w')
 import re as _re
 

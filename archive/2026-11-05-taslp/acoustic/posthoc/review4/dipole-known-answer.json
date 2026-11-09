@@ -1,0 +1,15 @@
+{
+ "pure_dipole_rel_error": [
+  4.2898169333307437e-10,
+  1.4874211882999362e-08,
+  6.285789513690346e-07
+ ],
+ "pure_dipole_pass_1e-6": true,
+ "point_only_vs_oracle_fit_rel_pred": {
+  "max": 0.0,
+  "median": 0.0,
+  "n": 20
+ },
+ "point_only_vs_oracle_fit_evidence_abs_diff_max": 0.0,
+ "point_only_pass_1e-8": true
+}
