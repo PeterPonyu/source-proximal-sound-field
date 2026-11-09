@@ -96,6 +96,15 @@ at commit `7a1e5c9b9187bef00c864942a4587b2eb6b71e23` with Julia 1.11.9; `Project
 packages. The docstrings name the protocols and plans in `PROTOCOLS/` and `PLAN*.md`, which are listed in
 `REGISTRATION.md` by commit time and SHA-256.
 
+## Registration-document availability
+
+The README and registration list inside the archived version 1.0.0 and 1.1.0 ZIP files said that the registration
+documents would be released with the paper. That statement has been superseded: the documents are not public.
+The archives are retained unchanged, including the registered code, results and checksums. `REGISTRATION.md` lists
+the document identifiers and checksums, but does not provide their contents or the original registration history.
+This limitation applies to rerunning the registered studies; regeneration of the paper's numbers, tables and figures
+from the included saved results remains supported.
+
 ## Citation
 
 If you use this code or the results, please cite the archived version, [doi:10.5281/zenodo.24067791](https://doi.org/10.5281/zenodo.24067791);
