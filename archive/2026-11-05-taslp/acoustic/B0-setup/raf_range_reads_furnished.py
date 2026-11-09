@@ -1,9 +1,10 @@
 """Furnished room: read only the last 4 KB of the central directory (the metadata entries are its last records,
 as in the empty room) and then the two compressed position files; the full 16 MB directory was not read."""
+import os
 import json, struct, subprocess, zlib
 from pathlib import Path
 B = 'https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/rir/archived'
-OUT = Path('/home/zeyufu/Desktop/data/external/acoustic-geometry-20261104/raf')
+OUT = Path(os.environ.get('ACOUSTIC_DATA', 'data')) / 'raf'
 used = 0
 def rng(name, a, b):
     global used; used += b - a + 1

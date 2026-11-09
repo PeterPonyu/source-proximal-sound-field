@@ -1,11 +1,7 @@
 __pycache__/
 *.pyc
-.omc/
-.omx/
-.codex/
-.claude/
-.cursor/
-.agent/
+.*/
+!.gitignore
 papers/acoustic-source-proximal/figures/
 papers/acoustic-source-proximal/generated/*
 !papers/acoustic-source-proximal/generated/ka-table.tex

@@ -65,7 +65,7 @@ With these package versions both outputs are byte-identical to those of the pape
 ## Rerunning the studies
 
 This package supports regeneration from saved results. It does not support the registered study reruns as shipped:
-the frozen-input checks also require withheld protocols and study documents, full dataset extracts, and the original
+the frozen-input checks also require the registration documents, which are not public, full dataset extracts, and the original
 registration history or a capsule made from that history. Downloading the datasets alone does not satisfy those checks.
 The public checksum listing documents the inputs; it does not replace the registration-history check. The registered
 runners and their checks are preserved unchanged. Manuscript LaTeX sources are not included in this package.
@@ -94,7 +94,7 @@ registration commit in the author's repository or against the checksum list of a
 `acoustic/comparators/ribeiro2024/` runs the authors' Julia library, `skoyamalab/PhysicsConstrainedNeuralKernel` (MIT),
 at commit `7a1e5c9b9187bef00c864942a4587b2eb6b71e23` with Julia 1.11.9; `Project.toml` and `Manifest.toml` pin the Julia
 packages. The docstrings name the protocols and plans in `PROTOCOLS/` and `PLAN*.md`, which are listed in
-`REGISTRATION.md` and will be released with the paper.
+`REGISTRATION.md` by commit time and SHA-256.
 
 ## Citation
 

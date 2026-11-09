@@ -1,8 +1,9 @@
 """Byte-range reads of the RAF split-zip central directory and metadata position files (budget 20 MB)."""
+import os
 import json, struct, subprocess, sys, zlib
 from pathlib import Path
 B = 'https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/rir/archived'
-OUT = Path('/home/zeyufu/Desktop/data/external/acoustic-geometry-20261104/raf')
+OUT = Path(os.environ.get('ACOUSTIC_DATA', 'data')) / 'raf'
 BUDGET = 20_000_000
 used = 0
 def rng(name, a, b):

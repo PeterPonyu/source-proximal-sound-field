@@ -1,10 +1,12 @@
 """RAF interior-emitter check: per pose group (position 1 cm, quaternion 0.02), is the emitter inside the hull of
 its own receivers, and is the neighbourhood (0.5 m ball inside the hull) sampled at <= lambda/2 (covering radius <= lambda/4)?"""
+import os
+from pathlib import Path
 import json, sys
 import numpy as np
 from scipy.spatial import Delaunay, cKDTree
 from scipy.cluster.hierarchy import fcluster, linkage
-D = '/home/zeyufu/Desktop/data/external/acoustic-geometry-20261104/raf/'
+D = str(Path(os.environ.get('ACOUSTIC_DATA', 'data')) / 'raf') + '/'
 out = {}
 for room, pre in (('emptyroom', 'emptyroom-EmptyRoom'), ('furnishedroom', 'furnishedroom-FurnishedRoom')):
     tx = np.loadtxt(D + pre + '_metadata_all_tx_pos.txt', delimiter=',')

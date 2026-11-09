@@ -2,7 +2,7 @@
 import hashlib, subprocess, sys, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-D = Path('/home/zeyufu/Desktop/data/external/acoustic-geometry-20261104/mp-rir')
+D = Path(os.environ.get('ACOUSTIC_DATA', 'data')) / 'mp-rir'
 SIZE = 3440099456
 MD5 = dict(S4='a705e3f028cfab4303511c52f75749ef', S7='f33f021d2550711d1371b6d65c5abbfb', S8='25b297c591162d71059f53b6e955057c')
 CH = 16 * 1024 * 1024

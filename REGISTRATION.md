@@ -2,7 +2,7 @@
 
 Every confirmatory study was registered by a commit to the author's repository before its first output, together with the SHA-256 of every frozen input (`archive/2026-11-05-taslp/acoustic/FROZEN-INPUTS.json`). Post hoc analyses had a plan committed before their script. Each run records the registration commit and its start time in `started.json` next to its results.
 
-The table lists every registered document: the time of the commit that added it (UTC), the commit in the author's repository, and the SHA-256 of the document as committed. The documents themselves are not part of this version; they will be released with the paper, and these checksums identify them.
+The table lists every registered document: the time of the commit that added it (UTC), the commit in the author's repository, and the SHA-256 of the document as committed. The documents themselves are not public; these checksums identify them.
 
 Paths are relative to `archive/2026-11-05-taslp/acoustic/`. The two studies of the earlier single-frequency estimator (`TB-S1`, `TB-M1`) informed its development and supply no number of the paper; their results are not released.
 
