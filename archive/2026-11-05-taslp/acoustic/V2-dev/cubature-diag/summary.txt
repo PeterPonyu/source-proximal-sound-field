@@ -1,0 +1,28 @@
+rows 18 errors 0
+A2-f125-M24            K_cv 2 k_maxR(cub) 0.19 radii j [0.052 0.039] gsmf [0.039 0.053 0.046 0.05  0.044]; dB change j +0.02 mo26 -0.06 gsmf -0.04
+A2-f125-M24            K_cv 2 k_maxR(cub) 0.15 radii j [0.005 0.005] gsmf [0.005 0.048 0.005 0.049 0.049]; dB change j -0.00 mo26 -0.39 gsmf -3.91
+A2-f250-M48            K_cv 3 k_maxR(cub) 0.30 radii j [0.026 0.023 0.045] gsmf [0.005 0.005 0.028 0.023 0.043]; dB change j +0.01 mo26 +0.06 gsmf -0.10
+A2-f1000-M24           K_cv 2 k_maxR(cub) 1.79 radii j [0.032 0.073] gsmf [0.025 0.039 0.005 0.03  0.006]; dB change j -0.00 mo26 -0.21 gsmf +5.05
+A2-f1000-M24           K_cv 2 k_maxR(cub) 0.91 radii j [0.034 0.005] gsmf [0.005 0.005 0.009 0.013 0.009]; dB change j -0.00 mo26 -0.33 gsmf -0.01
+A2-f250-M48            K_cv 5 k_maxR(cub) 0.30 radii j [0.034 0.018 0.048 0.042 0.041] gsmf [0.005 0.027 0.006 0.036 0.04 ]; dB change j -0.01 mo26 -1.99 gsmf -0.02
+S4 250 M48             K_cv 1 k_maxR(cub) 0.61 radii j [0.102] gsmf [0.005 0.008 0.005 0.016 0.013]; dB change j -0.00 mo26 +0.05 gsmf -0.16
+S4 125 M48             K_cv 1 k_maxR(cub) 0.23 radii j [0.005] gsmf [0.005 0.007 0.044 0.045 0.005]; dB change j -0.00 mo26 -0.08 gsmf +1.16
+S4 500 M48             K_cv 1 k_maxR(cub) 1.51 radii j [0.127] gsmf [0.005 0.005 0.005 0.005 0.005]; dB change j -0.02 mo26 -0.08 gsmf -0.12
+S7 125 M48             K_cv 1 k_maxR(cub) 1.50 radii j [0.005] gsmf [0.005 0.039 0.028 0.005 0.042]; dB change j -0.00 mo26 -0.00 gsmf +0.01
+S7 250 M48             K_cv 1 k_maxR(cub) 2.97 radii j [0.101] gsmf [0.008 0.021 0.024 0.021 0.005]; dB change j -0.00 mo26 +0.02 gsmf -0.05
+S4 1000 M48            K_cv 2 k_maxR(cub) 0.85 radii j [0.034 0.005] gsmf [0.005 0.005 0.008 0.036 0.005]; dB change j -0.00 mo26 -0.00 gsmf +0.02
+S8 125 M48             K_cv 1 k_maxR(cub) 0.47 radii j [0.157] gsmf [0.005 0.009 0.037 0.017 0.016]; dB change j +0.01 mo26 +0.38 gsmf -1.85
+S7 1000 M48            K_cv 4 k_maxR(cub) 4.10 radii j [0.034 0.115 0.014 0.171] gsmf [0.005 0.005 0.005 0.005 0.005]; dB change j -0.00 mo26 +0.13 gsmf +0.05
+S7 500 M48             K_cv 4 k_maxR(cub) 4.72 radii j [0.005 0.008 0.394 0.031] gsmf [0.005 0.007 0.005 0.028 0.005]; dB change j +0.01 mo26 +0.08 gsmf -0.68
+S8 250 M48             K_cv 4 k_maxR(cub) 0.50 radii j [0.084 0.005 0.015 0.005] gsmf [0.005 0.027 0.043 0.014 0.024]; dB change j -0.00 mo26 +0.00 gsmf -0.06
+S8 500 M48             K_cv 4 k_maxR(cub) 1.85 radii j [0.062 0.057 0.036 0.155] gsmf [0.005 0.005 0.008 0.005 0.005]; dB change j +0.00 mo26 +0.22 gsmf +0.01
+S8 1000 M48            K_cv 3 k_maxR(cub) 0.66 radii j [0.028 0.011 0.005] gsmf [0.005 0.005 0.005 0.005 0.005]; dB change j -0.00 mo26 -0.08 gsmf -0.03
+cubature runs reproduce the development rows bit for bit: {'j_cv_ext': '18/18', 'mo26_cap5': '18/18', 'gsmf': '18/18'}
+j_cv_ext: series minus cubature dB: median -0.001, mean -0.000, min -0.02, max +0.02, |change| > 0.1 dB in 0/18
+mo26_cap5: series minus cubature dB: median -0.001, mean -0.127, min -1.99, max +0.38, |change| > 0.1 dB in 7/18
+gsmf: series minus cubature dB: median -0.034, mean -0.041, min -3.91, max +5.05, |change| > 0.1 dB in 8/18
+k_max R (cubature fits): median 0.76 max 4.72
+--- paired summary, exact minus cubature (dB), 95 % Student-t over the problems
+j_cv_ext: n 18, mean -0.000 [-0.004, +0.003], median -0.001; rule (interval entirely below -0.3 dB): not triggered
+mo26_cap5: n 18, mean -0.127 [-0.374, +0.121], median -0.001; rule (interval entirely below -0.3 dB): not triggered
+gsmf: n 18, mean -0.041 [-0.860, +0.778], median -0.034; rule (interval entirely below -0.3 dB): not triggered

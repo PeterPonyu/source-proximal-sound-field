@@ -1,0 +1,126 @@
+=== seed 1
+Error encountered while load FileIO.File{FileIO.DataFormat{:JLD}, String}("/root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel/400ms/SPM.jld").
+
+Fatal error:
+ERROR: LoadError: ArgumentError: Package JLD [4138dd39-2aa7-5051-a626-17a0bb65d9c8] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+Stacktrace:
+  [1] _require(pkg::Base.PkgId, env::Nothing)
+    @ Base ./loading.jl:2515
+  [2] __require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+    @ Base ./loading.jl:2388
+  [3] #invoke_in_world#3
+    @ ./essentials.jl:1089 [inlined]
+  [4] invoke_in_world
+    @ ./essentials.jl:1086 [inlined]
+  [5] _require_prelocked
+    @ ./loading.jl:2375 [inlined]
+  [6] _require_prelocked
+    @ ./loading.jl:2374 [inlined]
+  [7] macro expansion
+    @ ./lock.jl:273 [inlined]
+  [8] require(uuidkey::Base.PkgId)
+    @ Base ./loading.jl:2371
+  [9] #34
+    @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:203 [inlined]
+ [10] lock(f::FileIO.var"#34#35"{Base.PkgId}, l::ReentrantLock)
+    @ Base ./lock.jl:232
+ [11] action(::Symbol, ::Vector{Union{Base.PkgId, Module}}, ::FileIO.Formatted; options::@Kwargs{})
+    @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:203
+ [12] action
+    @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:196 [inlined]
+ [13] action
+    @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:185 [inlined]
+ [14] load(::String; options::@Kwargs{})
+    @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:113
+ [15] load(::String)
+    @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:109
+ [16] top-level scope
+    @ ~/taslp/ribeiro2024/repro.jl:14
+Stacktrace:
+ [1] handle_error(e::ArgumentError, q::Base.PkgId, bt::Vector{Union{Ptr{Nothing}, Base.InterpreterIP}})
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/error_handling.jl:75
+ [2] handle_exceptions(exceptions::Vector{Tuple{Any, Union{Base.PkgId, Module}, Vector}}, action::String)
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/error_handling.jl:66
+ [3] action(::Symbol, ::Vector{Union{Base.PkgId, Module}}, ::FileIO.Formatted; options::@Kwargs{})
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:228
+ [4] action
+   @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:196 [inlined]
+ [5] action
+   @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:185 [inlined]
+ [6] load(::String; options::@Kwargs{})
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:113
+ [7] load(::String)
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:109
+ [8] top-level scope
+   @ ~/taslp/ribeiro2024/repro.jl:14
+in expression starting at /root/taslp/ribeiro2024/repro.jl:14
+
+real	0m45.752s
+user	0m47.496s
+sys	0m3.285s
+=== seed 2
+Error encountered while load FileIO.File{FileIO.DataFormat{:JLD}, String}("/root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel/400ms/SPM.jld").
+
+Fatal error:
+ERROR: LoadError: ArgumentError: Package JLD [4138dd39-2aa7-5051-a626-17a0bb65d9c8] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+Stacktrace:
+  [1] _require(pkg::Base.PkgId, env::Nothing)
+    @ Base ./loading.jl:2515
+  [2] __require_prelocked(uuidkey::Base.PkgId, env::Nothing)
+    @ Base ./loading.jl:2388
+  [3] #invoke_in_world#3
+    @ ./essentials.jl:1089 [inlined]
+  [4] invoke_in_world
+    @ ./essentials.jl:1086 [inlined]
+  [5] _require_prelocked
+    @ ./loading.jl:2375 [inlined]
+  [6] _require_prelocked
+    @ ./loading.jl:2374 [inlined]
+  [7] macro expansion
+    @ ./lock.jl:273 [inlined]
+  [8] require(uuidkey::Base.PkgId)
+    @ Base ./loading.jl:2371
+  [9] #34
+    @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:203 [inlined]
+ [10] lock(f::FileIO.var"#34#35"{Base.PkgId}, l::ReentrantLock)
+    @ Base ./lock.jl:232
+ [11] action(::Symbol, ::Vector{Union{Base.PkgId, Module}}, ::FileIO.Formatted; options::@Kwargs{})
+    @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:203
+ [12] action
+    @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:196 [inlined]
+ [13] action
+    @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:185 [inlined]
+ [14] load(::String; options::@Kwargs{})
+    @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:113
+ [15] load(::String)
+    @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:109
+ [16] top-level scope
+    @ ~/taslp/ribeiro2024/repro.jl:14
+Stacktrace:
+ [1] handle_error(e::ArgumentError, q::Base.PkgId, bt::Vector{Union{Ptr{Nothing}, Base.InterpreterIP}})
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/error_handling.jl:75
+ [2] handle_exceptions(exceptions::Vector{Tuple{Any, Union{Base.PkgId, Module}, Vector}}, action::String)
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/error_handling.jl:66
+ [3] action(::Symbol, ::Vector{Union{Base.PkgId, Module}}, ::FileIO.Formatted; options::@Kwargs{})
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:228
+ [4] action
+   @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:196 [inlined]
+ [5] action
+   @ ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:185 [inlined]
+ [6] load(::String; options::@Kwargs{})
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:113
+ [7] load(::String)
+   @ FileIO ~/taslp/ribeiro2024/julia-depot/packages/FileIO/pFGbU/src/loadsave.jl:109
+ [8] top-level scope
+   @ ~/taslp/ribeiro2024/repro.jl:14
+in expression starting at /root/taslp/ribeiro2024/repro.jl:14
+
+real	0m46.230s
+user	0m47.611s
+sys	0m3.385s
+=== seed 3
+freqs = [0.0, 150.0, 300.0, 450.0, 600.0, 750.0, 900.0, 1050.0, 1200.0, 1350.0, 1500.0]  M=41 Mval=73

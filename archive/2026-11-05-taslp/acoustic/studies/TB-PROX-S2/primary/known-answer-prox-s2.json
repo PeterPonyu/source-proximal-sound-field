@@ -1,0 +1,70 @@
+{
+ "checks": [
+  {
+   "name": "swap",
+   "inside": true,
+   "restored": true,
+   "restored_after_exception": true,
+   "passed": true
+  },
+  {
+   "name": "pipeline",
+   "stage1_identical": true,
+   "active_after_stage1": 2,
+   "stage2_evaluations": [
+    101,
+    101
+   ],
+   "common_prefix_identical": true,
+   "common_prefix": 101,
+   "registered_stop_rule": true,
+   "registered_stopped_early": false,
+   "paper_stop_rule": true,
+   "paper_stopped_early": false,
+   "records_are_the_stopped_quantities": true,
+   "same_stop": true,
+   "predictions_identical_when_same_stop": true,
+   "passed": true
+  },
+  {
+   "name": "rough_rates",
+   "eta": 0.001,
+   "rate": 0.01,
+   "active": 2,
+   "stage2_evaluations": [
+    2,
+    2
+   ],
+   "common_prefix_identical": true,
+   "common_prefix": 2,
+   "registered_stop_rule": true,
+   "registered_stopped_early": true,
+   "paper_stop_rule": true,
+   "paper_stopped_early": true,
+   "stops_differ": false,
+   "requirement": "both_early",
+   "passed": true
+  },
+  {
+   "name": "discriminating",
+   "eta": 0.01,
+   "rate": 0.0001,
+   "active": 2,
+   "stage2_evaluations": [
+    40,
+    44
+   ],
+   "common_prefix_identical": true,
+   "common_prefix": 40,
+   "registered_stop_rule": true,
+   "registered_stopped_early": true,
+   "paper_stop_rule": true,
+   "paper_stopped_early": true,
+   "stops_differ": true,
+   "requirement": "differ",
+   "passed": true
+  }
+ ],
+ "dictionary": 4907,
+ "passed": true
+}

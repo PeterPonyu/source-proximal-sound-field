@@ -1,0 +1,12 @@
+{
+ "tasks": 1536,
+ "errors": 0,
+ "elapsed_seconds": 8882,
+ "machine": "rented CPU machine (240 workers)",
+ "note": "box capsule is not a git checkout; the started.json input hashes match the files committed at registration (916cf1e) and in adk_fix.py at its commit",
+ "outputs": {
+  "rows.jsonl": "32660f080999d77a7cfcff5ad687494cd6b3d77aa1edffa2f11dafbfad39d0f4",
+  "started.json": "b03495155e6b5f37530b6c29dd0c2ed76e4a3a88b1667f26b205f3c8ed66a8c2",
+  "summary.json": "0266b4448beec5c2a73966c0a7c20afd8308de51a21b125b72fa3f9e123e42f4"
+ }
+}

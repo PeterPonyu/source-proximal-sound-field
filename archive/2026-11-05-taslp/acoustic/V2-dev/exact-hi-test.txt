@@ -1,0 +1,7 @@
+python3 -B V2-dev/exact_hi_test.py   (laptop, 2026-11-06 03:24-03:42 PST, beside TB-M2-EXACT; 2 processes)
+('S4', 125.0, 96, 400940) row built: True 
+  nmse keys ['gsmf_cubature', 'gsmf_exact'] seconds {'gsmf_cubature': 9.4, 'gsmf_exact': 243.8}
+  cubature twin vs dev1-box gsmf: True
+('S4', 125.0, 192, 400942) row built: True 
+  nmse keys ['gsmf_cubature', 'gsmf_exact'] seconds {'gsmf_cubature': 41.8, 'gsmf_exact': 1040.9}
+  cubature twin vs dev1-box gsmf: True

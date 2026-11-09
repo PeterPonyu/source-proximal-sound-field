@@ -1,0 +1,10 @@
+python3 -B V2-dev/exact_fit_test.py   (laptop, 2026-11-06, beside TB-PROX)
+('S4', 125.0, 48, 400938) {'mo26_cap5_cubature': 3.8, 'gsmf_cubature': 3.9, 'mo26_cap5_exact': 107.7, 'gsmf_exact': 107.4}
+  cubature vs dev1-box: True True
+  exact vs diagnostic series: True True
+  cubature vs diagnostic cubature: True True
+('S7', 125.0, 48, 400946) {'mo26_cap5_cubature': 3.5, 'gsmf_cubature': 4.6, 'mo26_cap5_exact': 99.8, 'gsmf_exact': 133.7}
+  cubature vs dev1-box: True True
+  exact vs diagnostic series: True True
+  cubature vs diagnostic cubature: True True
+

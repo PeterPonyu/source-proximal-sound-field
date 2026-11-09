@@ -1,0 +1,59 @@
+{
+ "S4": {
+  "status": "verified",
+  "source": "assembled file",
+  "md5": "a705e3f028cfab4303511c52f75749ef",
+  "md5_matches_zenodo": true,
+  "npy_header": {
+   "descr": "<f4",
+   "fortran_order": false,
+   "shape": [
+    1074,
+    8,
+    100096
+   ]
+  },
+  "header_bytes": 128,
+  "box_sha256": "cedadb7d95d308819a506216663488bee4f477ae296fec6eac3cd00db8f9f346",
+  "registered_box_sha256": "cedadb7d95d308819a506216663488bee4f477ae296fec6eac3cd00db8f9f346",
+  "box_matches_registered": true
+ },
+ "S7": {
+  "status": "verified",
+  "source": "assembled file",
+  "md5": "f33f021d2550711d1371b6d65c5abbfb",
+  "md5_matches_zenodo": true,
+  "npy_header": {
+   "descr": "<f4",
+   "fortran_order": false,
+   "shape": [
+    1074,
+    8,
+    100096
+   ]
+  },
+  "header_bytes": 128,
+  "box_sha256": "a8d10e3dd571096877c6badcbbc3043914fc66aca3acea8ed1b4211f88d6b492",
+  "registered_box_sha256": "a8d10e3dd571096877c6badcbbc3043914fc66aca3acea8ed1b4211f88d6b492",
+  "box_matches_registered": true
+ },
+ "S8": {
+  "status": "verified",
+  "source": "assembled file",
+  "md5": "25b297c591162d71059f53b6e955057c",
+  "md5_matches_zenodo": true,
+  "npy_header": {
+   "descr": "<f4",
+   "fortran_order": false,
+   "shape": [
+    1074,
+    8,
+    100096
+   ]
+  },
+  "header_bytes": 128,
+  "box_sha256": "ddf317ca08b59ab1f8462ab4517814983aca991dc27efbe15816a78c7a737834",
+  "registered_box_sha256": "ddf317ca08b59ab1f8462ab4517814983aca991dc27efbe15816a78c7a737834",
+  "box_matches_registered": true
+ }
+}

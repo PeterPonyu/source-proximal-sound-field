@@ -1,0 +1,105 @@
+{
+ "status": "post hoc",
+ "rows": 3072,
+ "errors": 0,
+ "gate_failed": 0,
+ "gate_max": 0.0,
+ "TB-M2": {
+  "problems": 1024,
+  "cells": 16,
+  "gauss_minus_registered": {
+   "classes": {
+    "win": 0,
+    "tie": 16,
+    "loss": 0
+   },
+   "pooled": {
+    "mean": -0.00339553064381538,
+    "low": -0.008782299315950889,
+    "high": 0.00199123802832013,
+    "units": 32
+   }
+  },
+  "gauss_vs_best_generic": {
+   "classes": {
+    "win": 13,
+    "tie": 3,
+    "loss": 0
+   },
+   "pooled_vs_per_problem_oracle": {
+    "mean": -0.6747430835677845,
+    "low": -0.766970521500454,
+    "high": -0.5825156456351149,
+    "units": 32
+   }
+  },
+  "gauss_minus_points": {
+   "mean": -0.044815966891201334,
+   "low": -0.061987055244468084,
+   "high": -0.02764487853793458,
+   "units": 32
+  },
+  "registered_minus_points": {
+   "mean": -0.04142043624738596,
+   "low": -0.05778347124834248,
+   "high": -0.025057401246429432,
+   "units": 32
+  },
+  "radii": {
+   "n": 2448,
+   "median": 0.033426957791382855,
+   "p95": 0.5,
+   "max": 0.5,
+   "min": 0.005000000000000002
+  }
+ },
+ "TB-S2": {
+  "problems": 2048,
+  "cells": 63,
+  "gauss_minus_registered": {
+   "classes": {
+    "win": 0,
+    "tie": 63,
+    "loss": 0
+   },
+   "pooled": {
+    "mean": 0.00393911298264891,
+    "low": 9.112456060868246e-07,
+    "high": 0.007877314719691733,
+    "units": 32
+   }
+  },
+  "gauss_vs_best_generic": {
+   "classes": {
+    "win": 63,
+    "tie": 0,
+    "loss": 0
+   },
+   "pooled_vs_per_problem_oracle": {
+    "mean": -4.893579703965724,
+    "low": -5.02675889606004,
+    "high": -4.760400511871408,
+    "units": 32
+   }
+  },
+  "gauss_minus_points": {
+   "mean": -0.1685806825830835,
+   "low": -0.19186978707702476,
+   "high": -0.14529157808914225,
+   "units": 32
+  },
+  "registered_minus_points": {
+   "mean": -0.1725197955657324,
+   "low": -0.19465130047736282,
+   "high": -0.150388290654102,
+   "units": 32
+  },
+  "radii": {
+   "n": 9158,
+   "median": 0.03687734876883435,
+   "p95": 0.21400817008405518,
+   "max": 0.5,
+   "min": 0.005000000000000002
+  }
+ }
+}

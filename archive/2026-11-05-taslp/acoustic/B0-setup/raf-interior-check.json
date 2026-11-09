@@ -1,0 +1,20 @@
+{
+ "emptyroom": {
+  "rows": 47484,
+  "pose_groups": 404,
+  "receivers_per_group_median": 36.0,
+  "inside_own_hull": 54,
+  "best_covering_radius_m": 0.5857540830960131,
+  "qualifying_250Hz": 0,
+  "qualifying_125Hz": 46
+ },
+ "furnishedroom": {
+  "rows": 39132,
+  "pose_groups": 407,
+  "receivers_per_group_median": 36.0,
+  "inside_own_hull": 21,
+  "best_covering_radius_m": 0.44001833445221783,
+  "qualifying_250Hz": 0,
+  "qualifying_125Hz": 21
+ }
+}

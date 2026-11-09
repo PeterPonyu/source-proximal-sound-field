@@ -1,0 +1,56 @@
+{
+  "declared": {
+    "development_and_known_answers": [
+      400000,
+      400999
+    ],
+    "TB-S1_simulation_fields": [
+      401000,
+      401095
+    ],
+    "TB-M1_measured_subset_draws": [
+      406700,
+      409003
+    ],
+    "TB-S2_simulation_fields": [
+      402000,
+      402031
+    ],
+    "TB-M2_measured_draws": [
+      403000,
+      403279
+    ]
+  },
+  "spent_never_reused": [
+    [
+      399000,
+      399099
+    ]
+  ],
+  "external_known_reviewer_ranges": [
+    [
+      7000,
+      7023
+    ],
+    [
+      930000,
+      930095
+    ],
+    [
+      940000,
+      940039
+    ]
+  ],
+  "note": "Integers passed to numpy SeedSequence with fixed salts. TB-S1 fields are paired across all cells and estimators (the same seed in every cell). 399000-399099 were the Phase A pilot and known-answer seeds and are excluded. After the TB-S1 and TB-M1 runs: 400900-400911 were used by a development pilot of another session (scripts outside this folder), and 400920-400999 are reserved for version-2 development; neither is fresh. Editing this file means TB-S1 and TB-M1 are reproduced from a checkout of their registration commits (c42efd3, 4eda109). TB-S2 (version 2, simulation): 402000-402031, 32 fields per cell, paired across the 64 cells. TB-M2 (version 2, measured): 403000-403279, one microphone draw per (loudspeaker, microphone count, draw): 256 for the 32 MeshRIR loudspeakers, then 24 for the held-out S4/S7/S8 bins.",
+  "development_used": {
+    "phase_b_development": "various seeds inside 400000-400999 (development only, never reused for a registered run)",
+    "improvement_pilot_parent_session_2026-11-04": [
+      400900,
+      400911
+    ],
+    "version_2_development": [
+      400920,
+      400999
+    ]
+  }
+}

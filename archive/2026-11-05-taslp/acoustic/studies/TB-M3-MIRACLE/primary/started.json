@@ -1,0 +1,25 @@
+{
+ "tasks": 1536,
+ "workers": 240,
+ "commit": null,
+ "started": "2026-11-07T13:57:14+0000",
+ "machine": {
+  "node": "d53735041058",
+  "cpu": "x86_64",
+  "numpy": "2.2.6"
+ },
+ "extracts": {
+  "A1": "e3c36c2ce15cefedd8eb65bfeea4c60b468241b85fd1e216def70c5423b923ba",
+  "R2": "d8b94fc29242673fe9c39c8daeb992b060b9c436f55d3e5531528ce24945c540"
+ },
+ "inputs": {
+  "common/estimators.py": "3c6bbc9aa746fe4a438150b5d835796114e97768e5a3f52acfcd9fa3087d9e60",
+  "common/v2.py": "4473270dd4bc451f5ecf301f6e9771367c45df358fdbcdaf9c2c1af889bc71c7",
+  "common/methods_v2.py": "ed7255012283f3f2db4e4590ac2f8e2cd38b626a01ddb115f81564ed1b931cb8",
+  "common/problems_v2.py": "3cb8ab5e23441074011cbc620d6ab5b8ab28b66e912293665fcdfb8531b032bf",
+  "common/sbl_guard.py": "bd40aa37ee19faea06a5c96f72bfd4a40a1f2c26e4cb4bd77f2587c86f2252cd",
+  "posthoc/review3/adk_fix.py": "48aa036ea7004860a89660d254477f0779b7174b6ad194c35c72c249c4aa96ee",
+  "studies/TB-M3-MIRACLE/run_m3.py": "4b31dc6f5dfcc68fcb0adaa58529c1b8c0fc568ea973e738dea13aab4570a07f",
+  "studies/TB-M3-MIRACLE/PROTOCOL.md": "3c3037b856bbc56f006fb32bb264a2f35c4feb41aa20939072b85e5949ce1889"
+ }
+}

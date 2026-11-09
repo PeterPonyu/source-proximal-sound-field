@@ -1,0 +1,25 @@
+=== seed 1
+freqs = [0.0, 150.0, 300.0, 450.0, 600.0, 750.0, 900.0, 1050.0, 1200.0, 1350.0, 1500.0]  M=41 Mval=73
+RESULT f=750.0 Hz  NMSE_dB uniform=-3.59 PCNN=-9.06 adaptive=-14.31  train_s pcnn=105.4 adaptive=770.2
+RESULT f=1500.0 Hz  NMSE_dB uniform=-0.91 PCNN=-7.75 adaptive=-16.07  train_s pcnn=1.1 adaptive=346.9
+
+real	21m39.667s
+user	34m36.403s
+sys	2m25.377s
+=== seed 2
+freqs = [0.0, 150.0, 300.0, 450.0, 600.0, 750.0, 900.0, 1050.0, 1200.0, 1350.0, 1500.0]  M=41 Mval=73
+RESULT f=750.0 Hz  NMSE_dB uniform=-4.07 PCNN=-11.04 adaptive=-15.11  train_s pcnn=55.5 adaptive=296.1
+RESULT f=1500.0 Hz  NMSE_dB uniform=-0.89 PCNN=-6.85 adaptive=-16.83  train_s pcnn=0.7 adaptive=107.1
+
+real	8m22.405s
+user	13m45.982s
+sys	0m42.431s
+=== seed 3
+freqs = [0.0, 150.0, 300.0, 450.0, 600.0, 750.0, 900.0, 1050.0, 1200.0, 1350.0, 1500.0]  M=41 Mval=73
+RESULT f=750.0 Hz  NMSE_dB uniform=-3.83 PCNN=-9.07 adaptive=-12.8  train_s pcnn=40.3 adaptive=557.7
+RESULT f=1500.0 Hz  NMSE_dB uniform=-0.82 PCNN=-6.91 adaptive=-17.42  train_s pcnn=0.7 adaptive=92.8
+
+real	12m0.201s
+user	21m14.561s
+sys	1m31.027s
+REPRO_DONE

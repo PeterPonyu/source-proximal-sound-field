@@ -1,0 +1,6 @@
+  development_and_known_answers: 400000-400999; earlier seeds inside: 2 (development block: expected)
+  TB-S1_simulation_fields: 401000-401095; earlier seeds inside: 0
+  TB-M1_measured_subset_draws: 406700-409003; earlier seeds inside: 0
+  TB-S2_simulation_fields: 402000-402031; earlier seeds inside: 0
+  TB-M2_measured_draws: 403000-403279; earlier seeds inside: 0
+no registered block contains an earlier seed; no two declared blocks overlap

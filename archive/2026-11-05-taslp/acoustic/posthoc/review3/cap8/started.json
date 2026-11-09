@@ -1,0 +1,16 @@
+{
+ "tasks": 3072,
+ "workers": 240,
+ "started": "2026-11-07T16:25:21+0000",
+ "machine": {
+  "cpu": "x86_64",
+  "python": "3.13.5",
+  "numpy": "2.2.6"
+ },
+ "inputs": {
+  "common/estimators.py": "3c6bbc9aa746fe4a438150b5d835796114e97768e5a3f52acfcd9fa3087d9e60",
+  "common/v2.py": "4473270dd4bc451f5ecf301f6e9771367c45df358fdbcdaf9c2c1af889bc71c7",
+  "posthoc/review3/cap8.py": "a3d8616af0204fb9f15ea980df0ada6ad069c6f5a98f504ee1ba560649d72997",
+  "posthoc/review3/refit.py": "0f59518beec017ee3aba67957abf0611506f2e8cb1fc7172d5e4594590fa5a94"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "i_traced_equals_registered": {
+  "states": 5,
+  "identical": true
+ },
+ "ii_interior": {
+  "max_abs_Yc": 1.150034571403221,
+  "rel_err": 1.6659601178591468e-07
+ },
+ "ii_saturated": {
+  "microphones": 3,
+  "directions": 72,
+  "clipped_directions": 4,
+  "max_abs_Yc": 35.189881358705065,
+  "min_margin_to_clip": 1.1366019292852556,
+  "covariance_condition": 43.17341506224385,
+  "rel_err": 1.000745484016365e-07
+ },
+ "iii_registered_at_saturated": {
+  "rel_err": 0.05316683633299279,
+  "note": "recorded; expected to exceed the 1e-6 tolerance"
+ },
+ "passed": true
+}

@@ -1,0 +1,1 @@
+{"mode": "mono", "tau": 0.01, "Q": 1209, "stage1_s": 25.1, "survivors_stage1": 49, "total_s": 77.3, "final_regions": 42, "nmse_db": -16.69, "rec_tail": [0.00637, 0.00637, 0.00637]}

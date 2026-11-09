@@ -1,0 +1,7 @@
+Smoke test of the registered runners' one() on a development MeshRIR problem (S7, 125 Hz, 24 microphones, seed 400946),
+problem builder patched to the development band; prox iterations cut (mo26 stage 1: 5, stage 2: 2; gsmf: 5).
+Script: V2-dev/smoke_one.py. Laptop, 2026-11-06 02:22-02:45 PST, beside TB-PROX. Checks only that a row is built without error and serialises.
+The first background attempt for run_prox_s2 left an empty log (cause unknown; no error was written); the foreground rerun below passed.
+exact False  keys ['F', 'M', 'M_mics', 'band', 'c_used', 'draw', 'info', 'kind', 'nmse', 'seconds', 'seed', 'source', 'wall_seconds'] nmse keys ['gsmf_cubature', 'gsmf_exact', 'mo26_cap5_cubature', 'mo26_cap5_exact'] len 2716
+a1 False  keys ['F', 'M', 'M_mics', 'band', 'c_used', 'draw', 'info', 'kind', 'nmse', 'process_seconds', 'seed', 'source', 'variant', 'wall_seconds'] nmse keys ['gsmf_prox'] len 808
+s2 False  (foreground rerun) keys ['F', 'M', 'M_mics', 'band', 'c_used', 'draw', 'info', 'kind', 'nmse', 'process_seconds', 'seed', 'source', 'variant', 'wall_seconds'] nmse keys ['mo26_prox_s2'] len 138171

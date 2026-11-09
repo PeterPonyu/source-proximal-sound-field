@@ -1,0 +1,4 @@
+=== seed 1
+MODE=gpuhybrid T=Float64 device=NVIDIA GeForce RTX 5070 Ti
+ERROR: LoadError: MethodError: no method matching NeuralWeightPlaneWaveKernel(::Float64, ::Chain{Tuple{Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDACore.DeviceMemory}}, Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDA
+=== seed 2

@@ -1,0 +1,83 @@
+{
+ "status": "post hoc coverage check of the registered run; analyze_m3.py and summary.json unchanged",
+ "rows_sha256": "91e3c23d8b93fbdb6f26e625eda75b854271d324d0e5d89e9ceceddcd8d58dea",
+ "checker_sha256": "9e4e4b8cc146e9a321be1fee7301f55b9c35e55bb426d7e69940038ed6ac84a5",
+ "rows": 20,
+ "errors": 0,
+ "duplicates": 0,
+ "missing": 1516,
+ "extra": 0,
+ "seed_mismatch": 0,
+ "F_mismatch": 0,
+ "methods_required": [
+  "adk_standin",
+  "gsmf",
+  "j_cv_ext",
+  "mo26_cap5",
+  "rbf",
+  "ref_point",
+  "ref_region",
+  "sbl_em_common",
+  "sbl_mackay_common",
+  "sinc_ev",
+  "two_stage_point",
+  "two_stage_region",
+  "v1"
+ ],
+ "methods_checked": [
+  "adk_standin",
+  "fam_K0",
+  "fj_cv",
+  "fj_cv_ext",
+  "gsmf",
+  "hybrid_v1",
+  "ind_cv_ext",
+  "ind_sw",
+  "j_K0",
+  "j_K1",
+  "j_K2",
+  "j_K3",
+  "j_K4",
+  "j_K5",
+  "j_cv",
+  "j_cv_ext",
+  "j_la",
+  "j_sw",
+  "j_sw3",
+  "j_sw_ext",
+  "mo26_cap5",
+  "rbf",
+  "ref_point",
+  "ref_region",
+  "sbl_em_common",
+  "sbl_mackay_common",
+  "sinc_ev",
+  "two_stage_point",
+  "two_stage_region",
+  "v1"
+ ],
+ "nonfinite_by_method": {},
+ "scenarios": {
+  "A1": {
+   "problems": 20,
+   "conditions": 3,
+   "problems_per_condition": [
+    6,
+    7
+   ],
+   "sources": 4,
+   "draws_per_source_and_condition": [
+    1,
+    2
+   ]
+  },
+  "R2": {
+   "problems": 0,
+   "conditions": 0,
+   "problems_per_condition": [],
+   "sources": 0,
+   "draws_per_source_and_condition": []
+  }
+ },
+ "complete": false
+}

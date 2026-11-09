@@ -1,0 +1,70 @@
+{
+ "M1 (registered generic set)": {
+  "best_generic_per_cell": {
+   "125Hz-M192": "rbf",
+   "250Hz-M192": "sinc_ev",
+   "500Hz-M192": "adk_standin",
+   "1000Hz-M192": "adk_standin",
+   "125Hz-M96": "rbf",
+   "250Hz-M96": "sinc_ev",
+   "500Hz-M96": "adk_standin",
+   "1000Hz-M96": "adk_standin",
+   "125Hz-M48": "adk_standin",
+   "250Hz-M48": "sinc_ev",
+   "500Hz-M48": "adk_standin",
+   "1000Hz-M48": "adk_standin",
+   "125Hz-M24": "adk_standin",
+   "250Hz-M24": "adk_standin",
+   "500Hz-M24": "adk_standin",
+   "1000Hz-M24": "adk_standin"
+  },
+  "wins": 13,
+  "ties": 3,
+  "losses": 0,
+  "pooled_vs_per_cell_best": {
+   "mean": -0.7278161504606593,
+   "low": -0.8296364975671425,
+   "high": -0.625995803354176
+  },
+  "pooled_vs_per_problem_best": {
+   "mean": -0.6713475529239691,
+   "low": -0.7642742737093553,
+   "high": -0.5784208321385829
+  },
+  "undefined_problems_per_cell_best": 0
+ },
+ "M1-corrected": {
+  "best_generic_per_cell": {
+   "125Hz-M192": "sbl_mackay_guard",
+   "250Hz-M192": "sbl_em_guard",
+   "500Hz-M192": "adk_standin",
+   "1000Hz-M192": "adk_standin",
+   "125Hz-M96": "sbl_mackay_guard",
+   "250Hz-M96": "sinc_ev",
+   "500Hz-M96": "adk_standin",
+   "1000Hz-M96": "adk_standin",
+   "125Hz-M48": "sbl_mackay_guard",
+   "250Hz-M48": "sinc_ev",
+   "500Hz-M48": "adk_standin",
+   "1000Hz-M48": "adk_standin",
+   "125Hz-M24": "adk_standin",
+   "250Hz-M24": "adk_standin",
+   "500Hz-M24": "sbl_mackay_guard",
+   "1000Hz-M24": "sbl_mackay_guard"
+  },
+  "wins": 13,
+  "ties": 3,
+  "losses": 0,
+  "pooled_vs_per_cell_best": {
+   "mean": -0.7225687382099818,
+   "low": -0.8017841236109109,
+   "high": -0.6433533528090527
+  },
+  "pooled_vs_per_problem_best": {
+   "mean": -0.5960016755991888,
+   "low": -0.6755343299789871,
+   "high": -0.5164690212193905
+  },
+  "undefined_problems_per_cell_best": 0
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "checks": {
+  "125Hz_R0.05_kR0.11": {
+   "series_vs_dense": 5.049894494730409e-07,
+   "cubature33_vs_series": 0.0006856508770876778
+  },
+  "500Hz_R0.1_kR0.92": {
+   "series_vs_dense": 2.4610520715156156e-06,
+   "cubature33_vs_series": 0.016455456178554907
+  },
+  "1000Hz_R0.15_kR2.75": {
+   "series_vs_dense": 1.5691998661686227e-05,
+   "cubature33_vs_series": 0.10535994921262247
+  },
+  "1000Hz_R0.3_kR5.50": {
+   "series_vs_dense": 2.4854477597430753e-05,
+   "cubature33_vs_series": 0.37008534036518487
+  },
+  "1400Hz_R0.3_kR7.69": {
+   "series_vs_dense": 4.315814582359454e-05,
+   "cubature33_vs_series": 0.35791606533731024
+  },
+  "objective_gradient_max_rel_err": 2.0760846946594587e-08
+ },
+ "limits": {
+  "series_vs_dense": 0.0001,
+  "objective_gradient_max_rel_err": 1e-06
+ },
+ "passed": true
+}

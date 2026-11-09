@@ -1,0 +1,11 @@
+{
+ "tasks": 3072,
+ "workers": 20,
+ "started": "2026-11-07T08:23:41-0800",
+ "inputs": {
+  "common/estimators.py": "3c6bbc9aa746fe4a438150b5d835796114e97768e5a3f52acfcd9fa3087d9e60",
+  "common/v2.py": "4473270dd4bc451f5ecf301f6e9771367c45df358fdbcdaf9c2c1af889bc71c7",
+  "posthoc/review3/gauss_ext.py": "676c8fdeb724db81ca4b57b405023d5fe518e043ab1496f9212dcf9d70edb648",
+  "posthoc/review3/refit.py": "0f59518beec017ee3aba67957abf0611506f2e8cb1fc7172d5e4594590fa5a94"
+ }
+}

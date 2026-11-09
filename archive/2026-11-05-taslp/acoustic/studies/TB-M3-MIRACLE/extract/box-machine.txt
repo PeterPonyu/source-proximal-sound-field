@@ -1,0 +1,7 @@
+CPU(s):                                  256
+Model name:                              AMD EPYC 7B13 64-Core Processor
+Thread(s) per core:                      2
+CPU(s) scaling MHz:                      45%
+256
+               total        used        free      shared  buff/cache   available
+Mem:             503           7         480           0          19         496

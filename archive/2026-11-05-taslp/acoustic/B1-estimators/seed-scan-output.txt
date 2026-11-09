@@ -1,0 +1,30 @@
+files with seeds: 159; distinct integers: 13980; global range 0-969607051435257253112
+  band 0: 0-969607051435257253112 (78 files)
+  band 10000: 12345-12352 (6 files)
+  band 20000: 20000-30095 (1 files)
+  band 30000: 30000-30095 (1 files)
+  band 40000: 40000-20261027 (4 files)
+  band 50000: 50000-51999 (1 files)
+  band 70000: 70000-70511 (5 files)
+  band 90000: 90000-90255 (4 files)
+  band 100000: 100000-110255 (1 files)
+  band 150000: 150000-160511 (1 files)
+  band 160000: 160000-160511 (1 files)
+  band 310000: 310000-310063 (6 files)
+  band 320000: 320000-320047 (5 files)
+  band 330000: 330000-330047 (5 files)
+  band 340000: 340000-341191 (5 files)
+  band 350000: 350000-364191 (6 files)
+  band 360000: 361000-366095 (15 files)
+  band 2026100000: 2026102823-2026111124 (5 files)
+  band 20261020000: 20261028011-20261118071 (6 files)
+  band 20261030000: 20261030052-20261948072 (1 files)
+  band 202610281000000000: 202610281000000002-202610281000090020 (1 files)
+  band 202610282000000000: 202610282000002000-202610283000920019 (1 files)
+  declared development_and_known_answers: 400000-400999; earlier seeds inside: 0
+  declared TB-S1_simulation_fields: 401000-401095; earlier seeds inside: 0
+  declared TB-M1_measured_subset_draws: 408000-408999; earlier seeds inside: 0
+  declared external: 7000-7023; earlier seeds inside: 2
+  declared external: 930000-930095; earlier seeds inside: 2
+  declared external: 940000-940039; earlier seeds inside: 2
+no overlap with any earlier seed or declared range

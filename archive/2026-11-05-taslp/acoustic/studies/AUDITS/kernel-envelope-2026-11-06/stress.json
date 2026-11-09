@@ -1,0 +1,78 @@
+{
+ "summary": {
+  "problems": 5,
+  "errors": 0,
+  "radius_m": 0.5,
+  "max_abs_change_db": 0.00032777016404184067,
+  "max_abs_bin_change_db": 0.0012693581856042192,
+  "added_after_reading": "effect.json"
+ },
+ "rows": [
+  {
+   "kind": "sim",
+   "cell": "A2-f1000-M24",
+   "seed": 400920,
+   "targets": 624,
+   "targets_in_or_near": 86,
+   "k_max": 24.45202961853907,
+   "db_registered": -7.583316927242602,
+   "db_refined": -7.5832675277924135,
+   "change_db": 4.939945018822556e-05,
+   "max_bin_change_db": 0.0002127540314371052
+  },
+  {
+   "kind": "sim",
+   "cell": "A2-f1000-M24",
+   "seed": 400921,
+   "targets": 624,
+   "targets_in_or_near": 91,
+   "k_max": 24.45202961853907,
+   "db_registered": 0.6123015960907664,
+   "db_refined": 0.6123074100048027,
+   "change_db": 5.813914036312262e-06,
+   "max_bin_change_db": 0.0003487440917086944
+  },
+  {
+   "kind": "meas",
+   "source": "S4",
+   "band": 1000.0,
+   "M": 48,
+   "seed": 400938,
+   "targets": 600,
+   "targets_in_or_near": 93,
+   "k_max": 23.910830583799697,
+   "db_registered": -3.2583898379614613,
+   "db_refined": -3.258522659481197,
+   "change_db": -0.00013282151973559309,
+   "max_bin_change_db": 0.00033735937584404834
+  },
+  {
+   "kind": "meas",
+   "source": "S7",
+   "band": 1000.0,
+   "M": 48,
+   "seed": 400946,
+   "targets": 600,
+   "targets_in_or_near": 53,
+   "k_max": 24.01700122908744,
+   "db_registered": -3.3893587387944195,
+   "db_refined": -3.3896865089584614,
+   "change_db": -0.00032777016404184067,
+   "max_bin_change_db": 0.0012693581856042192
+  },
+  {
+   "kind": "meas",
+   "source": "S8",
+   "band": 1000.0,
+   "M": 48,
+   "seed": 400954,
+   "targets": 600,
+   "targets_in_or_near": 61,
+   "k_max": 23.83938989584189,
+   "db_registered": -4.778320830525206,
+   "db_refined": -4.778200371642219,
+   "change_db": 0.00012045888298661822,
+   "max_bin_change_db": 0.0004898292332006296
+  }
+ ]
+}

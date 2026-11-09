@@ -1,0 +1,1 @@
+lrl-taslp-acoustic N_S 200 regions 103 ref regions 198 max dB diff 0.28731363534094223 bitwise equal False

@@ -1,0 +1,10 @@
+{
+ "config": {
+  "Q_MAX": 512,
+  "LOSS": "mean",
+  "ETA_C": 0.01,
+  "ETA_R": 0.001
+ },
+ "subset": "small",
+ "tasks": 54
+}

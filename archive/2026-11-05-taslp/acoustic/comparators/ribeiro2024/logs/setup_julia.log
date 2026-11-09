@@ -1,0 +1,884 @@
++ B=/root/taslp/ribeiro2024
++ cd /root/taslp/ribeiro2024/dl
++ U=https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.9-linux-x86_64.tar.gz
++ curl -fsSL -O https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.9-linux-x86_64.tar.gz
++ curl -fsSL -O https://julialang-s3.julialang.org/bin/checksums/julia-1.11.9.sha256
++ echo 'b36363356d7a05eaf8b7b9e7a91c710f6bd3d2940be4d4e6d14b9a9f2927de35  julia-1.11.9-linux-x86_64.tar.gz'
++ sha256sum -c -
+julia-1.11.9-linux-x86_64.tar.gz: OK
++ grep julia-1.11.9-linux-x86_64.tar.gz julia-1.11.9.sha256
++ grep -v musl
+b36363356d7a05eaf8b7b9e7a91c710f6bd3d2940be4d4e6d14b9a9f2927de35  julia-1.11.9-linux-x86_64.tar.gz
++ mkdir -p /root/taslp/ribeiro2024/julia-1.11.9
++ tar -xzf julia-1.11.9-linux-x86_64.tar.gz -C /root/taslp/ribeiro2024/julia-1.11.9 --strip-components=1
++ '[' -d /root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel ']'
++ git clone https://github.com/skoyamalab/PhysicsConstrainedNeuralKernel /root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel
+Cloning into '/root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel'...
++ git -C /root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel checkout 7a1e5c9b9187bef00c864942a4587b2eb6b71e23
+Note: switching to '7a1e5c9b9187bef00c864942a4587b2eb6b71e23'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 7a1e5c9 Added package and versioning functionality
++ git -C /root/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel rev-parse HEAD
+7a1e5c9b9187bef00c864942a4587b2eb6b71e23
++ export JULIA_DEPOT_PATH=/root/taslp/ribeiro2024/julia-depot JULIA_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8 JULIA_NUM_PRECOMPILE_TASKS=8
++ JULIA_DEPOT_PATH=/root/taslp/ribeiro2024/julia-depot
++ JULIA_NUM_THREADS=8
++ OPENBLAS_NUM_THREADS=8
++ JULIA_NUM_PRECOMPILE_TASKS=8
++ /root/taslp/ribeiro2024/julia-1.11.9/bin/julia --project=/root/taslp/ribeiro2024/env -e 'using Pkg; Pkg.add(["GenericLinearAlgebra","SpecialFunctions","ArrayAllocators","KernelFunctions","ChainRules","JLD2","Lebedev","Functors","Optimisers","FFTW","Flux","KernelAbstractions","OrdinaryDiffEq","SciMLSensitivity","Distributions","ForwardDiff","Optimization","OptimizationOptimJL","Suppressor","ProgressMeter","Zygote","NPZ"]); Pkg.precompile(); Pkg.status()'
+Precompiling Pkg...
+    831.8 ms  ✓ UUIDs
+   1031.1 ms  ✓ Unicode
+    947.3 ms  ✓ Logging
+    989.2 ms  ✓ MbedTLS_jll
+   1022.2 ms  ✓ Zlib_jll
+   1176.5 ms  ✓ NetworkOptions
+   1193.8 ms  ✓ Base64
+    912.0 ms  ✓ MozillaCACerts_jll
+    951.7 ms  ✓ nghttp2_jll
+   1076.3 ms  ✓ p7zip_jll
+   1002.3 ms  ✓ LibSSH2_jll
+   1398.1 ms  ✓ Printf
+    935.4 ms  ✓ LibGit2_jll
+    979.0 ms  ✓ LibCURL_jll
+   3852.6 ms  ✓ ArgTools
+   1417.9 ms  ✓ LibCURL
+   1411.8 ms  ✓ Tar
+   4722.4 ms  ✓ Dates
+   6898.5 ms  ✓ Markdown
+   1373.6 ms  ✓ TOML
+   5548.3 ms  ✓ LibGit2
+   6704.3 ms  ✓ Downloads
+  93929.9 ms  ✓ Pkg
+  23 dependencies successfully precompiled in 105 seconds
+  Installing known registries into `~/taslp/ribeiro2024/julia-depot`
+       Added `General` registry to ~/taslp/ribeiro2024/julia-depot/registries
+    Updating registry at `~/taslp/ribeiro2024/julia-depot/registries/General.toml`
+   Resolving package versions...
+   Installed ConsoleProgressMonitor ─────────── v0.1.2
+   Installed OrdinaryDiffEqRosenbrock ───────── v2.7.5
+   Installed HypergeometricFunctions ────────── v0.3.31
+   Installed ShowCases ──────────────────────── v0.1.0
+   Installed StatsFuns ──────────────────────── v2.2.1
+   Installed SciMLPublic ────────────────────── v1.3.0
+   Installed Enzyme_jll ─────────────────────── v0.0.294+0
+   Installed Preferences ────────────────────── v1.6.1
+   Installed LoggingExtras ──────────────────── v1.2.0
+   Installed FFTW ───────────────────────────── v1.10.0
+   Installed Accessors ──────────────────────── v0.1.46
+   Installed SciMLLogging ───────────────────── v2.1.0
+   Installed FindFirstFunctions ─────────────── v3.4.1
+   Installed NNlib ──────────────────────────── v0.9.58
+   Installed SciMLSensitivity ───────────────── v7.119.14
+   Installed PDMats ─────────────────────────── v0.11.41
+   Installed NonlinearSolve ─────────────────── v4.32.0
+   Installed TimerOutputs ───────────────────── v1.2.2
+   Installed StaticArrays ───────────────────── v1.9.24
+   Installed OrdinaryDiffEqSDIRK ────────────── v2.9.8
+   Installed SciMLJacobianOperators ─────────── v0.1.20
+   Installed ZipFile ────────────────────────── v0.10.1
+   Installed ProgressMeter ──────────────────── v1.13.0
+   Installed Tracy ──────────────────────────── v0.1.6
+   Installed Optimisers ─────────────────────── v0.4.11
+   Installed Roots ──────────────────────────── v3.0.13
+   Installed EnumX ──────────────────────────── v1.0.7
+   Installed CEnum ──────────────────────────── v0.5.0
+   Installed ScopedValues ───────────────────── v1.6.2
+   Installed MaybeInplace ───────────────────── v0.1.8
+   Installed OrdinaryDiffEqCore ─────────────── v4.19.1
+   Installed DelimitedFiles ─────────────────── v1.9.1
+   Installed FileIO ─────────────────────────── v1.20.0
+   Installed RecursiveArrayTools ────────────── v4.5.6
+   Installed BFloat16s ──────────────────────── v0.6.5
+   Installed LibTracyClient_jll ─────────────── v0.13.1+0
+   Installed FunctionWrappers ───────────────── v1.1.3
+   Installed CodeTracking ───────────────────── v3.0.2
+   Installed Statistics ─────────────────────── v1.11.5
+   Installed RandomNumbers ──────────────────── v1.6.0
+   Installed GPUArrays ──────────────────────── v12.2.0
+   Installed AMD ────────────────────────────── v0.5.4
+   Installed IntelOpenMP_jll ────────────────── v2025.2.0+0
+   Installed ZygoteRules ────────────────────── v0.2.8
+   Installed Gamma ──────────────────────────── v1.1.0
+   Installed FunctionProperties ─────────────── v1.2.0
+   Installed MLUtils ────────────────────────── v0.4.15
+   Installed Missings ───────────────────────── v1.2.1
+   Installed Distances ──────────────────────── v0.10.12
+   Installed LLVM ───────────────────────────── v9.13.2
+   Installed OrdinaryDiffEqVerner ───────────── v2.4.2
+   Installed IrrationalConstants ────────────── v0.2.7
+   Installed RealDot ────────────────────────── v0.1.0
+   Installed MuladdMacro ────────────────────── v0.2.7
+   Installed IRTools ────────────────────────── v0.4.25
+   Installed JLD2 ───────────────────────────── v0.6.7
+   Installed FiniteDiff ─────────────────────── v2.33.0
+   Installed FastPower ──────────────────────── v1.5.1
+   Installed MLCore ─────────────────────────── v1.1.0
+   Installed Functors ───────────────────────── v0.5.4
+   Installed PtrArrays ──────────────────────── v1.4.0
+   Installed NonlinearSolveQuasiNewton ──────── v1.15.3
+   Installed DiffEqBase ─────────────────────── v7.21.6
+   Installed SciMLBase ──────────────────────── v3.58.0
+   Installed ProgressLogging ────────────────── v0.1.6
+   Installed ADTypes ────────────────────────── v1.24.0
+   Installed SpecialFunctions ───────────────── v2.9.1
+   Installed OrdinaryDiffEqNonlinearSolve ───── v2.9.10
+   Installed LinearSolve ────────────────────── v5.18.3
+   Installed BracketingNonlinearSolve ───────── v1.12.8
+   Installed SimpleNonlinearSolve ───────────── v2.14.6
+   Installed LineSearch ─────────────────────── v0.1.20
+   Installed Sobol ──────────────────────────── v1.5.0
+   Installed PureKLU ────────────────────────── v1.6.0
+   Installed NonlinearSolveSpectralMethods ──── v1.8.3
+   Installed DiffEqNoiseProcess ─────────────── v5.36.5
+   Installed Zygote ─────────────────────────── v0.7.15
+   Installed Enzyme ─────────────────────────── v0.13.205
+   Installed ChunkCodecLibZstd ──────────────── v1.0.0
+   Installed OneHotArrays ───────────────────── v0.2.11
+   Installed StaticArraysCore ───────────────── v1.4.4
+   Installed NaNMath ────────────────────────── v1.1.5
+   Installed MLDataDevices ──────────────────── v1.18.0
+   Installed RespecializeParams ─────────────── v1.3.0
+   Installed SparseMatrixColorings ──────────── v0.4.29
+   Installed NLSolversBase ──────────────────── v8.0.1
+   Installed Lebedev ────────────────────────── v1.2.0
+   Installed SparseConnectivityTracer ───────── v1.2.4
+   Installed OrdinaryDiffEq ─────────────────── v7.8.1
+   Installed Rmath_jll ──────────────────────── v0.5.2+0
+   Installed OptimizationOptimJL ────────────── v0.4.23
+   Installed LeftChildRightSiblingTrees ─────── v0.3.0
+   Installed CommonSubexpressions ───────────── v0.3.1
+   Installed DataStructures ─────────────────── v0.19.6
+   Installed ExprTools ──────────────────────── v0.1.11
+   Installed ChainRules ─────────────────────── v1.74.10
+   Installed StatsAPI ───────────────────────── v1.8.0
+   Installed Compat ─────────────────────────── v4.18.1
+   Installed Tracker ────────────────────────── v0.2.39
+   Installed Scratch ────────────────────────── v1.3.0
+   Installed SciMLStructures ────────────────── v1.10.6
+   Installed StatsBase ──────────────────────── v0.34.13
+   Installed ArrayAllocators ────────────────── v0.3.0
+   Installed DiffRules ──────────────────────── v1.16.0
+   Installed Flux ───────────────────────────── v0.16.15
+   Installed oneTBB_jll ─────────────────────── v2023.1.0+0
+   Installed ArgCheck ───────────────────────── v2.5.0
+   Installed Zstd_jll ───────────────────────── v1.5.7+1
+   Installed FunctionWrappersWrappers ───────── v1.13.0
+   Installed TableTraits ────────────────────── v1.0.1
+   Installed TensorCore ─────────────────────── v0.1.1
+   Installed DiffResults ────────────────────── v1.1.0
+   Installed ChunkCodecLibZlib ──────────────── v1.1.0
+   Installed PrettyTables ───────────────────── v3.5.1
+   Installed PositiveFactorizations ─────────── v0.2.4
+   Installed HashArrayMappedTries ───────────── v0.2.0
+   Installed Setfield ───────────────────────── v1.2.0
+   Installed NonlinearSolveBase ─────────────── v2.55.1
+   Installed SciMLOperators ─────────────────── v1.30.4
+   Installed MKL_jll ────────────────────────── v2025.2.0+0
+   Installed DiffEqCallbacks ────────────────── v4.19.6
+   Installed JLLWrappers ────────────────────── v1.8.0
+   Installed AbstractFFTs ───────────────────── v1.5.0
+   Installed ConstructionBase ───────────────── v1.6.0
+   Installed DataValueInterfaces ────────────── v1.0.0
+   Installed NonlinearSolveFirstOrder ───────── v2.10.0
+   Installed EnzymeCore ─────────────────────── v0.8.26
+   Installed LLVMExtra_jll ──────────────────── v0.0.47+0
+   Installed AcceleratedKernels ─────────────── v0.5.11
+   Installed ReactantCore ───────────────────── v0.1.26
+   Installed FastClosures ───────────────────── v0.3.2
+   Installed ChunkCodecCore ─────────────────── v1.0.2
+   Installed OrderedCollections ─────────────── v1.8.2
+   Installed AbstractTrees ──────────────────── v0.4.5
+   Installed ArrayInterface ─────────────────── v7.30.2
+   Installed ChainRulesCore ─────────────────── v1.26.8
+   Installed KernelFunctions ────────────────── v0.11.1
+   Installed OrdinaryDiffEqTsit5 ────────────── v2.1.5
+   Installed Reexport ───────────────────────── v1.2.2
+   Installed TerminalLoggers ────────────────── v0.1.8
+   Installed LogExpFunctions ────────────────── v0.3.29
+   Installed LineSearches ───────────────────── v7.8.2
+   Installed PreallocationTools ─────────────── v1.7.1
+   Installed KernelAbstractions ─────────────── v0.9.45
+   Installed FFTW_jll ───────────────────────── v3.3.12+0
+   Installed OpenSpecFun_jll ────────────────── v0.5.6+0
+   Installed AliasTables ────────────────────── v1.1.3
+   Installed CompositionsBase ───────────────── v0.1.2
+   Installed MacroTools ─────────────────────── v0.5.16
+   Installed SparseInverseSubset ────────────── v0.1.3
+   Installed UnsafeAtomics ──────────────────── v0.3.2
+   Installed Krylov ─────────────────────────── v0.10.12
+   Installed GPUArraysCore ──────────────────── v0.2.2
+   Installed SimpleTraits ───────────────────── v0.9.6
+   Installed Crayons ────────────────────────── v4.2.0
+   Installed InverseFunctions ───────────────── v0.1.18
+   Installed CommonSolve ────────────────────── v0.2.14
+   Installed Atomix ─────────────────────────── v1.2.1
+   Installed DocStringExtensions ────────────── v0.9.5
+   Installed DifferentiationInterface ───────── v0.7.21
+   Installed Rmath ──────────────────────────── v0.9.0
+   Installed Adapt ──────────────────────────── v4.7.4
+   Installed Suppressor ─────────────────────── v0.2.8
+   Installed NPZ ────────────────────────────── v0.4.3
+   Installed IntervalSets ───────────────────── v0.7.15
+   Installed OrdinaryDiffEqDifferentiation ──── v3.12.5
+   Installed OrdinaryDiffEqBDF ──────────────── v2.4.14
+   Installed RuntimeGeneratedFunctions ──────── v0.5.27
+   Installed GPUCompiler ────────────────────── v1.23.0
+   Installed Tables ─────────────────────────── v1.14.0
+   Installed DataAPI ────────────────────────── v1.16.0
+   Installed RecipesBase ────────────────────── v1.3.4
+   Installed ConcreteStructs ────────────────── v0.2.8
+   Installed Optim ──────────────────────────── v2.3.2
+   Installed Optimization ───────────────────── v5.9.1
+   Installed StructIO ───────────────────────── v0.3.1
+   Installed IteratorInterfaceExtensions ────── v1.0.0
+   Installed TruncatedStacktraces ───────────── v1.4.0
+   Installed BinaryHeaps ────────────────────── v1.1.0
+   Installed StructArrays ───────────────────── v0.7.4
+   Installed PrecompileTools ────────────────── v1.2.1
+   Installed ReverseDiff ────────────────────── v1.17.3
+   Installed OrdinaryDiffEqRosenbrockTableaus ─ v2.4.2
+   Installed LaTeXStrings ───────────────────── v1.4.1
+   Installed PoissonRandom ──────────────────── v0.4.13
+   Installed QuadGK ─────────────────────────── v2.11.3
+   Installed ResettableStacks ───────────────── v1.4.0
+   Installed FillArrays ─────────────────────── v1.18.2
+   Installed SymbolicIndexingInterface ──────── v0.3.56
+   Installed ForwardDiff ────────────────────── v1.4.7
+   Installed ObjectFile ─────────────────────── v0.5.1
+   Installed OptimizationBase ───────────────── v5.10.1
+   Installed Requires ───────────────────────── v1.3.1
+   Installed FastBroadcast ──────────────────── v1.5.1
+   Installed SparseColumnPivotedQR ──────────── v2.1.8
+   Installed OrdinaryDiffEqDefault ──────────── v2.6.2
+   Installed GenericLinearAlgebra ───────────── v0.4.2
+   Installed SortingAlgorithms ──────────────── v1.2.3
+   Installed Distributions ──────────────────── v0.25.134
+   Installed ExpressionExplorer ─────────────── v1.1.6
+   Installed LHLFactorization ───────────────── v2.2.2
+   Installed StringManipulation ─────────────── v0.6.1
+    Updating `~/taslp/ribeiro2024/env/Project.toml`
+  [31c24e10] + Distributions v0.25.134
+  [587475ba] + Flux v0.16.15
+  [f6369f11] + ForwardDiff v1.4.7
+⌃ [63c18a36] + KernelAbstractions v0.9.45
+  [7f7a1694] + Optimization v5.9.1
+  [36348300] + OptimizationOptimJL v0.4.23
+  [1dea7af3] + OrdinaryDiffEq v7.8.1
+  [92933f4c] + ProgressMeter v1.13.0
+  [1ed8b502] + SciMLSensitivity v7.119.14
+  [fd094767] + Suppressor v0.2.8
+  [e88e6eb3] + Zygote v0.7.15
+    Updating `~/taslp/ribeiro2024/env/Manifest.toml`
+  [47edcb42] + ADTypes v1.24.0
+  [14f7f29c] + AMD v0.5.4
+  [1520ce14] + AbstractTrees v0.4.5
+  [6a4ca0a5] + AcceleratedKernels v0.5.11
+  [7d9f7c33] + Accessors v0.1.46
+  [dce04be8] + ArgCheck v2.5.0
+  [4fba245c] + ArrayInterface v7.30.2
+⌃ [a9b6321e] + Atomix v1.2.1
+  [ab4f0b2a] + BFloat16s v0.6.5
+  [b2a6c25c] + BinaryHeaps v1.1.0
+  [70df07ce] + BracketingNonlinearSolve v1.12.8
+⌅ [fa961155] + CEnum v0.5.0
+  [da1fd8a2] + CodeTracking v3.0.2
+  [38540f10] + CommonSolve v0.2.14
+  [bbf7d656] + CommonSubexpressions v0.3.1
+  [2569d6c7] + ConcreteStructs v0.2.8
+  [88cd18e8] + ConsoleProgressMonitor v0.1.2
+  [a8cc5b0e] + Crayons v4.2.0
+  [8bb1440f] + DelimitedFiles v1.9.1
+  [2b5f629d] + DiffEqBase v7.21.6
+  [459566f4] + DiffEqCallbacks v4.19.6
+  [77a26b50] + DiffEqNoiseProcess v5.36.5
+  [163ba53b] + DiffResults v1.1.0
+  [b552c78f] + DiffRules v1.16.0
+  [a0c0ee7d] + DifferentiationInterface v0.7.21
+  [31c24e10] + Distributions v0.25.134
+  [4e289a0a] + EnumX v1.0.7
+⌃ [7da242da] + Enzyme v0.13.205
+⌅ [f151be2c] + EnzymeCore v0.8.26
+  [e2ba6199] + ExprTools v0.1.11
+  [21656369] + ExpressionExplorer v1.1.6
+  [7034ab61] + FastBroadcast v1.5.1
+  [9aa1b823] + FastClosures v0.3.2
+  [a4df4552] + FastPower v1.5.1
+  [64ca27bc] + FindFirstFunctions v3.4.1
+  [6a86dc24] + FiniteDiff v2.33.0
+  [587475ba] + Flux v0.16.15
+  [f6369f11] + ForwardDiff v1.4.7
+  [f62d2435] + FunctionProperties v1.2.0
+  [069b7b12] + FunctionWrappers v1.1.3
+  [77dc65aa] + FunctionWrappersWrappers v1.13.0
+  [0c68f7d7] + GPUArrays v12.2.0
+⌅ [61eb1bfa] + GPUCompiler v1.23.0
+⌃ [a0844989] + Gamma v1.1.0
+  [34004b35] + HypergeometricFunctions v0.3.31
+  [7869d1d1] + IRTools v0.4.25
+  [8197267c] + IntervalSets v0.7.15
+  [3587e190] + InverseFunctions v0.1.18
+⌃ [63c18a36] + KernelAbstractions v0.9.45
+  [ba0b0d4f] + Krylov v0.10.12
+  [2faa5264] + LHLFactorization v2.2.2
+⌅ [929cbde3] + LLVM v9.13.2
+  [b964fa9f] + LaTeXStrings v1.4.1
+  [1d6d02ad] + LeftChildRightSiblingTrees v0.3.0
+  [87fe0de2] + LineSearch v0.1.20
+  [d3d80556] + LineSearches v7.8.2
+  [7ed4a6bd] + LinearSolve v5.18.3
+  [e6f89c97] + LoggingExtras v1.2.0
+  [c2834f40] + MLCore v1.1.0
+  [7e8f7934] + MLDataDevices v1.18.0
+  [f1d291b0] + MLUtils v0.4.15
+  [bb5d69b7] + MaybeInplace v0.1.8
+  [46d2c3a1] + MuladdMacro v0.2.7
+  [d41bc354] + NLSolversBase v8.0.1
+  [872c559c] + NNlib v0.9.58
+  [77ba4419] + NaNMath v1.1.5
+  [8913a72c] + NonlinearSolve v4.32.0
+  [be0214bd] + NonlinearSolveBase v2.55.1
+  [5959db7a] + NonlinearSolveFirstOrder v2.10.0
+  [9a2c21bd] + NonlinearSolveQuasiNewton v1.15.3
+  [26075421] + NonlinearSolveSpectralMethods v1.8.3
+⌅ [d8793406] + ObjectFile v0.5.1
+  [0b1bfda6] + OneHotArrays v0.2.11
+  [429524aa] + Optim v2.3.2
+  [7f7a1694] + Optimization v5.9.1
+  [bca83a33] + OptimizationBase v5.10.1
+  [36348300] + OptimizationOptimJL v0.4.23
+  [1dea7af3] + OrdinaryDiffEq v7.8.1
+  [6ad6398a] + OrdinaryDiffEqBDF v2.4.14
+  [bbf590c4] + OrdinaryDiffEqCore v4.19.1
+  [50262376] + OrdinaryDiffEqDefault v2.6.2
+  [4302a76b] + OrdinaryDiffEqDifferentiation v3.12.5
+  [127b3ac7] + OrdinaryDiffEqNonlinearSolve v2.9.10
+  [43230ef6] + OrdinaryDiffEqRosenbrock v2.7.5
+  [b4bd8bb3] + OrdinaryDiffEqRosenbrockTableaus v2.4.2
+  [2d112036] + OrdinaryDiffEqSDIRK v2.9.8
+  [b1df2697] + OrdinaryDiffEqTsit5 v2.1.5
+  [79d7bb75] + OrdinaryDiffEqVerner v2.4.2
+  [90014a1f] + PDMats v0.11.41
+⌃ [e409e4f3] + PoissonRandom v0.4.13
+  [85a6dd25] + PositiveFactorizations v0.2.4
+  [d236fae5] + PreallocationTools v1.7.1
+  [08abe8d2] + PrettyTables v3.5.1
+  [33c8b6b6] + ProgressLogging v0.1.6
+  [92933f4c] + ProgressMeter v1.13.0
+  [0c0d3e7f] + PureKLU v1.6.0
+  [1fd47b50] + QuadGK v2.11.3
+  [e6cf234a] + RandomNumbers v1.6.0
+  [a3311ec8] + ReactantCore v0.1.26
+⌅ [3cdcf5f2] + RecipesBase v1.3.4
+  [731186ca] + RecursiveArrayTools v4.5.6
+  [ae5879a3] + ResettableStacks v1.4.0
+  [9fe22ead] + RespecializeParams v1.3.0
+⌃ [37e2e3b7] + ReverseDiff v1.17.3
+  [79098fc4] + Rmath v0.9.0
+  [f2b01f46] + Roots v3.0.13
+  [7e49a35a] + RuntimeGeneratedFunctions v0.5.27
+  [0bca4576] + SciMLBase v3.58.0
+  [19f34311] + SciMLJacobianOperators v0.1.20
+  [a6db7da4] + SciMLLogging v2.1.0
+  [c0aeaf25] + SciMLOperators v1.30.4
+  [431bcebd] + SciMLPublic v1.3.0
+  [1ed8b502] + SciMLSensitivity v7.119.14
+  [53ae85a6] + SciMLStructures v1.10.6
+  [6c6a2e73] + Scratch v1.3.0
+  [efcf1570] + Setfield v1.2.0
+  [605ecd9f] + ShowCases v0.1.0
+  [727e6d20] + SimpleNonlinearSolve v2.14.6
+  [699a6c99] + SimpleTraits v0.9.6
+  [ed01d8cd] + Sobol v1.5.0
+  [a57abbd0] + SparseColumnPivotedQR v2.1.8
+  [9f842d2f] + SparseConnectivityTracer v1.2.4
+  [0a514795] + SparseMatrixColorings v0.4.29
+  [90137ffa] + StaticArrays v1.9.24
+  [1e83bf80] + StaticArraysCore v1.4.4
+  [4c63d2b9] + StatsFuns v2.2.1
+  [892a3eda] + StringManipulation v0.6.1
+  [53d494c1] + StructIO v0.3.1
+  [fd094767] + Suppressor v0.2.8
+  [2efcf032] + SymbolicIndexingInterface v0.3.56
+  [5d786b92] + TerminalLoggers v0.1.8
+  [a759f4b9] + TimerOutputs v1.2.2
+  [9f7883ad] + Tracker v0.2.39
+  [e689c965] + Tracy v0.1.6
+  [781d530d] + TruncatedStacktraces v1.4.0
+⌅ [013be700] + UnsafeAtomics v0.3.2
+  [e88e6eb3] + Zygote v0.7.15
+  [700de1a5] + ZygoteRules v0.2.8
+⌅ [7cc45869] + Enzyme_jll v0.0.294+0
+⌅ [dad2f222] + LLVMExtra_jll v0.0.47+0
+  [ad6e5548] + LibTracyClient_jll v0.13.1+0
+  [f50d1b31] + Rmath_jll v0.5.2+0
+  [9fa8497b] + Future v1.11.0
+  [3fa0cd96] + REPL v1.11.0
+  [f489334b] + StyledStrings v1.11.0
+        Info Packages marked with ⌃ and ⌅ have new versions available. Those with ⌃ may be upgradable, but those with ⌅ are restricted by compatibility constraints from upgrading. To see why use `status --outdated -m`
+Precompiling project...
+    709.2 ms  ✓ IteratorInterfaceExtensions
+    827.0 ms  ✓ LaTeXStrings
+    956.3 ms  ✓ ExprTools
+   1044.1 ms  ✓ PositiveFactorizations
+   1229.9 ms  ✓ AbstractFFTs
+   1333.5 ms  ✓ ExpressionExplorer
+    855.2 ms  ✓ TensorCore
+    834.6 ms  ✓ StatsAPI
+    724.9 ms  ✓ Future
+   1724.0 ms  ✓ FunctionWrappers
+    874.5 ms  ✓ ChunkCodecCore
+    724.5 ms  ✓ CEnum
+    910.5 ms  ✓ InverseFunctions
+   1026.8 ms  ✓ OpenLibm_jll
+    822.3 ms  ✓ ArgCheck
+   1694.3 ms  ✓ Gamma
+   1296.0 ms  ✓ Serialization
+   1206.4 ms  ✓ Statistics
+   1935.5 ms  ✓ FillArrays
+   1019.1 ms  ✓ CompilerSupportLibraries_jll
+    911.9 ms  ✓ SuiteSparse_jll
+   1179.3 ms  ✓ ShowCases
+   4055.6 ms  ✓ UnsafeAtomics
+   1180.6 ms  ✓ OrderedCollections
+    863.2 ms  ✓ Requires
+    746.8 ms  ✓ DataValueInterfaces
+    769.3 ms  ✓ EnumX
+    810.9 ms  ✓ StructIO
+    657.7 ms  ✓ Reexport
+    882.3 ms  ✓ RealDot
+   2282.3 ms  ✓ RandomNumbers
+   1006.5 ms  ✓ AbstractTrees
+   1117.1 ms  ✓ DocStringExtensions
+    891.0 ms  ✓ IntervalSets
+    826.3 ms  ✓ Mmap
+    899.9 ms  ✓ CompositionsBase
+    836.9 ms  ✓ PtrArrays
+   2309.0 ms  ✓ IrrationalConstants
+   1121.5 ms  ✓ HashArrayMappedTries
+    981.9 ms  ✓ ConstructionBase
+   4284.9 ms  ✓ MacroTools
+    688.8 ms  ✓ DataAPI
+   1222.2 ms  ✓ Adapt
+   1818.1 ms  ✓ EnzymeCore
+    799.9 ms  ✓ FastClosures
+    926.3 ms  ✓ ProgressLogging
+    765.5 ms  ✓ Suppressor
+   1016.7 ms  ✓ StaticArraysCore
+   3415.8 ms  ✓ ChainRulesCore
+   1255.3 ms  ✓ ZipFile
+   1697.4 ms  ✓ OrdinaryDiffEqRosenbrockTableaus
+   2320.4 ms  ✓ Crayons
+    838.8 ms  ✓ Scratch
+   1696.2 ms  ✓ GenericLinearAlgebra
+   1355.2 ms  ✓ BFloat16s
+   1180.1 ms  ✓ LoggingExtras
+   1829.3 ms  ✓ ProgressMeter
+   1008.9 ms  ✓ Compat
+   1735.0 ms  ✓ Preferences
+    952.4 ms  ✓ TableTraits
+   1058.1 ms  ✓ ChunkCodecLibZlib
+   1660.5 ms  ✓ ArrayAllocators
+   2026.0 ms  ✓ LazyArtifacts
+    963.8 ms  ✓ NaNMath
+   1408.9 ms  ✓ InverseFunctions → InverseFunctionsDatesExt
+   3392.2 ms  ✓ InteractiveUtils
+   1063.4 ms  ✓ FillArrays → FillArraysStatisticsExt
+   1544.4 ms  ✓ Distances
+    973.9 ms  ✓ Atomix
+   2328.7 ms  ✓ HypergeometricFunctions
+   1396.1 ms  ✓ Lebedev
+    708.4 ms  ✓ LeftChildRightSiblingTrees
+    851.3 ms  ✓ IntervalSets → IntervalSetsRandomExt
+    896.1 ms  ✓ IntervalSets → IntervalSetsStatisticsExt
+   4119.3 ms  ✓ Distributed
+    920.8 ms  ✓ DelimitedFiles
+    882.0 ms  ✓ CompositionsBase → CompositionsBaseInverseFunctionsExt
+   3581.8 ms  ✓ DataStructures
+   1088.1 ms  ✓ AliasTables
+    790.4 ms  ✓ ConstructionBase → ConstructionBaseIntervalSetsExt
+   1155.7 ms  ✓ ScopedValues
+   4315.9 ms  ✓ ObjectFile
+   1466.7 ms  ✓ LogExpFunctions
+    808.6 ms  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
+   1040.5 ms  ✓ CommonSubexpressions
+    994.8 ms  ✓ Missings
+   1305.8 ms  ✓ ReactantCore
+   1080.3 ms  ✓ GPUArraysCore
+   1233.5 ms  ✓ ArrayInterface
+    880.1 ms  ✓ EnzymeCore → AdaptExt
+    740.1 ms  ✓ DiffResults
+   1200.2 ms  ✓ AbstractFFTs → AbstractFFTsChainRulesCoreExt
+   1057.0 ms  ✓ ConsoleProgressMonitor
+   1338.2 ms  ✓ EnzymeCore → EnzymeCoreChainRulesCoreExt
+   8080.3 ms  ✓ SparseArrays
+    989.0 ms  ✓ Compat → CompatLinearAlgebraExt
+   1670.1 ms  ✓ ZygoteRules
+   1031.8 ms  ✓ JLLWrappers
+   1106.2 ms  ✓ TruncatedStacktraces
+   1319.3 ms  ✓ PrecompileTools
+   8277.9 ms  ✓ FileIO
+    918.3 ms  ✓ Distances → DistancesChainRulesCoreExt
+  18123.4 ms  ✓ StyledStrings
+    897.0 ms  ✓ ProgressMeter → ProgressMeterDistributedExt
+   1444.9 ms  ✓ SimpleTraits
+   2247.5 ms  ✓ Tables
+   1246.8 ms  ✓ TerminalLoggers
+   1185.8 ms  ✓ SortingAlgorithms
+   1059.1 ms  ✓ LogExpFunctions → LogExpFunctionsInverseFunctionsExt
+    750.3 ms  ✓ ArrayInterface → ArrayInterfaceGPUArraysCoreExt
+   2326.0 ms  ✓ QuadGK
+   2547.6 ms  ✓ Sobol
+   2158.9 ms  ✓ Setfield
+   2585.4 ms  ✓ LogExpFunctions → LogExpFunctionsChainRulesCoreExt
+    961.7 ms  ✓ ArrayInterface → ArrayInterfaceFillArraysExt
+    743.7 ms  ✓ ArrayInterface → ArrayInterfaceStaticArraysCoreExt
+    990.9 ms  ✓ ArrayInterface → ArrayInterfaceChainRulesCoreExt
+   5652.5 ms  ✓ Test
+   1203.4 ms  ✓ SuiteSparse
+   1678.2 ms  ✓ AMD
+   1429.2 ms  ✓ Statistics → SparseArraysExt
+   1276.0 ms  ✓ FillArrays → FillArraysSparseArraysExt
+   1032.8 ms  ✓ Adapt → AdaptSparseArraysExt
+   4067.6 ms  ✓ Accessors
+   1259.7 ms  ✓ ChainRulesCore → ChainRulesCoreSparseArraysExt
+   1445.0 ms  ✓ Distances → DistancesSparseArraysExt
+   1039.7 ms  ✓ Rmath_jll
+   1198.7 ms  ✓ ArrayInterface → ArrayInterfaceSparseArraysExt
+   1410.1 ms  ✓ Functors
+    988.0 ms  ✓ LibTracyClient_jll
+   1157.0 ms  ✓ FFTW_jll
+   1391.6 ms  ✓ Zstd_jll
+   2243.8 ms  ✓ oneTBB_jll
+   2678.1 ms  ✓ IntelOpenMP_jll
+   2696.2 ms  ✓ LLVMExtra_jll
+   1261.4 ms  ✓ OpenSpecFun_jll
+   3227.5 ms  ✓ Enzyme_jll
+   1615.8 ms  ✓ MuladdMacro
+   1909.1 ms  ✓ ADTypes
+   3700.5 ms  ✓ RecipesBase
+   4541.3 ms  ✓ ConcreteStructs
+   1136.9 ms  ✓ CommonSolve
+   5166.5 ms  ✓ FunctionProperties
+   2331.2 ms  ✓ FastPower
+   1199.6 ms  ✓ SciMLPublic
+  13638.6 ms  ✓ Krylov
+   3191.7 ms  ✓ BinaryHeaps
+   4298.0 ms  ✓ RuntimeGeneratedFunctions
+   2047.4 ms  ✓ SciMLLogging
+   6657.0 ms  ✓ FindFirstFunctions
+  14113.8 ms  ✓ StaticArrays
+  14496.8 ms  ✓ SparseColumnPivotedQR
+   2609.3 ms  ✓ PoissonRandom
+   1615.0 ms  ✓ SciMLStructures
+   2706.9 ms  ✓ FastBroadcast
+   3531.9 ms  ✓ MaybeInplace
+   1517.0 ms  ✓ StructArrays
+   1663.5 ms  ✓ MLCore
+   2810.1 ms  ✓ NPZ
+   1044.8 ms  ✓ InverseFunctions → InverseFunctionsTestExt
+   1244.9 ms  ✓ FiniteDiff
+   1653.7 ms  ✓ SparseInverseSubset
+   2890.3 ms  ✓ AbstractFFTs → AbstractFFTsTestExt
+  30912.0 ms  ✓ IRTools
+   2076.9 ms  ✓ PDMats
+   1089.9 ms  ✓ Accessors → LinearAlgebraExt
+   1152.6 ms  ✓ Accessors → TestExt
+   1127.1 ms  ✓ Accessors → IntervalSetsExt
+   7641.4 ms  ✓ StringManipulation
+   1519.0 ms  ✓ Rmath
+   1545.7 ms  ✓ Tracy
+   4095.1 ms  ✓ StatsBase
+   2642.9 ms  ✓ Optimisers
+   1616.4 ms  ✓ ChunkCodecLibZstd
+   2518.5 ms  ✓ DifferentiationInterface
+   6355.5 ms  ✓ SpecialFunctions
+    869.5 ms  ✓ ADTypes → ADTypesChainRulesCoreExt
+   7572.9 ms  ✓ SparseConnectivityTracer
+    955.3 ms  ✓ ADTypes → ADTypesEnzymeCoreExt
+    950.8 ms  ✓ ADTypes → ADTypesConstructionBaseExt
+   1415.4 ms  ✓ IntervalSets → IntervalSetsRecipesBaseExt
+   1707.3 ms  ✓ FunctionWrappersWrappers
+  12113.9 ms  ✓ MKL_jll
+   1064.3 ms  ✓ FindFirstFunctions → FindFirstFunctionsEnzymeCoreExt
+   1624.3 ms  ✓ MLDataDevices
+   2702.6 ms  ✓ PreallocationTools
+  32238.1 ms  ✓ LHLFactorization
+   1135.0 ms  ✓ StaticArrays → StaticArraysChainRulesCoreExt
+   1058.2 ms  ✓ StaticArrays → StaticArraysStatisticsExt
+   1158.5 ms  ✓ FillArrays → FillArraysStaticArraysExt
+   1434.5 ms  ✓ Adapt → AdaptStaticArraysExt
+   1660.6 ms  ✓ ConstructionBase → ConstructionBaseStaticArraysExt
+  15858.0 ms  ✓ LLVM
+   1997.3 ms  ✓ ResettableStacks
+   1887.6 ms  ✓ Accessors → StaticArraysExt
+   1590.8 ms  ✓ SparseColumnPivotedQR → SparseColumnPivotedQRAMDExt
+   1243.7 ms  ✓ StructArrays → AdaptExt
+   1701.8 ms  ✓ MaybeInplace → MaybeInplaceSparseArraysExt
+   1218.4 ms  ✓ StructArrays → LinearAlgebraExt
+    919.2 ms  ✓ StructArrays → GPUArraysCoreExt
+   1713.1 ms  ✓ StructArrays → SparseArraysExt
+    945.2 ms  ✓ Accessors → StructArraysExt
+   1043.6 ms  ✓ FiniteDiff → FiniteDiffSparseArraysExt
+  39445.5 ms  ✓ PureKLU
+   1911.5 ms  ✓ StructArrays → StaticArraysExt
+   1214.4 ms  ✓ FillArrays → FillArraysPDMatsExt
+   1408.0 ms  ✓ FiniteDiff → FiniteDiffStaticArraysExt
+  16031.3 ms  ✓ SparseMatrixColorings
+   1313.1 ms  ✓ SciMLLogging → SciMLLoggingTracyExt
+    969.9 ms  ✓ Optimisers → OptimisersEnzymeCoreExt
+   1200.2 ms  ✓ PDMats → StatsBaseExt
+    987.0 ms  ✓ Optimisers → OptimisersAdaptExt
+    796.9 ms  ✓ DifferentiationInterface → DifferentiationInterfaceGPUArraysCoreExt
+   2865.3 ms  ✓ SymbolicIndexingInterface
+   1023.8 ms  ✓ DifferentiationInterface → DifferentiationInterfaceFiniteDiffExt
+   1203.4 ms  ✓ DifferentiationInterface → DifferentiationInterfaceStaticArraysExt
+    966.6 ms  ✓ DifferentiationInterface → DifferentiationInterfaceChainRulesCoreExt
+   1324.1 ms  ✓ DifferentiationInterface → DifferentiationInterfaceSparseArraysExt
+   1327.2 ms  ✓ DiffRules
+   6271.6 ms  ✓ Roots
+   3295.6 ms  ✓ SpecialFunctions → SpecialFunctionsChainRulesCoreExt
+   2187.5 ms  ✓ StatsFuns
+   2570.5 ms  ✓ SparseConnectivityTracer → SparseConnectivityTracerNaNMathExt
+   7480.5 ms  ✓ SciMLOperators
+   1730.1 ms  ✓ SparseConnectivityTracer → SparseConnectivityTracerChainRulesCoreExt
+   1935.2 ms  ✓ SparseConnectivityTracer → SparseConnectivityTracerLogExpFunctionsExt
+    954.9 ms  ✓ RespecializeParams
+   1579.8 ms  ✓ DifferentiationInterface → DifferentiationInterfaceSparseConnectivityTracerExt
+   2838.5 ms  ✓ SparseConnectivityTracer → SparseConnectivityTracerSpecialFunctionsExt
+   5652.6 ms  ✓ KernelFunctions
+   1206.1 ms  ✓ MLDataDevices → FillArraysExt
+   1322.4 ms  ✓ MLDataDevices → ChainRulesCoreExt
+   1456.4 ms  ✓ MLDataDevices → SparseArraysExt
+   1061.7 ms  ✓ PreallocationTools → PreallocationToolsEnzymeCoreExt
+   2159.4 ms  ✓ LLVM → BFloat16sExt
+   2307.8 ms  ✓ LHLFactorization → LHLFactorizationSparseExt
+   1555.9 ms  ✓ DifferentiationInterface → DifferentiationInterfaceSparseMatrixColoringsExt
+   4763.8 ms  ✓ UnsafeAtomics → UnsafeAtomicsLLVM
+   1783.0 ms  ✓ NLSolversBase
+   6835.0 ms  ✓ KernelAbstractions
+   1328.9 ms  ✓ Roots → RootsChainRulesCoreExt
+   1291.7 ms  ✓ StatsFuns → StatsFunsInverseFunctionsExt
+  10126.5 ms  ✓ FFTW
+   1486.7 ms  ✓ SciMLOperators → SciMLOperatorsSparseArraysExt
+   1757.8 ms  ✓ KernelFunctions → KernelFunctionsChainRulesCoreExt
+   3209.4 ms  ✓ StatsFuns → StatsFunsChainRulesCoreExt
+   7077.5 ms  ✓ RecursiveArrayTools
+   2171.5 ms  ✓ KernelFunctions → KernelFunctionsPDMatsExt
+   1807.9 ms  ✓ LineSearches
+  11969.0 ms  ✓ ChainRules
+   2329.2 ms  ✓ KernelAbstractions → SparseArraysExt
+   8020.1 ms  ✓ ForwardDiff
+   1632.8 ms  ✓ KernelAbstractions → LinearAlgebraExt
+   1702.7 ms  ✓ KernelAbstractions → EnzymeExt
+   1168.0 ms  ✓ StructArrays → KernelAbstractionsExt
+   1373.8 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsStatisticsExt
+   1595.7 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsFastBroadcastExt
+   4955.7 ms  ✓ KernelFunctions → KernelFunctionsZygoteRulesExt
+   1525.5 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsSparseArraysExt
+   1601.2 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsStructArraysExt
+   1297.0 ms  ✓ MLDataDevices → RecursiveArrayToolsExt
+   1446.0 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsTablesExt
+   2124.7 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsKernelAbstractionsExt
+   1255.0 ms  ✓ ArrayInterface → ArrayInterfaceChainRulesExt
+   1216.9 ms  ✓ FastPower → FastPowerForwardDiffExt
+   1645.9 ms  ✓ MLDataDevices → ChainRulesExt
+   1869.8 ms  ✓ ForwardDiff → ForwardDiffStaticArraysExt
+   1807.4 ms  ✓ DifferentiationInterface → DifferentiationInterfaceForwardDiffExt
+   1106.5 ms  ✓ Roots → RootsForwardDiffExt
+   1589.2 ms  ✓ PureKLU → PureKLUForwardDiffExt
+   1456.0 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsForwardDiffExt
+   2570.5 ms  ✓ PreallocationTools → PreallocationToolsForwardDiffExt
+   5342.8 ms  ✓ Optim
+  10763.7 ms  ✓ Distributions
+   6120.3 ms  ✓ AcceleratedKernels
+   2443.3 ms  ✓ Distributions → DistributionsTestExt
+   1991.2 ms  ✓ Distributions → DistributionsSparseConnectivityTracerExt
+   2401.2 ms  ✓ Distributions → DistributionsChainRulesCoreExt
+  72252.4 ms  ✓ REPL
+   2481.1 ms  ✓ CodeTracking
+  18699.1 ms  ✓ SciMLBase
+  12426.0 ms  ✓ GPUArrays
+   3017.1 ms  ✓ SciMLBase → SciMLBaseDistributionsExt
+   2350.2 ms  ✓ SciMLBase → SciMLBaseStaticArraysExt
+   2165.6 ms  ✓ SciMLBase → SciMLBaseReactantCoreExt
+   3033.5 ms  ✓ SciMLBase → SciMLBaseChainRulesCoreExt
+  54631.6 ms  ✓ JLD2
+   2910.8 ms  ✓ SciMLBase → SciMLBaseDifferentiationInterfaceExt
+   3211.1 ms  ✓ SciMLBase → SciMLBaseForwardDiffExt
+  29251.8 ms  ✓ NNlib
+  13280.3 ms  ✓ Pkg → REPLExt
+   2367.9 ms  ✓ SciMLBase → SciMLBaseFunctionPropertiesExt
+  31223.8 ms  ✓ ReverseDiff
+   3839.8 ms  ✓ MLDataDevices → GPUArraysSparseArraysExt
+   3854.4 ms  ✓ SparseMatrixColorings → SparseMatrixColoringsGPUArraysExt
+   4152.0 ms  ✓ GPUArrays → JLD2Ext
+   1793.6 ms  ✓ NNlib → NNlibSpecialFunctionsExt
+   2196.0 ms  ✓ NNlib → NNlibEnzymeCoreExt
+   6602.8 ms  ✓ OptimizationBase
+   2660.1 ms  ✓ NNlib → NNlibFFTWExt
+   4664.4 ms  ✓ SciMLJacobianOperators
+  37367.9 ms  ✓ Zygote
+   2089.0 ms  ✓ NNlib → NNlibForwardDiffExt
+   2041.5 ms  ✓ OneHotArrays
+   2988.9 ms  ✓ SparseConnectivityTracer → SparseConnectivityTracerNNlibExt
+   5841.5 ms  ✓ DifferentiationInterface → DifferentiationInterfaceReverseDiffExt
+   5910.8 ms  ✓ FastPower → FastPowerReverseDiffExt
+   7424.2 ms  ✓ MLUtils
+   6976.5 ms  ✓ ArrayInterface → ArrayInterfaceReverseDiffExt
+   2885.7 ms  ✓ OptimizationBase → OptimizationChainRulesCoreExt
+   8033.7 ms  ✓ MLDataDevices → ReverseDiffExt
+   1282.2 ms  ✓ OptimizationBase → OptimizationForwardDiffExt
+   6078.5 ms  ✓ PreallocationTools → PreallocationToolsReverseDiffExt
+   1103.7 ms  ✓ OptimizationBase → OptimizationFiniteDiffExt
+   7250.5 ms  ✓ SciMLBase → SciMLBaseReverseDiffExt
+   3562.1 ms  ✓ OptimizationBase → OptimizationMLDataDevicesExt
+   3084.5 ms  ✓ Optimization
+   9235.1 ms  ✓ OptimizationBase → OptimizationReverseDiffExt
+   3679.7 ms  ✓ DifferentiationInterface → DifferentiationInterfaceZygoteExt
+   4231.7 ms  ✓ Zygote → ZygoteDistancesExt
+   3026.1 ms  ✓ MLDataDevices → ZygoteExt
+   5135.7 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsZygoteExt
+   2105.5 ms  ✓ MLDataDevices → OneHotArraysExt
+   5825.1 ms  ✓ OptimizationBase → OptimizationZygoteExt
+  34893.8 ms  ✓ LinearSolve
+   8536.7 ms  ✓ SciMLBase → SciMLBaseZygoteExt
+   3712.8 ms  ✓ MLDataDevices → MLUtilsExt
+  45721.7 ms  ✓ PrettyTables
+   2748.6 ms  ✓ OptimizationOptimJL
+  15802.2 ms  ✓ LineSearch
+  10077.9 ms  ✓ Tracker
+   5198.9 ms  ✓ OptimizationBase → OptimizationMLUtilsExt
+   3249.0 ms  ✓ LinearSolve → LinearSolveChainRulesCoreExt
+   4377.9 ms  ✓ LinearSolve → LinearSolveForwardDiffExt
+   3672.4 ms  ✓ LinearSolve → LinearSolveEnzymeExt
+   5919.8 ms  ✓ LinearSolve → LinearSolveKernelAbstractionsExt
+   2163.9 ms  ✓ SymbolicIndexingInterface → SymbolicIndexingInterfacePrettyTablesExt
+   3003.6 ms  ✓ LineSearch → LineSearchLineSearchesExt
+   2557.9 ms  ✓ ArrayInterface → ArrayInterfaceTrackerExt
+   3602.9 ms  ✓ Tracker → TrackerPDMatsExt
+  36137.4 ms  ✓ GPUCompiler
+   2603.3 ms  ✓ FastPower → FastPowerTrackerExt
+   2467.5 ms  ✓ DifferentiationInterface → DifferentiationInterfaceTrackerExt
+  11686.4 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsReverseDiffExt
+   2526.4 ms  ✓ MLDataDevices → TrackerExt
+   3404.0 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsTrackerExt
+   3521.2 ms  ✓ Zygote → ZygoteTrackerExt
+   3940.8 ms  ✓ SciMLBase → SciMLBaseTrackerExt
+   2960.9 ms  ✓ ArrayInterface → ArrayInterfaceGPUArraysCoreTrackerExt
+  13156.8 ms  ✓ TimerOutputs
+  15252.1 ms  ✓ NonlinearSolveBase
+   2419.5 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseLineSearchExt
+   2691.2 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseSparseArraysExt
+   2851.8 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseSparseMatrixColoringsExt
+   5049.4 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseTrackerExt
+   3009.6 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseChainRulesCoreExt
+   3921.3 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseLinearSolveExt
+   8406.1 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseReverseDiffExt
+   5744.7 ms  ✓ BracketingNonlinearSolve
+   9809.5 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseForwardDiffExt
+   3128.0 ms  ✓ BracketingNonlinearSolve → BracketingNonlinearSolveForwardDiffExt
+   2531.6 ms  ✓ BracketingNonlinearSolve → BracketingNonlinearSolveChainRulesCoreExt
+   9853.5 ms  ✓ DiffEqBase
+   3073.3 ms  ✓ DiffEqBase → DiffEqBaseChainRulesCoreExt
+  16815.8 ms  ✓ NonlinearSolveSpectralMethods
+   4299.1 ms  ✓ DiffEqBase → DiffEqBaseTrackerExt
+   2659.3 ms  ✓ DiffEqBase → DiffEqBaseSparseArraysExt
+  15696.1 ms  ✓ SimpleNonlinearSolve
+   7964.5 ms  ✓ DiffEqBase → DiffEqBaseForwardDiffExt
+   8908.7 ms  ✓ DiffEqBase → DiffEqBaseReverseDiffExt
+   3763.9 ms  ✓ NonlinearSolveSpectralMethods → NonlinearSolveSpectralMethodsForwardDiffExt
+   8410.5 ms  ✓ DiffEqCallbacks
+   9229.6 ms  ✓ OrdinaryDiffEqCore
+   5295.8 ms  ✓ SimpleNonlinearSolve → SimpleNonlinearSolveTrackerExt
+   3254.6 ms  ✓ SimpleNonlinearSolve → SimpleNonlinearSolveChainRulesCoreExt
+   9838.4 ms  ✓ DiffEqNoiseProcess
+   2870.4 ms  ✓ DiffEqCallbacks → DiffEqCallbacksFunctorsExt
+   3429.7 ms  ✓ OrdinaryDiffEqCore → OrdinaryDiffEqCoreSparseArraysExt
+  10363.3 ms  ✓ SimpleNonlinearSolve → SimpleNonlinearSolveReverseDiffExt
+   4757.6 ms  ✓ DiffEqNoiseProcess → DiffEqNoiseProcessOptimExt
+  46674.3 ms  ✓ NonlinearSolveQuasiNewton
+  10519.7 ms  ✓ DiffEqNoiseProcess → DiffEqNoiseProcessReverseDiffExt
+   6897.0 ms  ✓ OrdinaryDiffEqDifferentiation
+   5259.5 ms  ✓ NonlinearSolveQuasiNewton → NonlinearSolveQuasiNewtonForwardDiffExt
+   4514.9 ms  ✓ OrdinaryDiffEqDifferentiation → OrdinaryDiffEqDifferentiationSparseArraysExt
+  26792.4 ms  ✓ OrdinaryDiffEqTsit5
+ 103134.9 ms  ✓ Flux
+ 108538.7 ms  ✓ Enzyme
+  52154.4 ms  ✓ OrdinaryDiffEqVerner
+   5541.0 ms  ✓ Enzyme → EnzymeOrderedCollectionsExt
+   5765.7 ms  ✓ Enzyme → EnzymeLogExpFunctionsExt
+   5913.4 ms  ✓ Enzyme → EnzymeStaticArraysExt
+   5906.9 ms  ✓ Enzyme → EnzymeChainRulesCoreExt
+   5123.1 ms  ✓ Enzyme → EnzymeBFloat16sExt
+   9078.8 ms  ✓ Enzyme → EnzymeSpecialFunctionsExt
+   5290.5 ms  ✓ Enzyme → EnzymeGPUArraysCoreExt
+   5469.7 ms  ✓ QuadGK → QuadGKEnzymeExt
+   5888.2 ms  ✓ DifferentiationInterface → DifferentiationInterfaceEnzymeExt
+   6372.2 ms  ✓ FastPower → FastPowerEnzymeExt
+   7347.6 ms  ✓ FunctionWrappersWrappers → FunctionWrappersWrappersEnzymeExt
+   6732.6 ms  ✓ SciMLBase → SciMLBaseEnzymeExt
+   7361.5 ms  ✓ OptimizationBase → OptimizationEnzymeExt
+   7491.1 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseEnzymeExt
+   7834.5 ms  ✓ DiffEqBase → DiffEqBaseEnzymeExt
+  11895.9 ms  ✓ Flux → FluxEnzymeExt
+ 106216.0 ms  ✓ NonlinearSolveFirstOrder
+  33585.1 ms  ✓ SciMLSensitivity
+  89694.7 ms  ✓ OrdinaryDiffEqRosenbrock
+ 116557.6 ms  ✓ NonlinearSolve
+  11195.9 ms  ✓ OrdinaryDiffEqNonlinearSolve
+ 107872.4 ms  ✓ OrdinaryDiffEqSDIRK
+  58069.2 ms  ✓ OrdinaryDiffEqBDF
+ 156258.4 ms  ✓ OrdinaryDiffEqDefault
+  13525.9 ms  ✓ OrdinaryDiffEq
+  414 dependencies successfully precompiled in 775 seconds. 23 already precompiled.
+  1 dependency had output during precompilation:
+┌ MKL_jll
+│  Downloading artifact: IntelOpenMP
+│   Downloading artifact: oneTBB
+└  
+Status `~/taslp/ribeiro2024/env/Project.toml`
+  [c9d4266f] ArrayAllocators v0.3.0
+  [082447d4] ChainRules v1.74.10
+  [31c24e10] Distributions v0.25.134
+  [7a1cc6ca] FFTW v1.10.0
+  [587475ba] Flux v0.16.15
+  [f6369f11] ForwardDiff v1.4.7
+  [d9f16b24] Functors v0.5.4
+  [14197337] GenericLinearAlgebra v0.4.2
+  [033835bb] JLD2 v0.6.7
+⌃ [63c18a36] KernelAbstractions v0.9.45
+  [ec8451be] KernelFunctions v0.11.1
+  [c5712dd9] Lebedev v1.2.0
+  [15e1cf62] NPZ v0.4.3
+  [3bd65402] Optimisers v0.4.11
+  [7f7a1694] Optimization v5.9.1
+  [36348300] OptimizationOptimJL v0.4.23
+  [1dea7af3] OrdinaryDiffEq v7.8.1
+  [92933f4c] ProgressMeter v1.13.0
+  [1ed8b502] SciMLSensitivity v7.119.14
+  [276daf66] SpecialFunctions v2.9.1
+  [fd094767] Suppressor v0.2.8
+  [e88e6eb3] Zygote v0.7.15
+Info Packages marked with ⌃ have new versions available and may be upgradable.
++ echo SETUP_RC=0
+SETUP_RC=0
++ du -sh /root/taslp/ribeiro2024/julia-depot
+2.2G	/root/taslp/ribeiro2024/julia-depot
++ echo BOX_SETUP_DONE
+BOX_SETUP_DONE

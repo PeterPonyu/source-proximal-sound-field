@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "/root/taslp/ribeiro2024/test_bridge_gpu.py", line 18, in <module>
+    for i, ng, nc, dt, info, md in ex.map(problem, range(3)):
+                                   ~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/root/taslp/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/root/taslp/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/root/taslp/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/root/taslp/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/taslp/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/taslp/ribeiro2024/test_bridge_gpu.py", line 14, in problem
+    t = time.time(); p, info = rb.predict(x, pw(x), q, f, c, seed=i, return_info=True, device="gpu", cuda_device=i % 2); dt = time.time()-t
+                               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/taslp/ribeiro2024/ribeiro_bridge.py", line 42, in predict
+    raise RuntimeError("bridge.jl failed:\n" + r.stderr[-3000:])
+RuntimeError: bridge.jl failed:
+ERROR: LoadError: parsing header failed: unsupported type U3
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:35
+  [2] parsedtype(s::SubString{String})
+    @ NPZ ~/taslp/ribeiro2024/julia-depot/packages/NPZ/UCofn/src/NPZ.jl:139
+  [3] parseheader(s::SubString{String})
+    @ NPZ ~/taslp/ribeiro2024/julia-depot/packages/NPZ/UCofn/src/NPZ.jl:167
+  [4] readheader(f::ZipFile.ReadableFile)
+    @ NPZ ~/taslp/ribeiro2024/julia-depot/packages/NPZ/UCofn/src/NPZ.jl:207
+  [5] npzreadarray(f::ZipFile.ReadableFile)
+    @ NPZ ~/taslp/ribeiro2024/julia-depot/packages/NPZ/UCofn/src/NPZ.jl:224
+  [6] (::NPZ.var"#6#9")(f::ZipFile.ReadableFile)
+    @ NPZ ./none:0
+  [7] iterate
+    @ ./generator.jl:48 [inlined]
+  [8] grow_to!(dest::Dict{String, Array}, itr::Base.Generator{Base.Iterators.Filter{NPZ.var"#7#10"{Vector{String}}, Vector{ZipFile.ReadableFile}}, NPZ.var"#6#9"}, st::Int64)
+    @ Base ./abstractdict.jl:629
+  [9] grow_to!(dest::Dict{String, Matrix{Float64}}, itr::Base.Generator{Base.Iterators.Filter{NPZ.var"#7#10"{Vector{String}}, Vector{ZipFile.ReadableFile}}, NPZ.var"#6#9"}, st::Int64)
+    @ Base ./abstractdict.jl:627
+ [10] grow_to!(dest::Dict{Any, Any}, itr::Base.Generator{Base.Iterators.Filter{NPZ.var"#7#10"{Vector{String}}, Vector{ZipFile.ReadableFile}}, NPZ.var"#6#9"})
+    @ Base ./abstractdict.jl:606
+ [11] dict_with_eltype
+    @ ./abstractdict.jl:645 [inlined]
+ [12] Dict
+    @ ./dict.jl:117 [inlined]
+ [13] npzread (repeats 2 times)
+    @ ~/taslp/ribeiro2024/julia-depot/packages/NPZ/UCofn/src/NPZ.jl:292 [inlined]
+ [14] npzread(::String)
+    @ NPZ ~/taslp/ribeiro2024/julia-depot/packages/NPZ/UCofn/src/NPZ.jl:276
+ [15] main(inpath::String, outpath::String)
+    @ Main ~/taslp/ribeiro2024/bridge.jl:18
+ [16] top-level scope
+    @ ~/taslp/ribeiro2024/bridge.jl:73
+in expression starting at /root/taslp/ribeiro2024/bridge.jl:73
+
+BRIDGE_GPU_DONE

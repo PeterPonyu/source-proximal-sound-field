@@ -1,0 +1,13 @@
+{
+ "one bin": {
+  "bound_rms_m": 0.06066081241207637,
+  "empirical_rms_m": 0.06159819354767645,
+  "trials": 300
+ },
+ "six bins": {
+  "bound_rms_m": 0.024592493509918812,
+  "empirical_rms_m": 0.02561005940727535,
+  "trials": 300
+ },
+ "ratio_bound": 0.40540989367005137
+}

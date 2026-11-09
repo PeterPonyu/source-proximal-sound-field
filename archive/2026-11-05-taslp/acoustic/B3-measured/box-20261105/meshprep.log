@@ -1,0 +1,3 @@
+[meshprep 2026-11-05T09:52:07Z] start
+{"source": "MeshRIR v1.2 S32-M441_npy.zip", "microphones_present": 441, "partial": false, "average_temperature_c": 17.1, "sound_speed_from_temperature": 341.51277000396715, "bins_per_band": {"125": [64, 67, 71, 75, 79, 83, 88, 92, 98, 103, 108, 114], "250": [127, 134, 142, 149, 158, 166, 175, 185, 195, 206, 217, 229], "500": [255, 269, 283, 299, 315, 332, 351, 370, 390, 411, 434, 458], "1000": [509, 537, 566, 597, 630, 665, 701, 740, 780, 823, 868, 915]}, "arrival_residual_ms_median": 0.015191566409958335, "extract_sha256": "957f56233483acd45074d6423b16e444ae08a4ed62c8c1f940cb67df4ccbe6fe"}
+[meshprep 2026-11-05T09:53:48Z] done

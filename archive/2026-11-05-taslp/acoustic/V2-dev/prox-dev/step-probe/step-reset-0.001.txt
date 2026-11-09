@@ -1,0 +1,1 @@
+{"mode": "reset", "tau": 0.001, "Q": 1209, "stage1_s": 63.4, "survivors_stage1": 119, "total_s": 156.5, "final_regions": 56, "nmse_db": -21.62, "rec_tail": [0.1, 0.1, 0.1]}

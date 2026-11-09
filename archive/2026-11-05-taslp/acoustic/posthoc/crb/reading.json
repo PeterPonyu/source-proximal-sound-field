@@ -1,0 +1,182 @@
+{
+ "status": "post hoc reading, written after comparison.json was read; descriptive, not registered",
+ "floor_clearance_m": 0.6,
+ "s2_single_driver_clear_of_floor": {
+  "conditions": 7,
+  "in_band": 7,
+  "R_obs_median": 0.3951198018619237,
+  "R_pred_median": 0.40173357210652366,
+  "A_J_median": 1.0856763263963913,
+  "names": [
+   "A1-below0.1",
+   "A1-beside0.3",
+   "A1-beside0.6",
+   "A1-beside1.2",
+   "A1-in",
+   "FF-00",
+   "FF-04"
+  ]
+ },
+ "s2_other": {
+  "conditions": 57,
+  "in_band": 9,
+  "R_obs_median": 0.9271453820542516,
+  "R_pred_median": 0.40386071700442405,
+  "A_J_median": 5.898745397291022,
+  "names": [
+   "A1-below0.6",
+   "A2-f1000-M192",
+   "A2-f1000-M24",
+   "A2-f1000-M48",
+   "A2-f1000-M96",
+   "A2-f125-M192",
+   "A2-f125-M24",
+   "A2-f125-M48",
+   "A2-f125-M96",
+   "A2-f250-M192",
+   "A2-f250-M24",
+   "A2-f250-M48",
+   "A2-f250-M96",
+   "A2-f500-M192",
+   "A2-f500-M24",
+   "A2-f500-M48",
+   "A3-phi0-h0.05",
+   "A3-phi0-h0.25",
+   "A3-phi180-h0.05",
+   "A3-phi180-h0.25",
+   "A3-phi180-hbase",
+   "A3-phi90-h0.05",
+   "A3-phi90-h0.25",
+   "A3-phi90-hbase",
+   "A4-beta0.0",
+   "A4-beta0.45",
+   "A5-delta0.1",
+   "A5-delta0.2",
+   "A5-delta0.4",
+   "A6-second0.3",
+   "A6-second0.6",
+   "A6-second1.0",
+   "A7-jitter0.002",
+   "A7-jitter0.005",
+   "A7-jitter0.01",
+   "A7-jitter0.02",
+   "A8-speed0.005",
+   "A8-speed0.01",
+   "A8-speed0.02",
+   "A9-snr10",
+   "A9-snr20",
+   "A9-snr40",
+   "FF-01",
+   "FF-02",
+   "FF-03",
+   "FF-05",
+   "FF-06",
+   "FF-07",
+   "FF-08",
+   "FF-09",
+   "FF-10",
+   "FF-11",
+   "FF-12",
+   "FF-13",
+   "FF-14",
+   "FF-15",
+   "base"
+  ]
+ },
+ "below_band": [
+  {
+   "study": "TB-S2",
+   "condition": "A2-f1000-M192",
+   "obs_over_pred": 0.27561704155176336,
+   "A_J": 1.144805563893824,
+   "A_f": 4.153609506322268
+  },
+  {
+   "study": "TB-S2",
+   "condition": "A2-f1000-M48",
+   "obs_over_pred": 0.43389575520310325,
+   "A_J": 0.9864216976782642,
+   "A_f": 2.273407116454799
+  },
+  {
+   "study": "TB-S2",
+   "condition": "A2-f1000-M96",
+   "obs_over_pred": 0.26457879779360144,
+   "A_J": 0.8832311780252572,
+   "A_f": 3.3382538033688856
+  },
+  {
+   "study": "TB-S2",
+   "condition": "A3-phi180-hbase",
+   "obs_over_pred": 0.26688959373214555,
+   "A_J": 0.771416392783998,
+   "A_f": 2.890395170514603
+  }
+ ],
+ "below_band_A_J_range": [
+  0.771416392783998,
+  1.144805563893824
+ ],
+ "below_band_A_f_range": [
+  2.273407116454799,
+  4.153609506322268
+ ],
+ "m2_by_microphones": {
+  "24": {
+   "conditions": 4,
+   "in_band": 3,
+   "R_obs_median": 0.7064700480836615,
+   "R_pred_median": 0.36156891358219995,
+   "A_J_median": 1.2362740514072912,
+   "names": [
+    "1000 Hz, M = 24",
+    "125 Hz, M = 24",
+    "250 Hz, M = 24",
+    "500 Hz, M = 24"
+   ]
+  },
+  "48": {
+   "conditions": 4,
+   "in_band": 0,
+   "R_obs_median": 0.7634348534826052,
+   "R_pred_median": 0.3555959167754663,
+   "A_J_median": 1.7711354299660171,
+   "names": [
+    "1000 Hz, M = 48",
+    "125 Hz, M = 48",
+    "250 Hz, M = 48",
+    "500 Hz, M = 48"
+   ]
+  },
+  "96": {
+   "conditions": 4,
+   "in_band": 0,
+   "R_obs_median": 0.8011261418481588,
+   "R_pred_median": 0.34901599420653917,
+   "A_J_median": 2.317552802979897,
+   "names": [
+    "1000 Hz, M = 96",
+    "125 Hz, M = 96",
+    "250 Hz, M = 96",
+    "500 Hz, M = 96"
+   ]
+  },
+  "192": {
+   "conditions": 4,
+   "in_band": 0,
+   "R_obs_median": 0.7849346546083092,
+   "R_pred_median": 0.32988574503813317,
+   "A_J_median": 2.4298637105752183,
+   "names": [
+    "1000 Hz, M = 192",
+    "125 Hz, M = 192",
+    "250 Hz, M = 192",
+    "500 Hz, M = 192"
+   ]
+  }
+ },
+ "efficient_median_over_rms": [
+  0.6744897501960817,
+  0.8880641651696379
+ ]
+}

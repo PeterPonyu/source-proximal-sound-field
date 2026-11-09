@@ -1,0 +1,4 @@
+A2-f1000-M24 400921 stage1 unchanged True fit_s 996.5 stage2 lengths [3, 101, 3, 10, 5, 8] registered [3, 101, 3, 10, 5, 8]
+A2-f1000-M24 400920 stage1 unchanged True fit_s 1436.3 stage2 lengths [13, 35, 50, 9, 15, 92] registered [13, 35, 50, 9, 15, 92]
+A2-f125-M24 400921 stage1 unchanged True fit_s 2946.1 stage2 lengths [101, 101, 101, 10, 35, 101] registered [101, 101, 101, 10, 35, 101]
+A2-f125-M24 400920 stage1 unchanged True fit_s 3362.1 stage2 lengths [42, 101, 101, 15, 87, 8] registered [42, 101, 101, 15, 87, 8]

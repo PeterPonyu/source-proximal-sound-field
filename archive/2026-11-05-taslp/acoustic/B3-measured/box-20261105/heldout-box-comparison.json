@@ -1,0 +1,31 @@
+{
+ "arrays_identical": true,
+ "per_array": {
+  "S4_positions": true,
+  "S4_H": true,
+  "S4_arrival_s": true,
+  "S7_positions": true,
+  "S7_H": true,
+  "S7_arrival_s": true,
+  "S8_positions": true,
+  "S8_H": true,
+  "S8_arrival_s": true,
+  "bins": true,
+  "freqs": true,
+  "band": true
+ },
+ "box_sha256_identical": {
+  "S4": [
+   true,
+   "verified full file"
+  ],
+  "S7": [
+   true,
+   "verified full file"
+  ],
+  "S8": [
+   true,
+   "verified full file"
+  ]
+ }
+}

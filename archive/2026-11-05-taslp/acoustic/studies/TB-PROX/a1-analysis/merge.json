@@ -1,0 +1,21 @@
+{
+ "primary": {
+  "protocol_commit": "196f5f95da9ae5ce2b9dd7c21057825182536caf",
+  "rows_sha256": "4f9b7e4322c1874d81ab17aef6f5081eced1693e5fdef3342b0568604157e59b",
+  "status": "partial",
+  "mo26_rows": 128,
+  "mo26_errors": 0,
+  "gsmf_error_rows_superseded": 128,
+  "gsmf_rows_without_error": 0,
+  "not_run": 0
+ },
+ "amendment": {
+  "protocol_commit": "8e174693e6c58ecf8bb97ab3b7dcd79dd2bf0b90",
+  "rows_sha256": "74fa6bcb97dccf2151a1511823f608363f6106c1f2a0808b99aa21473aa190e9",
+  "status": "complete",
+  "gsmf_rows": 128,
+  "gsmf_errors": 0,
+  "not_run": 0
+ },
+ "merged_rows_sha256": "528725d706be1a1cd46686ee66425b7059cc0587b88c0b43e15c20e96e2b20d2"
+}

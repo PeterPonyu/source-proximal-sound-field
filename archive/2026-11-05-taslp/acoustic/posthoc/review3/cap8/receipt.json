@@ -1,0 +1,15 @@
+{
+ "tasks": 3072,
+ "errors": 0,
+ "elapsed_seconds": 7733,
+ "machine": "rented CPU machine (240 workers)",
+ "note": "box capsule is not a git checkout; the started.json input hashes match the files committed with the cap-8 script (ac2c341) and the version 2 code",
+ "gate": {
+  "max_rel_orders_0_5": 0.0,
+  "K5_argmin_mismatches": 0
+ },
+ "outputs": {
+  "rows.jsonl": "712f29714b9bec4c9bd75b2a4ed7e9d40a4ea7f7a82c5f1d4ea34d7b5bb4e635",
+  "started.json": "3f6d392f379551f7fd6f6d76834c8d350a0d4604314761d7fc1a2608c771a001"
+ }
+}

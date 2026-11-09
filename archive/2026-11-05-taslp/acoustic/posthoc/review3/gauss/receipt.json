@@ -1,0 +1,14 @@
+{
+ "tasks": 3072,
+ "errors": 0,
+ "elapsed_seconds": 14018,
+ "machine": "laptop (20 workers)",
+ "gate": {
+  "max_rel_orders_0_5": 0.0
+ },
+ "outputs": {
+  "known-answer.json": "82576c7ea2d6a6ad0904beee9583b33642f752f63ba1a66650f3e40cc94d6709",
+  "rows.jsonl": "67cde4f5d2798e866f31dfa39ddc558615d814701858ff324b273c3fad87989e",
+  "started.json": "a2d8fe12df02c93c189f81452dde41653eb423eb6e67a15903c88e1ff8278903"
+ }
+}

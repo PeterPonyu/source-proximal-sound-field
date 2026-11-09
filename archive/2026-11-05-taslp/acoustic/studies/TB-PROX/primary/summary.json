@@ -1,0 +1,194 @@
+{
+ "study": "TB-PROX",
+ "n_rows": 256,
+ "n_errors": 128,
+ "registered_rows": {
+  "mesh": {
+   "rows_sha256_matches_receipt": true,
+   "protocol_commit": "f4d1e18f4fa760edc45437b580d787456ffa2357"
+  }
+ },
+ "arms": {
+  "MeshRIR": {
+   "problems": 128,
+   "nonfinite": {
+    "j_cv_ext": 0,
+    "mo26_cap5": 0,
+    "gsmf": 0,
+    "mo26_prox": 0,
+    "gsmf_prox": 128
+   },
+   "pooled": {
+    "j_cv_ext-vs-mo26_prox": {
+     "mean": -10.974880065400239,
+     "low": -11.399983618572103,
+     "high": -10.549776512228375,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "j_cv_ext-vs-gsmf_prox": {
+     "mean": null,
+     "low": null,
+     "high": null,
+     "units": 0,
+     "problems_left_out": 128
+    },
+    "mo26_prox-vs-mo26_cap5": {
+     "mean": 9.409108016826899,
+     "low": 8.89611585782018,
+     "high": 9.922100175833618,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "gsmf_prox-vs-gsmf": {
+     "mean": null,
+     "low": null,
+     "high": null,
+     "units": 0,
+     "problems_left_out": 128
+    }
+   },
+   "cells": {
+    "(1000.0, 24)": {
+     "j_cv_ext-vs-mo26_prox": {
+      "mean": -9.787374610124921,
+      "low": -10.89681443240039,
+      "high": -8.677934787849452,
+      "units": 32,
+      "cls": "win"
+     },
+     "j_cv_ext-vs-gsmf_prox": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     },
+     "mo26_prox-vs-mo26_cap5": {
+      "mean": 8.60384310471358,
+      "low": 7.505774102798057,
+      "high": 9.701912106629102,
+      "units": 32,
+      "cls": "loss"
+     },
+     "gsmf_prox-vs-gsmf": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     }
+    },
+    "(125.0, 24)": {
+     "j_cv_ext-vs-mo26_prox": {
+      "mean": -7.55944889988103,
+      "low": -8.483866544180826,
+      "high": -6.635031255581234,
+      "units": 32,
+      "cls": "win"
+     },
+     "j_cv_ext-vs-gsmf_prox": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     },
+     "mo26_prox-vs-mo26_cap5": {
+      "mean": 6.466400486663423,
+      "low": 5.356687759698609,
+      "high": 7.576113213628236,
+      "units": 32,
+      "cls": "loss"
+     },
+     "gsmf_prox-vs-gsmf": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     }
+    },
+    "(250.0, 24)": {
+     "j_cv_ext-vs-mo26_prox": {
+      "mean": -14.130134484672276,
+      "low": -15.02970801380674,
+      "high": -13.230560955537811,
+      "units": 32,
+      "cls": "win"
+     },
+     "j_cv_ext-vs-gsmf_prox": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     },
+     "mo26_prox-vs-mo26_cap5": {
+      "mean": 12.040685186703357,
+      "low": 10.849125213518215,
+      "high": 13.232245159888498,
+      "units": 32,
+      "cls": "loss"
+     },
+     "gsmf_prox-vs-gsmf": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     }
+    },
+    "(500.0, 24)": {
+     "j_cv_ext-vs-mo26_prox": {
+      "mean": -12.422562266922725,
+      "low": -13.613079624345653,
+      "high": -11.232044909499797,
+      "units": 32,
+      "cls": "win"
+     },
+     "j_cv_ext-vs-gsmf_prox": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     },
+     "mo26_prox-vs-mo26_cap5": {
+      "mean": 10.525503289227242,
+      "low": 9.175272699357466,
+      "high": 11.875733879097018,
+      "units": 32,
+      "cls": "loss"
+     },
+     "gsmf_prox-vs-gsmf": {
+      "mean": null,
+      "low": null,
+      "high": null,
+      "units": 0,
+      "cls": "undefined"
+     }
+    }
+   },
+   "rules": {
+    "primary_vs_mo26_prox": {
+     "rule": "j_cv_ext pooled superior to mo26_prox (upper bound < 0)",
+     "passed": true
+    },
+    "primary_vs_gsmf_prox": {
+     "rule": "j_cv_ext pooled superior to gsmf_prox (upper bound < 0)",
+     "passed": false
+    }
+   },
+   "stronger_reading": {
+    "mo26_prox": "registered stronger",
+    "gsmf_prox": "indistinguishable"
+   },
+   "report_against_prox": [],
+   "stop": {
+    "rule": "ask the user before any manuscript work if j_cv_ext shows a pooled loss to either variant (lower bound > 0)",
+    "triggered": false
+   }
+  }
+ }
+}

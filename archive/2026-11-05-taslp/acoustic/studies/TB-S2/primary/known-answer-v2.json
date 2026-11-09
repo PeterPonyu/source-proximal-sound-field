@@ -1,0 +1,91 @@
+{
+ "passed": true,
+ "n": 12,
+ "tests": [
+  {
+   "test": "joint evidence gradient equals finite differences (K = 1, three bins)",
+   "value": 1.638400137216255e-10,
+   "tolerance": 0.0001,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "joint region evidence gradient equals finite differences (J = 2, three bins)",
+   "value": 6.762912235785765e-10,
+   "tolerance": 0.0001,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "exact recovery of a point-source band (K = 1): worst-bin NMSE",
+   "value": 1.5436694298188556e-13,
+   "tolerance": 1e-08,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "exact recovery: localisation error (m)",
+   "value": 1.7530622254218932e-07,
+   "tolerance": 0.0001,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "two sources, reverberant remainder, 30 dB: Schwarz order selects K = 2",
+   "value": 0.0,
+   "tolerance": 0.0,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "same field: Laplace-selected order predicts within 5% of K = 2 (ratio - 1)",
+   "value": -0.0007911452341639036,
+   "tolerance": 0.05,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "same field: K = 2 mean NMSE within 20% of point sources at the true positions (ratio - 1)",
+   "value": 0.004585328978162773,
+   "tolerance": 0.2,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "extension of the two points: mean NMSE within 20% of the true-position reference (ratio - 1)",
+   "value": 0.005557788369494832,
+   "tolerance": 0.2,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "group-sparse multi-frequency region kernel: mean NMSE within a factor 2 of the true-position reference (ratio - 1)",
+   "value": 0.6956339847828785,
+   "tolerance": 1.0,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "remainder family for a noisy plane wave is sinc (0 = sinc)",
+   "value": 0.0,
+   "tolerance": 0.0,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "remainder family for a smooth Gaussian-process field at 125 Hz is Gaussian or sum (0 = yes)",
+   "value": 0.0,
+   "tolerance": 0.0,
+   "relation": "<=",
+   "passed": true
+  },
+  {
+   "test": "common-domain sparse dictionary covers a source 0.6 m beside the region at 1 kHz (nearest node, m)",
+   "value": 0.11614140366035067,
+   "tolerance": 0.25,
+   "relation": "<=",
+   "passed": true
+  }
+ ],
+ "wall_seconds": 16.531943321228027
+}

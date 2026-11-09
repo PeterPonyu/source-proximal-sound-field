@@ -1,0 +1,70 @@
+rows 232 errors 0
+problems 18
+gsmf grid: (sigma2, zeta): n, mean dB, mean (gsmf_prox - registered gsmf)
+   (0.01, 0.001) 18 -6.74 8.1 6.64
+   (0.01, 0.01) 18 -6.67 8.17 7.35
+   (0.01, 0.1) 18 -6.94 7.9 7.52
+   (0.01, 1.0) 18 -6.72 8.12 7.65
+   (0.01, 10.0) 18 -5.42 9.42 8.51
+   (0.01, 100.0) 18 -1.08 13.75 11.24
+   (0.0592, 0.001) 18 -9.42 5.42 5.16
+   (0.0592, 0.01) 18 -9.4 5.43 6.1
+   (0.0592, 0.1) 18 -9.57 5.27 5.68
+   (0.0592, 1.0) 18 -9.15 5.69 5.74
+   (0.0592, 10.0) 18 -8.48 6.35 6.1
+   (0.0592, 100.0) 18 -5.74 9.09 9.78
+best gsmf (0.0592, 0.1)
+mo26 rows 16
+('meas', 'S4', 1000.0, 48) {'j_cv_ext': -3.3, 'gsmf': -3.4, 'mo26_cap5': -3.1, 'sinc_ev': -1.0, 'gsmf_prox': -1.3, 'mo26_prox': 1.5}
+('meas', 'S4', 125.0, 48) {'j_cv_ext': -24.2, 'gsmf': -24.2, 'mo26_cap5': -23.4, 'sinc_ev': -22.5, 'gsmf_prox': -18.2, 'mo26_prox': nan}
+('meas', 'S4', 250.0, 48) {'j_cv_ext': -19.3, 'gsmf': -18.9, 'mo26_cap5': -16.8, 'sinc_ev': -17.1, 'gsmf_prox': -10.9, 'mo26_prox': -3.7}
+('meas', 'S4', 500.0, 48) {'j_cv_ext': -6.1, 'gsmf': -6.2, 'mo26_cap5': -5.7, 'sinc_ev': -4.7, 'gsmf_prox': -3.1, 'mo26_prox': -0.2}
+('meas', 'S7', 1000.0, 48) {'j_cv_ext': -5.0, 'gsmf': -4.6, 'mo26_cap5': -4.0, 'sinc_ev': -1.0, 'gsmf_prox': -2.8, 'mo26_prox': 0.3}
+('meas', 'S7', 125.0, 48) {'j_cv_ext': -25.0, 'gsmf': -24.1, 'mo26_cap5': -21.5, 'sinc_ev': -21.9, 'gsmf_prox': -16.0, 'mo26_prox': -11.6}
+('meas', 'S7', 250.0, 48) {'j_cv_ext': -20.0, 'gsmf': -18.8, 'mo26_cap5': -17.6, 'sinc_ev': -18.6, 'gsmf_prox': -12.5, 'mo26_prox': -4.6}
+('meas', 'S7', 500.0, 48) {'j_cv_ext': -9.2, 'gsmf': -8.2, 'mo26_cap5': -8.3, 'sinc_ev': -5.4, 'gsmf_prox': -5.7, 'mo26_prox': -2.4}
+('meas', 'S8', 1000.0, 48) {'j_cv_ext': -5.4, 'gsmf': -5.4, 'mo26_cap5': -4.7, 'sinc_ev': -1.0, 'gsmf_prox': -3.2, 'mo26_prox': 2.2}
+('meas', 'S8', 125.0, 48) {'j_cv_ext': -22.6, 'gsmf': -19.0, 'mo26_cap5': -21.2, 'sinc_ev': -20.7, 'gsmf_prox': -17.2, 'mo26_prox': -11.3}
+('meas', 'S8', 250.0, 48) {'j_cv_ext': -19.6, 'gsmf': -19.0, 'mo26_cap5': -17.6, 'sinc_ev': -17.1, 'gsmf_prox': -10.3, 'mo26_prox': nan}
+('meas', 'S8', 500.0, 48) {'j_cv_ext': -10.8, 'gsmf': -9.4, 'mo26_cap5': -9.2, 'sinc_ev': -5.5, 'gsmf_prox': -6.2, 'mo26_prox': -3.4}
+('sim', 'A2-f1000-M24', 400920) {'j_cv_ext': -7.6, 'gsmf': -7.6, 'mo26_cap5': -4.3, 'sinc_ev': -0.2, 'gsmf_prox': -1.5, 'mo26_prox': -0.1}
+('sim', 'A2-f1000-M24', 400921) {'j_cv_ext': -7.4, 'gsmf': -6.0, 'mo26_cap5': -5.7, 'sinc_ev': -0.3, 'gsmf_prox': -4.6, 'mo26_prox': -2.9}
+('sim', 'A2-f125-M24', 400920) {'j_cv_ext': -26.3, 'gsmf': -21.5, 'mo26_cap5': -21.5, 'sinc_ev': -13.6, 'gsmf_prox': -16.2, 'mo26_prox': -9.8}
+('sim', 'A2-f125-M24', 400921) {'j_cv_ext': -25.2, 'gsmf': -24.6, 'mo26_cap5': -20.9, 'sinc_ev': -10.5, 'gsmf_prox': -16.2, 'mo26_prox': -9.1}
+('sim', 'A2-f250-M48', 400920) {'j_cv_ext': -23.3, 'gsmf': -22.4, 'mo26_cap5': -18.1, 'sinc_ev': -12.9, 'gsmf_prox': -12.4, 'mo26_prox': -7.0}
+('sim', 'A2-f250-M48', 400921) {'j_cv_ext': -25.0, 'gsmf': -23.6, 'mo26_cap5': -20.8, 'sinc_ev': -12.9, 'gsmf_prox': -14.1, 'mo26_prox': -5.7}
+j_cv_ext - gsmf_prox: median, mean, n, count<0 = (-6.07, -6.28, 18, 18)
+j_cv_ext - mo26_prox: median, mean, n, count<0 = (-9.42, -10.85, 16, 16)
+gsmf_prox - gsmf: median, mean, n, count<0 = (5.68, 5.27, 18, 0)
+mo26_prox - mo26_cap5: median, mean, n, count<0 = (8.43, 8.49, 16, 0)
+gsmf_prox - sinc_ev: median, mean, n, count<0 = (-0.3, 0.82, 18, 10)
+mo26_prox - sinc_ev: median, mean, n, count<0 = (3.52, 4.97, 16, 1)
+j_cv_ext - gsmf: median, mean, n, count<0 = (-0.74, -1.01, 18, 15)
+j_cv_ext - mo26_cap5: median, mean, n, count<0 = (-1.83, -2.26, 18, 18)
+mo26 stage-1 iterations: median 2000.0 min 2000 max 2000 fraction at 2000: 1.0 fraction stopped early: 0.0
+mo26 stage-2 iterations: median 19.0 max 101 ; active regions after stage 1: median 284.5 max 1563
+mo26 M 24 fit_s median 3385.45 max 5074.3 prepare median 263.25
+mo26 M 48 fit_s median 4796.049999999999 max 6553.3 prepare median 435.15
+gsmf M 24 fit_s median 175.7 prepare median 258.65 iters {2000}
+gsmf M 48 fit_s median 1225.4 prepare median 394.65 iters {2000}
+--- spread and power
+j_cv_ext - gsmf_prox: mean -6.28, per-problem SD 3.18; measured per-loudspeaker means [-4.87 -5.56 -5.38] (SD 0.36)
+     n=32: 95% half-width about 0.36 dB (SD 1.00); effect/half-width 17.4
+     n=16: 95% half-width about 0.53 dB (SD 1.00); effect/half-width 11.8
+     n=8: 95% half-width about 0.84 dB (SD 1.00); effect/half-width 7.5
+     n=6: 95% half-width about 1.05 dB (SD 1.00); effect/half-width 6.0
+j_cv_ext - mo26_prox: mean -10.85, per-problem SD 5.10; measured per-loudspeaker means [ -8.77 -10.22  -8.75] (SD 0.84)
+     n=32: 95% half-width about 0.36 dB (SD 1.00); effect/half-width 30.1
+     n=16: 95% half-width about 0.53 dB (SD 1.00); effect/half-width 20.4
+     n=8: 95% half-width about 0.84 dB (SD 1.00); effect/half-width 13.0
+     n=6: 95% half-width about 1.05 dB (SD 1.00); effect/half-width 10.3
+gsmf_prox - gsmf: mean +5.27, per-problem SD 3.03; measured per-loudspeaker means [4.84 4.71 3.98] (SD 0.46)
+     n=32: 95% half-width about 0.36 dB (SD 1.00); effect/half-width 14.6
+     n=16: 95% half-width about 0.53 dB (SD 1.00); effect/half-width 9.9
+     n=8: 95% half-width about 0.84 dB (SD 1.00); effect/half-width 6.3
+     n=6: 95% half-width about 1.05 dB (SD 1.00); effect/half-width 5.0
+mo26_prox - mo26_cap5: mean +8.49, per-problem SD 3.89; measured per-loudspeaker means [7.74 8.26 7.54] (SD 0.37)
+     n=32: 95% half-width about 0.36 dB (SD 1.00); effect/half-width 23.5
+     n=16: 95% half-width about 0.53 dB (SD 1.00); effect/half-width 15.9
+     n=8: 95% half-width about 0.84 dB (SD 1.00); effect/half-width 10.1
+     n=6: 95% half-width about 1.05 dB (SD 1.00); effect/half-width 8.1

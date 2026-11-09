@@ -1,0 +1,196 @@
+{
+ "note": "post hoc descriptive, not a registered rule",
+ "problems": 128,
+ "pooled": {
+  "mo26_prox-vs-sinc_ev": {
+   "mean": 8.408481338474557,
+   "low": 7.88117365608641,
+   "high": 8.935789020862703,
+   "units": 32,
+   "problems_left_out": 0,
+   "loudspeakers_favouring_first": 0
+  },
+  "mo26_cap5-vs-sinc_ev": {
+   "mean": -1.000626678352343,
+   "low": -1.2754362255289688,
+   "high": -0.7258171311757172,
+   "units": 32,
+   "problems_left_out": 0,
+   "loudspeakers_favouring_first": 30
+  },
+  "j_cv_ext-vs-sinc_ev": {
+   "mean": -2.5663987269256814,
+   "low": -2.8031657879904177,
+   "high": -2.329631665860945,
+   "units": 32,
+   "problems_left_out": 0,
+   "loudspeakers_favouring_first": 32
+  },
+  "gsmf_prox-vs-sinc_ev": {
+   "mean": 3.3673099953682044,
+   "low": 2.9973734144685635,
+   "high": 3.7372465762678453,
+   "units": 32,
+   "problems_left_out": 0,
+   "loudspeakers_favouring_first": 0
+  },
+  "gsmf-vs-sinc_ev": {
+   "mean": -1.8309677154655324,
+   "low": -2.1488401441451446,
+   "high": -1.5130952867859202,
+   "units": 32,
+   "problems_left_out": 0,
+   "loudspeakers_favouring_first": 31
+  }
+ },
+ "bands": {
+  "125.0": {
+   "mo26_prox-vs-sinc_ev": {
+    "mean": 7.438337978599725,
+    "low": 6.503654148251062,
+    "high": 8.373021808948387,
+    "units": 32,
+    "cls": "loss"
+   },
+   "mo26_cap5-vs-sinc_ev": {
+    "mean": 0.9719374919363027,
+    "low": 0.05997333232424695,
+    "high": 1.8839016515483586,
+    "units": 32,
+    "cls": "loss"
+   },
+   "j_cv_ext-vs-sinc_ev": {
+    "mean": -0.12111092128130607,
+    "low": -0.28810090076639405,
+    "high": 0.04587905820378188,
+    "units": 32,
+    "cls": "tie"
+   },
+   "gsmf_prox-vs-sinc_ev": {
+    "mean": 6.92944446375078,
+    "low": 6.489042462022672,
+    "high": 7.369846465478888,
+    "units": 32,
+    "cls": "loss"
+   },
+   "gsmf-vs-sinc_ev": {
+    "mean": 0.3295559694841826,
+    "low": -0.22010223041971594,
+    "high": 0.8792141693880811,
+    "units": 32,
+    "cls": "tie"
+   }
+  },
+  "250.0": {
+   "mo26_prox-vs-sinc_ev": {
+    "mean": 12.479251835851244,
+    "low": 11.326429781229631,
+    "high": 13.632073890472856,
+    "units": 32,
+    "cls": "loss"
+   },
+   "mo26_cap5-vs-sinc_ev": {
+    "mean": 0.4385666491478891,
+    "low": -0.5256305669346696,
+    "high": 1.402763865230448,
+    "units": 32,
+    "cls": "tie"
+   },
+   "j_cv_ext-vs-sinc_ev": {
+    "mean": -1.6508826488210304,
+    "low": -2.1895007081440943,
+    "high": -1.1122645894979666,
+    "units": 32,
+    "cls": "win"
+   },
+   "gsmf_prox-vs-sinc_ev": {
+    "mean": 4.724436336277899,
+    "low": 3.9006997893064685,
+    "high": 5.548172883249329,
+    "units": 32,
+    "cls": "loss"
+   },
+   "gsmf-vs-sinc_ev": {
+    "mean": -0.789719288813775,
+    "low": -1.8349810489191962,
+    "high": 0.2555424712916463,
+    "units": 32,
+    "cls": "tie"
+   }
+  },
+  "500.0": {
+   "mo26_prox-vs-sinc_ev": {
+    "mean": 8.60186767943786,
+    "low": 7.376073129725804,
+    "high": 9.827662229149913,
+    "units": 32,
+    "cls": "loss"
+   },
+   "mo26_cap5-vs-sinc_ev": {
+    "mean": -1.923635609789382,
+    "low": -2.6534967195737904,
+    "high": -1.1937745000049738,
+    "units": 32,
+    "cls": "win"
+   },
+   "j_cv_ext-vs-sinc_ev": {
+    "mean": -3.8206945874848657,
+    "low": -4.475717886584607,
+    "high": -3.165671288385124,
+    "units": 32,
+    "cls": "win"
+   },
+   "gsmf_prox-vs-sinc_ev": {
+    "mean": 2.6202375010240875,
+    "low": 1.8139929813069795,
+    "high": 3.4264820207411955,
+    "units": 32,
+    "cls": "loss"
+   },
+   "gsmf-vs-sinc_ev": {
+    "mean": -2.983630445633946,
+    "low": -3.6007492023573224,
+    "high": -2.3665116889105695,
+    "units": 32,
+    "cls": "win"
+   }
+  },
+  "1000.0": {
+   "mo26_prox-vs-sinc_ev": {
+    "mean": 5.114467860009398,
+    "low": 4.0615337184110745,
+    "high": 6.167402001607722,
+    "units": 32,
+    "cls": "loss"
+   },
+   "mo26_cap5-vs-sinc_ev": {
+    "mean": -3.4893752447041813,
+    "low": -3.9167684896529082,
+    "high": -3.0619819997554543,
+    "units": 32,
+    "cls": "win"
+   },
+   "j_cv_ext-vs-sinc_ev": {
+    "mean": -4.672906750115523,
+    "low": -5.082550081363991,
+    "high": -4.263263418867055,
+    "units": 32,
+    "cls": "win"
+   },
+   "gsmf_prox-vs-sinc_ev": {
+    "mean": -0.8048783195799496,
+    "low": -1.182240945927026,
+    "high": -0.42751569323287325,
+    "units": 32,
+    "cls": "win"
+   },
+   "gsmf-vs-sinc_ev": {
+    "mean": -3.880077096898591,
+    "low": -4.275397012035354,
+    "high": -3.484757181761828,
+    "units": 32,
+    "cls": "win"
+   }
+  }
+ }
+}

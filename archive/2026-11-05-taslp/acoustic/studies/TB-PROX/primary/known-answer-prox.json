@@ -1,0 +1,190 @@
+{
+ "checks": [
+  {
+   "name": "both papers' units recomputed from their set-ups",
+   "units": {
+    "icassp": {
+     "power": 0.016882665392922436,
+     "k0": 0.00974456414168371,
+     "S": 197
+    },
+    "jasa": {
+     "power": 0.006508893756468206,
+     "k0": 0.00727183823965446,
+     "S": 257
+    }
+   },
+   "transferred": {
+    "gsmf": {
+     "sigma2": 0.0591715976331361,
+     "k0_rel": 0.576923076923077
+    },
+    "mo26": {
+     "sigma2": 0.15363343063450607,
+     "k0_rel": 1.117222307574128
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "series kernel (eq. 13) converged and equal to a fine quadrature of eq. 12",
+   "max_rel_diff": {
+    "125Hz_rho0.37": {
+     "series_vs_order80": 1.385255766124171e-13,
+     "fine_quadrature_vs_order80": 6.691326654691328e-06
+    },
+    "250Hz_rho0.25": {
+     "series_vs_order80": 2.633458600598782e-13,
+     "fine_quadrature_vs_order80": 5.99660460172247e-06
+    },
+    "1000Hz_rho0.25": {
+     "series_vs_order80": 2.162977026291697e-11,
+     "fine_quadrature_vs_order80": 8.540723130448694e-06
+    },
+    "1400Hz_rho0.25": {
+     "series_vs_order80": 4.922626510165895e-13,
+     "fine_quadrature_vs_order80": 1.1470096634293244e-05
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "series kernel against a Monte Carlo integral (large k rho) and the 2025 quadrature (small k rho)",
+   "rel_frobenius": {
+    "1400Hz_rho0.37_krho9.49_monte_carlo": 0.00371818288168488,
+    "1000Hz_rho0.25_krho4.58_monte_carlo": 0.002862642308284738,
+    "125Hz_rho0.25_krho0.57_mo2025_quadrature": 0.0003709506072725852,
+    "250Hz_rho0.2_krho0.92_mo2025_quadrature": 0.00088723080282324
+   },
+   "passed": true
+  },
+  {
+   "name": "dense cubature for targets inside a ball against a Monte Carlo integral (about 1 %)",
+   "rel_frobenius": {
+    "180Hz_rho0.37_krho1.22": 0.0016082652409276157,
+    "350Hz_rho0.25_krho1.60": 0.0025125554371220192,
+    "700Hz_rho0.23_krho2.95": 0.0033746819852127664,
+    "1400Hz_rho0.23_krho5.90": 0.005857059779045919
+   },
+   "passed": true
+  },
+  {
+   "name": "NLML weight gradient (eq. 21) against finite differences",
+   "max_rel_err": 1.9979376377054883e-09,
+   "stack_vs_single": 1.939479807224432e-18,
+   "passed": true
+  },
+  {
+   "name": "refinement gradients (series, analytic) against finite differences",
+   "max_rel_err": {
+    "weights": 2.2050188447351624e-09,
+    "centres": 8.120854926868296e-11,
+    "radii": 3.1867238049652044e-10
+   },
+   "loss_consistent": true,
+   "passed": true
+  },
+  {
+   "name": "proximal operator (eq. 24)",
+   "one_bin_equals_soft_threshold": true,
+   "max_improvement_by_perturbation": 0.0,
+   "passed": true
+  },
+  {
+   "name": "no microphone inside any ball (start and after refinement, planar array)",
+   "details": {
+    "gsmf": {
+     "S": 2804,
+     "shrunk": 23,
+     "rho0": 0.14142135623730961,
+     "min_radius": 0.020710678118654735,
+     "start_clearance": 0.04999999999999999
+    },
+    "mo26": {
+     "S": 2804,
+     "shrunk": 63,
+     "rho0": 0.17320508075688787,
+     "min_radius": 0.020710678118654735,
+     "start_clearance": 0.04999999999999999,
+     "after_refinement_clearance": 0.43010945669598366,
+     "iterations": [
+      72,
+      101
+     ]
+    }
+   },
+   "passed": true
+  },
+  {
+   "name": "group step with one bin equals the per-bin l1 step",
+   "max_rel_diff": 0.0,
+   "nonzero": 1,
+   "passed": true
+  },
+  {
+   "name": "free-field monopole at a dictionary node (6 bins around 500 Hz, 48 microphones)",
+   "nmse_db": {
+    "gsmf_prox": -37.73985373938056,
+    "mo26_prox": -34.808361109553275,
+    "sinc": -4.898719475678634
+   },
+   "heaviest_region_distance_m": 0.01732050807568879,
+   "quarter_wavelength_m": 0.1715,
+   "gsmf_regions": 1,
+   "dictionary": 4893,
+   "delta": 0.20000000000000018,
+   "rho0_gsmf": 0.14142135623730961,
+   "rho0_mo26": 0.17320508075688787,
+   "mo26_regions": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "mo26_iterations": [
+    [
+     1752,
+     101
+    ],
+    [
+     1887,
+     101
+    ],
+    [
+     1917,
+     101
+    ],
+    [
+     2000,
+     101
+    ],
+    [
+     1875,
+     101
+    ],
+    [
+     1364,
+     101
+    ]
+   ],
+   "gsmf_iterations": 2000,
+   "process_seconds": 578.4,
+   "passed": true
+  },
+  {
+   "name": "non-zero regions do not grow with zeta where the step converges, and stay sparse (three sources)",
+   "nonzero_regions": {
+    "0.001": 4,
+    "0.1": 4,
+    "1": 4,
+    "100": 6,
+    "1000": 317
+   },
+   "passed": true
+  }
+ ],
+ "fast": false,
+ "passed": true
+}

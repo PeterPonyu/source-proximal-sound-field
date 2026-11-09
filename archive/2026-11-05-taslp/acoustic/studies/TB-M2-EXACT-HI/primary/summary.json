@@ -1,0 +1,2226 @@
+{
+ "study": "TB-M2-EXACT-HI",
+ "n_rows": 512,
+ "n_errors": 0,
+ "problems": 512,
+ "registered_rows": {
+  "protocol_commit": "f4d1e18f4fa760edc45437b580d787456ffa2357",
+  "status": "complete"
+ },
+ "tb_m2_exact_rows": {
+  "protocol_commit": "bf0b0117f6dd72891ac2f01255cd8a90c4731363",
+  "status": "complete"
+ },
+ "family_n": 16,
+ "cubature_reproduces_registered": {
+  "hi": "512/512",
+  "tb_m2_exact_gsmf": "512/512"
+ },
+ "part_a": {
+  "cells": [
+   "125Hz-M96",
+   "125Hz-M192",
+   "250Hz-M96",
+   "250Hz-M192",
+   "500Hz-M96",
+   "500Hz-M192",
+   "1000Hz-M96",
+   "1000Hz-M192"
+  ],
+  "rule_kx_gsmf": {
+   "rule": "robust to the kernel: no registered cell win of j_cv_ext becomes a tie or loss with the exact kernel, no cell loss to the exact gsmf, and a registered pooled win (defined, upper bound < 0) stays a pooled win",
+   "as_registered": {
+    "registered": {
+     "win": 1,
+     "tie": 7,
+     "loss": 0
+    },
+    "exact": {
+     "win": 1,
+     "tie": 7,
+     "loss": 0
+    },
+    "wins_lost": [],
+    "cells_lost_by_primary": [],
+    "pooled_registered": {
+     "mean": -0.06770524716187334,
+     "low": -0.08554908244731349,
+     "high": -0.0498614118764332,
+     "units": 32,
+     "finite_only": {
+      "mean": -0.06770524716187334,
+      "low": -0.08554908244731349,
+      "high": -0.0498614118764332,
+      "units": 32,
+      "problems_left_out": 0
+     }
+    },
+    "pooled_exact": {
+     "mean": -0.06426061305099609,
+     "low": -0.08178476442704466,
+     "high": -0.046736461674947515,
+     "units": 32,
+     "finite_only": {
+      "mean": -0.06426061305099609,
+      "low": -0.08178476442704466,
+      "high": -0.046736461674947515,
+      "units": 32,
+      "problems_left_out": 0
+     }
+    },
+    "non_inferior_exact": "8/8",
+    "robust_to_kernel": true
+   },
+   "finite_only": {
+    "registered": {
+     "win": 1,
+     "tie": 7,
+     "loss": 0
+    },
+    "exact": {
+     "win": 1,
+     "tie": 7,
+     "loss": 0
+    },
+    "wins_lost": [],
+    "cells_lost_by_primary": [],
+    "pooled_registered": {
+     "mean": -0.06770524716187334,
+     "low": -0.08554908244731349,
+     "high": -0.0498614118764332,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "pooled_exact": {
+     "mean": -0.06426061305099609,
+     "low": -0.08178476442704466,
+     "high": -0.046736461674947515,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "non_inferior_exact": "8/8",
+    "robust_to_kernel": true
+   }
+  },
+  "pooled": {
+   "j_cv_ext-vs-gsmf": {
+    "mean": -0.06770524716187334,
+    "low": -0.08554908244731349,
+    "high": -0.0498614118764332,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.06770524716187334,
+     "low": -0.08554908244731349,
+     "high": -0.0498614118764332,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "j_cv_ext-vs-gsmf_exact": {
+    "mean": -0.06426061305099609,
+    "low": -0.08178476442704466,
+    "high": -0.046736461674947515,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.06426061305099609,
+     "low": -0.08178476442704466,
+     "high": -0.046736461674947515,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "gsmf_exact-vs-gsmf": {
+    "mean": -0.0034446341108772417,
+    "low": -0.007294979843500658,
+    "high": 0.00040571162174617495,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.0034446341108772417,
+     "low": -0.007294979843500658,
+     "high": 0.00040571162174617495,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "gsmf_exact-vs-gsmf_cubature": {
+    "mean": -0.0034446341108772417,
+    "low": -0.007294979843500658,
+    "high": 0.00040571162174617495,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.0034446341108772417,
+     "low": -0.007294979843500658,
+     "high": 0.00040571162174617495,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   }
+  },
+  "cells_table": {
+   "125Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": 0.02159355232566914,
+      "low": -0.04741296987749485,
+      "high": 0.09060007452883312,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.02159355232566914,
+       "low": -0.04741296987749485,
+       "high": 0.09060007452883312,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": 0.02855839519435433,
+      "low": -0.03768062074349545,
+      "high": 0.0947974111322041,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.02855839519435433,
+       "low": -0.03768062074349545,
+       "high": 0.0947974111322041,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.006964842868685192,
+      "low": -0.021024843331757845,
+      "high": 0.007095157594387459,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.006964842868685192,
+       "low": -0.021024843331757845,
+       "high": 0.007095157594387459,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.006964842868685192,
+      "low": -0.021024843331757845,
+      "high": 0.007095157594387459,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.006964842868685192,
+       "low": -0.021024843331757845,
+       "high": 0.007095157594387459,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "125Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.007540265306194241,
+      "low": -0.02049425386129519,
+      "high": 0.0054137232489067065,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.007540265306194241,
+       "low": -0.02049425386129519,
+       "high": 0.0054137232489067065,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.006295350022611598,
+      "low": -0.019176406530065762,
+      "high": 0.006585706484842566,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.006295350022611598,
+       "low": -0.019176406530065762,
+       "high": 0.006585706484842566,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.0012449152835826427,
+      "low": -0.007688301160722503,
+      "high": 0.0051984705935572174,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0012449152835826427,
+       "low": -0.007688301160722503,
+       "high": 0.0051984705935572174,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.0012449152835826427,
+      "low": -0.007688301160722503,
+      "high": 0.0051984705935572174,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0012449152835826427,
+       "low": -0.007688301160722503,
+       "high": 0.0051984705935572174,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "250Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.05075939683882125,
+      "low": -0.08602283934858194,
+      "high": -0.015495954329060549,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.05075939683882125,
+       "low": -0.08602283934858194,
+       "high": -0.015495954329060549,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.047962262348676954,
+      "low": -0.08153091732882117,
+      "high": -0.014393607368532728,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.047962262348676954,
+       "low": -0.08153091732882117,
+       "high": -0.014393607368532728,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.002797134490144293,
+      "low": -0.009912301813136697,
+      "high": 0.004318032832848111,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.002797134490144293,
+       "low": -0.009912301813136697,
+       "high": 0.004318032832848111,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.002797134490144293,
+      "low": -0.009912301813136697,
+      "high": 0.004318032832848111,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.002797134490144293,
+       "low": -0.009912301813136697,
+       "high": 0.004318032832848111,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "250Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.019448131174837402,
+      "low": -0.03653510937001432,
+      "high": -0.0023611529796604865,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.019448131174837402,
+       "low": -0.03653510937001432,
+       "high": -0.0023611529796604865,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.016696675822006846,
+      "low": -0.03033694226229749,
+      "high": -0.0030564093817162,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.016696675822006846,
+       "low": -0.03033694226229749,
+       "high": -0.0030564093817162,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.0027514553528305563,
+      "low": -0.009582048068844953,
+      "high": 0.00407913736318384,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0027514553528305563,
+       "low": -0.009582048068844953,
+       "high": 0.00407913736318384,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.0027514553528305563,
+      "low": -0.009582048068844953,
+      "high": 0.00407913736318384,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0027514553528305563,
+       "low": -0.009582048068844953,
+       "high": 0.00407913736318384,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "500Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.07738538615060314,
+      "low": -0.17141108847682057,
+      "high": 0.01664031617561429,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.07738538615060314,
+       "low": -0.17141108847682057,
+       "high": 0.01664031617561429,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.0762744361042974,
+      "low": -0.1603101902322598,
+      "high": 0.007761318023665004,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0762744361042974,
+       "low": -0.1603101902322598,
+       "high": 0.007761318023665004,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.0011109500463057365,
+      "low": -0.020171554959615347,
+      "high": 0.017949654867003874,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0011109500463057365,
+       "low": -0.020171554959615347,
+       "high": 0.017949654867003874,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.0011109500463057365,
+      "low": -0.020171554959615347,
+      "high": 0.017949654867003874,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0011109500463057365,
+       "low": -0.020171554959615347,
+       "high": 0.017949654867003874,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "500Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.018665781439766826,
+      "low": -0.0401606240368481,
+      "high": 0.0028290611573144504,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.018665781439766826,
+       "low": -0.0401606240368481,
+       "high": 0.0028290611573144504,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.018923616124210063,
+      "low": -0.040943738497346296,
+      "high": 0.00309650624892617,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.018923616124210063,
+       "low": -0.040943738497346296,
+       "high": 0.00309650624892617,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.00025783468444323665,
+      "low": -0.006561923841626333,
+      "high": 0.007077593210512806,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.00025783468444323665,
+       "low": -0.006561923841626333,
+       "high": 0.007077593210512806,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.00025783468444323665,
+      "low": -0.006561923841626333,
+      "high": 0.007077593210512806,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.00025783468444323665,
+       "low": -0.006561923841626333,
+       "high": 0.007077593210512806,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "1000Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.33698152481700083,
+      "low": -0.4865779601452299,
+      "high": -0.18738508948877172,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.33698152481700083,
+       "low": -0.4865779601452299,
+       "high": -0.18738508948877172,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.3228131695069166,
+      "low": -0.4710883818884797,
+      "high": -0.17453795712535347,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.3228131695069166,
+       "low": -0.4710883818884797,
+       "high": -0.17453795712535347,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.014168355310084285,
+      "low": -0.04585496819853417,
+      "high": 0.0175182575783656,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.014168355310084285,
+       "low": -0.04585496819853417,
+       "high": 0.0175182575783656,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.014168355310084285,
+      "low": -0.04585496819853417,
+      "high": 0.0175182575783656,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.014168355310084285,
+       "low": -0.04585496819853417,
+       "high": 0.0175182575783656,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "1000Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.05245504389343217,
+      "low": -0.0895349662261211,
+      "high": -0.015375121560743235,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.05245504389343217,
+       "low": -0.0895349662261211,
+       "high": -0.015375121560743235,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.053677789673603704,
+      "low": -0.09270337597957655,
+      "high": -0.014652203367630859,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.053677789673603704,
+       "low": -0.09270337597957655,
+       "high": -0.014652203367630859,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.0012227457801715358,
+      "low": -0.018184807383091715,
+      "high": 0.020630298943434787,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.0012227457801715358,
+       "low": -0.018184807383091715,
+       "high": 0.020630298943434787,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.0012227457801715358,
+      "low": -0.018184807383091715,
+      "high": 0.020630298943434787,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.0012227457801715358,
+       "low": -0.018184807383091715,
+       "high": 0.020630298943434787,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   }
+  }
+ },
+ "part_b": {
+  "cells": [
+   "125Hz-M24",
+   "125Hz-M48",
+   "125Hz-M96",
+   "125Hz-M192",
+   "250Hz-M24",
+   "250Hz-M48",
+   "250Hz-M96",
+   "250Hz-M192",
+   "500Hz-M24",
+   "500Hz-M48",
+   "500Hz-M96",
+   "500Hz-M192",
+   "1000Hz-M24",
+   "1000Hz-M48",
+   "1000Hz-M96",
+   "1000Hz-M192"
+  ],
+  "problems": 1024,
+  "complete": true,
+  "headline": {
+   "reading": "pooled j_cv_ext - gsmf_exact over the 16 MeshRIR cells, 32 loudspeakers; the paper uses it for the gsmf comparison, with the registered value (cubature) beside it",
+   "exact": {
+    "mean": -0.24471977109827941,
+    "low": -0.27815992562935765,
+    "high": -0.21127961656720115,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.24471977109827941,
+     "low": -0.27815992562935765,
+     "high": -0.21127961656720115,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "registered": {
+    "mean": -0.27303907311305564,
+    "low": -0.3127036393306116,
+    "high": -0.23337450689549966,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.27303907311305564,
+     "low": -0.3127036393306116,
+     "high": -0.23337450689549966,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   }
+  },
+  "rule_kx_gsmf": {
+   "rule": "robust to the kernel: no registered cell win of j_cv_ext becomes a tie or loss with the exact kernel, no cell loss to the exact gsmf, and a registered pooled win (defined, upper bound < 0) stays a pooled win",
+   "as_registered": {
+    "registered": {
+     "win": 6,
+     "tie": 10,
+     "loss": 0
+    },
+    "exact": {
+     "win": 6,
+     "tie": 10,
+     "loss": 0
+    },
+    "wins_lost": [],
+    "cells_lost_by_primary": [],
+    "pooled_registered": {
+     "mean": -0.27303907311305564,
+     "low": -0.3127036393306116,
+     "high": -0.23337450689549966,
+     "units": 32,
+     "finite_only": {
+      "mean": -0.27303907311305564,
+      "low": -0.3127036393306116,
+      "high": -0.23337450689549966,
+      "units": 32,
+      "problems_left_out": 0
+     }
+    },
+    "pooled_exact": {
+     "mean": -0.24471977109827941,
+     "low": -0.27815992562935765,
+     "high": -0.21127961656720115,
+     "units": 32,
+     "finite_only": {
+      "mean": -0.24471977109827941,
+      "low": -0.27815992562935765,
+      "high": -0.21127961656720115,
+      "units": 32,
+      "problems_left_out": 0
+     }
+    },
+    "non_inferior_exact": "16/16",
+    "robust_to_kernel": true
+   },
+   "finite_only": {
+    "registered": {
+     "win": 6,
+     "tie": 10,
+     "loss": 0
+    },
+    "exact": {
+     "win": 6,
+     "tie": 10,
+     "loss": 0
+    },
+    "wins_lost": [],
+    "cells_lost_by_primary": [],
+    "pooled_registered": {
+     "mean": -0.27303907311305564,
+     "low": -0.3127036393306116,
+     "high": -0.23337450689549966,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "pooled_exact": {
+     "mean": -0.24471977109827941,
+     "low": -0.27815992562935765,
+     "high": -0.21127961656720115,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "non_inferior_exact": "16/16",
+    "robust_to_kernel": true
+   }
+  },
+  "m2_gsmf_part_with_exact_kernel": {
+   "as_registered": {
+    "non_inferior": "16/16",
+    "pooled": {
+     "mean": -0.24471977109827941,
+     "low": -0.27815992562935765,
+     "high": -0.21127961656720115,
+     "units": 32,
+     "finite_only": {
+      "mean": -0.24471977109827941,
+      "low": -0.27815992562935765,
+      "high": -0.21127961656720115,
+      "units": 32,
+      "problems_left_out": 0
+     }
+    },
+    "passed": true
+   },
+   "finite_only": {
+    "non_inferior": "16/16",
+    "pooled": {
+     "mean": -0.24471977109827941,
+     "low": -0.27815992562935765,
+     "high": -0.21127961656720115,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "passed": true
+   }
+  },
+  "pooled": {
+   "j_cv_ext-vs-gsmf": {
+    "mean": -0.27303907311305564,
+    "low": -0.3127036393306116,
+    "high": -0.23337450689549966,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.27303907311305564,
+     "low": -0.3127036393306116,
+     "high": -0.23337450689549966,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "j_cv_ext-vs-gsmf_exact": {
+    "mean": -0.24471977109827941,
+    "low": -0.27815992562935765,
+    "high": -0.21127961656720115,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.24471977109827941,
+     "low": -0.27815992562935765,
+     "high": -0.21127961656720115,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "gsmf_exact-vs-gsmf": {
+    "mean": -0.028319302014776244,
+    "low": -0.05156120753780919,
+    "high": -0.005077396491743297,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.028319302014776244,
+     "low": -0.05156120753780919,
+     "high": -0.005077396491743297,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "gsmf_exact-vs-gsmf_cubature": {
+    "mean": -0.028319302014776244,
+    "low": -0.05156120753780919,
+    "high": -0.005077396491743297,
+    "units": 32,
+    "finite_only": {
+     "mean": -0.028319302014776244,
+     "low": -0.05156120753780919,
+     "high": -0.005077396491743297,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   }
+  },
+  "cells_table": {
+   "125Hz-M24": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.23456294473949313,
+      "low": -0.6140748024866807,
+      "high": 0.1449489130076944,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.23456294473949313,
+       "low": -0.6140748024866807,
+       "high": 0.1449489130076944,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.11336323824090139,
+      "low": -0.3358052489115281,
+      "high": 0.10907877242972527,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.11336323824090139,
+       "low": -0.3358052489115281,
+       "high": 0.10907877242972527,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.12119970649859177,
+      "low": -0.433716375653873,
+      "high": 0.19131696265668943,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.12119970649859177,
+       "low": -0.433716375653873,
+       "high": 0.19131696265668943,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.12119970649859177,
+      "low": -0.433716375653873,
+      "high": 0.19131696265668943,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.12119970649859177,
+       "low": -0.433716375653873,
+       "high": 0.19131696265668943,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "125Hz-M48": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.04374894901984473,
+      "low": -0.10319822340268715,
+      "high": 0.01570032536299769,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.04374894901984473,
+       "low": -0.10319822340268715,
+       "high": 0.01570032536299769,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.058136824727157387,
+      "low": -0.1297389106653844,
+      "high": 0.013465261211069633,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.058136824727157387,
+       "low": -0.1297389106653844,
+       "high": 0.013465261211069633,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.014387875707312654,
+      "low": -0.03584662703761633,
+      "high": 0.06462237845224164,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.014387875707312654,
+       "low": -0.03584662703761633,
+       "high": 0.06462237845224164,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.014387875707312654,
+      "low": -0.03584662703761633,
+      "high": 0.06462237845224164,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.014387875707312654,
+       "low": -0.03584662703761633,
+       "high": 0.06462237845224164,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "125Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": 0.02159355232566914,
+      "low": -0.04741296987749485,
+      "high": 0.09060007452883312,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.02159355232566914,
+       "low": -0.04741296987749485,
+       "high": 0.09060007452883312,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": 0.02855839519435433,
+      "low": -0.03768062074349545,
+      "high": 0.0947974111322041,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.02855839519435433,
+       "low": -0.03768062074349545,
+       "high": 0.0947974111322041,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.006964842868685192,
+      "low": -0.021024843331757845,
+      "high": 0.007095157594387459,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.006964842868685192,
+       "low": -0.021024843331757845,
+       "high": 0.007095157594387459,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.006964842868685192,
+      "low": -0.021024843331757845,
+      "high": 0.007095157594387459,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.006964842868685192,
+       "low": -0.021024843331757845,
+       "high": 0.007095157594387459,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "125Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.007540265306194241,
+      "low": -0.02049425386129519,
+      "high": 0.0054137232489067065,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.007540265306194241,
+       "low": -0.02049425386129519,
+       "high": 0.0054137232489067065,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.006295350022611598,
+      "low": -0.019176406530065762,
+      "high": 0.006585706484842566,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.006295350022611598,
+       "low": -0.019176406530065762,
+       "high": 0.006585706484842566,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.0012449152835826427,
+      "low": -0.007688301160722503,
+      "high": 0.0051984705935572174,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0012449152835826427,
+       "low": -0.007688301160722503,
+       "high": 0.0051984705935572174,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.0012449152835826427,
+      "low": -0.007688301160722503,
+      "high": 0.0051984705935572174,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0012449152835826427,
+       "low": -0.007688301160722503,
+       "high": 0.0051984705935572174,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "250Hz-M24": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.5674896342497343,
+      "low": -1.1146244121017654,
+      "high": -0.02035485639770318,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.5674896342497343,
+       "low": -1.1146244121017654,
+       "high": -0.02035485639770318,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.37266644547629857,
+      "low": -0.6749261581086894,
+      "high": -0.07040673284390775,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.37266644547629857,
+       "low": -0.6749261581086894,
+       "high": -0.07040673284390775,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.19482318877343574,
+      "low": -0.5939341615902769,
+      "high": 0.20428778404340547,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": false,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.19482318877343574,
+       "low": -0.5939341615902769,
+       "high": 0.20428778404340547,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": false
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.19482318877343574,
+      "low": -0.5939341615902769,
+      "high": 0.20428778404340547,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": false,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.19482318877343574,
+       "low": -0.5939341615902769,
+       "high": 0.20428778404340547,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": false
+      }
+     }
+    }
+   },
+   "250Hz-M48": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.12608559750157833,
+      "low": -0.37477633738205995,
+      "high": 0.1226051423789033,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.12608559750157833,
+       "low": -0.37477633738205995,
+       "high": 0.1226051423789033,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.059388887161662796,
+      "low": -0.1375561804202606,
+      "high": 0.018778406096935013,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.059388887161662796,
+       "low": -0.1375561804202606,
+       "high": 0.018778406096935013,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.06669671033991553,
+      "low": -0.2786819714812174,
+      "high": 0.1452885508013864,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.06669671033991553,
+       "low": -0.2786819714812174,
+       "high": 0.1452885508013864,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.06669671033991553,
+      "low": -0.2786819714812174,
+      "high": 0.1452885508013864,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.06669671033991553,
+       "low": -0.2786819714812174,
+       "high": 0.1452885508013864,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "250Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.05075939683882125,
+      "low": -0.08602283934858194,
+      "high": -0.015495954329060549,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.05075939683882125,
+       "low": -0.08602283934858194,
+       "high": -0.015495954329060549,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.047962262348676954,
+      "low": -0.08153091732882117,
+      "high": -0.014393607368532728,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.047962262348676954,
+       "low": -0.08153091732882117,
+       "high": -0.014393607368532728,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.002797134490144293,
+      "low": -0.009912301813136697,
+      "high": 0.004318032832848111,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.002797134490144293,
+       "low": -0.009912301813136697,
+       "high": 0.004318032832848111,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.002797134490144293,
+      "low": -0.009912301813136697,
+      "high": 0.004318032832848111,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.002797134490144293,
+       "low": -0.009912301813136697,
+       "high": 0.004318032832848111,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "250Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.019448131174837402,
+      "low": -0.03653510937001432,
+      "high": -0.0023611529796604865,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.019448131174837402,
+       "low": -0.03653510937001432,
+       "high": -0.0023611529796604865,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.016696675822006846,
+      "low": -0.03033694226229749,
+      "high": -0.0030564093817162,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.016696675822006846,
+       "low": -0.03033694226229749,
+       "high": -0.0030564093817162,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.0027514553528305563,
+      "low": -0.009582048068844953,
+      "high": 0.00407913736318384,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0027514553528305563,
+       "low": -0.009582048068844953,
+       "high": 0.00407913736318384,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.0027514553528305563,
+      "low": -0.009582048068844953,
+      "high": 0.00407913736318384,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0027514553528305563,
+       "low": -0.009582048068844953,
+       "high": 0.00407913736318384,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "500Hz-M24": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.8401353992796499,
+      "low": -1.2075312133771878,
+      "high": -0.472739585182112,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.8401353992796499,
+       "low": -1.2075312133771878,
+       "high": -0.472739585182112,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.8547031282193605,
+      "low": -1.159964734683831,
+      "high": -0.5494415217548897,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.8547031282193605,
+       "low": -1.159964734683831,
+       "high": -0.5494415217548897,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.014567728939710645,
+      "low": -0.2744650407453159,
+      "high": 0.3036004986247372,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": false,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.014567728939710645,
+       "low": -0.2744650407453159,
+       "high": 0.3036004986247372,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": false
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.014567728939710645,
+      "low": -0.2744650407453159,
+      "high": 0.3036004986247372,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": false,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.014567728939710645,
+       "low": -0.2744650407453159,
+       "high": 0.3036004986247372,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": false
+      }
+     }
+    }
+   },
+   "500Hz-M48": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.45302200944611193,
+      "low": -0.7512067175385075,
+      "high": -0.15483730135371632,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.45302200944611193,
+       "low": -0.7512067175385075,
+       "high": -0.15483730135371632,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.40458264721284287,
+      "low": -0.6721460892818001,
+      "high": -0.13701920514388566,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.40458264721284287,
+       "low": -0.6721460892818001,
+       "high": -0.13701920514388566,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.048439362233269,
+      "low": -0.14456107181108657,
+      "high": 0.047682347344548556,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.048439362233269,
+       "low": -0.14456107181108657,
+       "high": 0.047682347344548556,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.048439362233269,
+      "low": -0.14456107181108657,
+      "high": 0.047682347344548556,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.048439362233269,
+       "low": -0.14456107181108657,
+       "high": 0.047682347344548556,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "500Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.07738538615060314,
+      "low": -0.17141108847682057,
+      "high": 0.01664031617561429,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.07738538615060314,
+       "low": -0.17141108847682057,
+       "high": 0.01664031617561429,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.0762744361042974,
+      "low": -0.1603101902322598,
+      "high": 0.007761318023665004,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0762744361042974,
+       "low": -0.1603101902322598,
+       "high": 0.007761318023665004,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.0011109500463057365,
+      "low": -0.020171554959615347,
+      "high": 0.017949654867003874,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0011109500463057365,
+       "low": -0.020171554959615347,
+       "high": 0.017949654867003874,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.0011109500463057365,
+      "low": -0.020171554959615347,
+      "high": 0.017949654867003874,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.0011109500463057365,
+       "low": -0.020171554959615347,
+       "high": 0.017949654867003874,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "500Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.018665781439766826,
+      "low": -0.0401606240368481,
+      "high": 0.0028290611573144504,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.018665781439766826,
+       "low": -0.0401606240368481,
+       "high": 0.0028290611573144504,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.018923616124210063,
+      "low": -0.040943738497346296,
+      "high": 0.00309650624892617,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.018923616124210063,
+       "low": -0.040943738497346296,
+       "high": 0.00309650624892617,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.00025783468444323665,
+      "low": -0.006561923841626333,
+      "high": 0.007077593210512806,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.00025783468444323665,
+       "low": -0.006561923841626333,
+       "high": 0.007077593210512806,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.00025783468444323665,
+      "low": -0.006561923841626333,
+      "high": 0.007077593210512806,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.00025783468444323665,
+       "low": -0.006561923841626333,
+       "high": 0.007077593210512806,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "1000Hz-M24": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.8166449354030876,
+      "low": -1.090029270951093,
+      "high": -0.5432605998550822,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.8166449354030876,
+       "low": -1.090029270951093,
+       "high": -0.5432605998550822,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.788122397216011,
+      "low": -1.069629726419488,
+      "high": -0.5066150680125338,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.788122397216011,
+       "low": -1.069629726419488,
+       "high": -0.5066150680125338,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.028522538187076646,
+      "low": -0.08987904951034417,
+      "high": 0.03283397313619088,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.028522538187076646,
+       "low": -0.08987904951034417,
+       "high": 0.03283397313619088,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.028522538187076646,
+      "low": -0.08987904951034417,
+      "high": 0.03283397313619088,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.028522538187076646,
+       "low": -0.08987904951034417,
+       "high": 0.03283397313619088,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "1000Hz-M48": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.7452937228744039,
+      "low": -1.0033254178652309,
+      "high": -0.48726202788357686,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.7452937228744039,
+       "low": -1.0033254178652309,
+       "high": -0.48726202788357686,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.7504678649102673,
+      "low": -1.0124628522673247,
+      "high": -0.4884728775532099,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.7504678649102673,
+       "low": -1.0124628522673247,
+       "high": -0.4884728775532099,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.005174142035863347,
+      "low": -0.0466556233332746,
+      "high": 0.057003907405001296,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.005174142035863347,
+       "low": -0.0466556233332746,
+       "high": 0.057003907405001296,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.005174142035863347,
+      "low": -0.0466556233332746,
+      "high": 0.057003907405001296,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.005174142035863347,
+       "low": -0.0466556233332746,
+       "high": 0.057003907405001296,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "1000Hz-M96": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.33698152481700083,
+      "low": -0.4865779601452299,
+      "high": -0.18738508948877172,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.33698152481700083,
+       "low": -0.4865779601452299,
+       "high": -0.18738508948877172,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.3228131695069166,
+      "low": -0.4710883818884797,
+      "high": -0.17453795712535347,
+      "units": 32,
+      "cls": "win",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.3228131695069166,
+       "low": -0.4710883818884797,
+       "high": -0.17453795712535347,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "win",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": -0.014168355310084285,
+      "low": -0.04585496819853417,
+      "high": 0.0175182575783656,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.014168355310084285,
+       "low": -0.04585496819853417,
+       "high": 0.0175182575783656,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": -0.014168355310084285,
+      "low": -0.04585496819853417,
+      "high": 0.0175182575783656,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.014168355310084285,
+       "low": -0.04585496819853417,
+       "high": 0.0175182575783656,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   },
+   "1000Hz-M192": {
+    "n": 64,
+    "comparisons": {
+     "j_cv_ext-vs-gsmf": {
+      "mean": -0.05245504389343217,
+      "low": -0.0895349662261211,
+      "high": -0.015375121560743235,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.05245504389343217,
+       "low": -0.0895349662261211,
+       "high": -0.015375121560743235,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "j_cv_ext-vs-gsmf_exact": {
+      "mean": -0.053677789673603704,
+      "low": -0.09270337597957655,
+      "high": -0.014652203367630859,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": -0.053677789673603704,
+       "low": -0.09270337597957655,
+       "high": -0.014652203367630859,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf": {
+      "mean": 0.0012227457801715358,
+      "low": -0.018184807383091715,
+      "high": 0.020630298943434787,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.0012227457801715358,
+       "low": -0.018184807383091715,
+       "high": 0.020630298943434787,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     },
+     "gsmf_exact-vs-gsmf_cubature": {
+      "mean": 0.0012227457801715358,
+      "low": -0.018184807383091715,
+      "high": 0.020630298943434787,
+      "units": 32,
+      "cls": "tie",
+      "non_inferior": true,
+      "defined": true,
+      "finite_only": {
+       "mean": 0.0012227457801715358,
+       "low": -0.018184807383091715,
+       "high": 0.020630298943434787,
+       "units": 32,
+       "problems_left_out": 0,
+       "cls": "tie",
+       "non_inferior": true
+      }
+     }
+    }
+   }
+  }
+ },
+ "stop": {
+  "rule": "ask the user before any manuscript work if j_cv_ext loses a cell or shows a pooled loss to the exact gsmf, in either reading, in part A or part B",
+  "triggered": false
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "study": "TB-M2-RIB",
+ "rows": 48,
+ "errors": 0,
+ "R1": {
+  "rule": "primary pooled superior to the official adaptive kernel (95% Student-t over the 6 loudspeakers, upper bound < 0); per-cell intervals descriptive",
+  "per_cell": {
+   "1000Hz-M48": {
+    "mean": -2.0382213106136677,
+    "low": -4.4528166933287805,
+    "high": 0.376374072101445,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M48": {
+    "mean": -1.5114988544886536,
+    "low": -4.674345231029668,
+    "high": 1.6513475220523608,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M48": {
+    "mean": -0.6824515610038825,
+    "low": -2.1609231688463506,
+    "high": 0.7960200468385855,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M48": {
+    "mean": -0.07758830495233988,
+    "low": -0.6286915651053439,
+    "high": 0.47351495520066406,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M24": {
+    "mean": 0.15076967447068546,
+    "low": -0.8207345991297741,
+    "high": 1.122273948071145,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M24": {
+    "mean": -4.613943643655045,
+    "low": -11.619717010822926,
+    "high": 2.3918297235128367,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M24": {
+    "mean": -1.1730391851403514,
+    "low": -2.1758498436283773,
+    "high": -0.17022852665232535,
+    "units": 6,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "1000Hz-M24": {
+    "mean": -4.140042802989559,
+    "low": -6.77995808071606,
+    "high": -1.500127525263057,
+    "units": 6,
+    "cls": "win",
+    "non_inferior": true
+   }
+  },
+  "wins": 2,
+  "ties": 6,
+  "losses": 0,
+  "non_inferior": 2,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -1.7607519985466016,
+   "low": -2.6392611074257943,
+   "high": -0.8822428896674089
+  },
+  "passed": true
+ },
+ "R2_standin_vs_official": {
+  "wins": 0,
+  "ties": 8,
+  "losses": 0,
+  "non_inferior": 0,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -0.6319164873416979,
+   "low": -1.0782276918688274,
+   "high": -0.1856052828145684
+  }
+ },
+ "official_vs_sinc": {
+  "wins": 0,
+  "ties": 8,
+  "losses": 0,
+  "non_inferior": 0,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -0.46892539803560207,
+   "low": -0.8954391274842255,
+   "high": -0.0424116685869787
+  }
+ },
+ "fit_seconds": {
+  "median": 322.48649019699997,
+  "max": 625.948725905
+ }
+}

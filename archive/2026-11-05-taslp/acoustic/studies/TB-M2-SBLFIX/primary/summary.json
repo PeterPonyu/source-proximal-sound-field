@@ -1,0 +1,200 @@
+{
+ "study": "TB-M2-SBLFIX",
+ "rows": 1024,
+ "errors": 0,
+ "nonfinite_guarded": {
+  "sbl_em_guard": 0,
+  "sbl_mackay_guard": 0
+ },
+ "M1_corrected": {
+  "rule": "primary beats the best generic estimator, with the corrected sparse Bayesian comparators, in >= 12 of 16 MeshRIR cells and loses in none",
+  "best_generic": {
+   "125Hz-M192": "sbl_mackay_guard",
+   "250Hz-M192": "sbl_em_guard",
+   "1000Hz-M192": "adk_standin",
+   "500Hz-M192": "adk_standin",
+   "125Hz-M96": "sbl_mackay_guard",
+   "250Hz-M96": "sinc_ev",
+   "500Hz-M96": "adk_standin",
+   "1000Hz-M96": "adk_standin",
+   "125Hz-M48": "sbl_mackay_guard",
+   "250Hz-M48": "sinc_ev",
+   "500Hz-M48": "adk_standin",
+   "1000Hz-M48": "adk_standin",
+   "125Hz-M24": "adk_standin",
+   "250Hz-M24": "adk_standin",
+   "1000Hz-M24": "sbl_mackay_guard",
+   "500Hz-M24": "sbl_mackay_guard"
+  },
+  "wins": 13,
+  "ties": 3,
+  "losses": 0,
+  "non_inferior": 16,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -0.7225687382099818,
+   "low": -0.8017841236109109,
+   "high": -0.6433533528090527
+  },
+  "per_cell": {
+   "125Hz-M192": {
+    "mean": -0.045242551766511055,
+    "low": -0.07255965000855841,
+    "high": -0.01792545352446371,
+    "units": 32,
+    "cls": "tie",
+    "non_inferior": true
+   },
+   "250Hz-M192": {
+    "mean": -0.1497020196113959,
+    "low": -0.19955559981388887,
+    "high": -0.09984843940890292,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "1000Hz-M192": {
+    "mean": -0.212670742426354,
+    "low": -0.3030454689774965,
+    "high": -0.12229601587521147,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "500Hz-M192": {
+    "mean": -0.11867708932241694,
+    "low": -0.16145524117181462,
+    "high": -0.07589893747301926,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "125Hz-M96": {
+    "mean": -0.04121774530675484,
+    "low": -0.1136702811329037,
+    "high": 0.03123479051939402,
+    "units": 32,
+    "cls": "tie",
+    "non_inferior": true
+   },
+   "250Hz-M96": {
+    "mean": -0.347488237433167,
+    "low": -0.4484937134278075,
+    "high": -0.24648276143852646,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "500Hz-M96": {
+    "mean": -0.47000176521316145,
+    "low": -0.6543382290421406,
+    "high": -0.28566530138418234,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "1000Hz-M96": {
+    "mean": -0.7308973407750137,
+    "low": -0.9480904050466235,
+    "high": -0.5137042765034039,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "125Hz-M48": {
+    "mean": -0.14209596052290618,
+    "low": -0.2297247322203919,
+    "high": -0.05446718882542048,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "250Hz-M48": {
+    "mean": -0.6544974718286088,
+    "low": -0.8470094428715718,
+    "high": -0.46198550078564593,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "500Hz-M48": {
+    "mean": -1.162985882550236,
+    "low": -1.5453729813873396,
+    "high": -0.7805987837131323,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "1000Hz-M48": {
+    "mean": -1.37097225495573,
+    "low": -1.7395172736637317,
+    "high": -1.0024272362477282,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "125Hz-M24": {
+    "mean": -0.07843160516744323,
+    "low": -0.29078980183086256,
+    "high": 0.13392659149597608,
+    "units": 32,
+    "cls": "tie",
+    "non_inferior": true
+   },
+   "250Hz-M24": {
+    "mean": -1.5172379639353855,
+    "low": -1.9613019431813157,
+    "high": -1.0731739846894552,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "1000Hz-M24": {
+    "mean": -2.2503439969173664,
+    "low": -2.565367913907028,
+    "high": -1.9353200799277048,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "500Hz-M24": {
+    "mean": -2.268637183627258,
+    "low": -2.7286444485578754,
+    "high": -1.8086299186966404,
+    "units": 32,
+    "cls": "win",
+    "non_inferior": true
+   }
+  },
+  "passed": true
+ },
+ "pooled_vs_task_best_generic": {
+  "mean": -0.5960016755991888,
+  "low": -0.6755343299789871,
+  "high": -0.5164690212193905
+ },
+ "primary_vs_sbl_em_guard": {
+  "wins": 13,
+  "ties": 3,
+  "losses": 0,
+  "non_inferior": 16,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -1.2356699168841274,
+   "low": -1.3154863762244295,
+   "high": -1.1558534575438253
+  }
+ },
+ "primary_vs_sbl_mackay_guard": {
+  "wins": 13,
+  "ties": 3,
+  "losses": 0,
+  "non_inferior": 16,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -0.8833759785018681,
+   "low": -0.9429815154461855,
+   "high": -0.8237704415575507
+  }
+ }
+}

@@ -1,0 +1,509 @@
+{
+ "dataset": "MeshRIR v1.2, Zenodo 10852693, S32-M441_npy.zip",
+ "bytes_read_range": 122171,
+ "rule": "B0-setup/MESHRIR-QUALIFICATION.md",
+ "mic_count": 441,
+ "source_count": 32,
+ "mic_extent": [
+  [
+   -0.5,
+   -0.5,
+   0.0
+  ],
+  [
+   0.5,
+   0.5,
+   0.0
+  ]
+ ],
+ "mic_spacing_median_m": 0.04999999999999999,
+ "qualifying_per_band": {
+  "125": 32,
+  "250": 32,
+  "500": 0,
+  "1000": 0
+ },
+ "qualifies_for_full_download": true,
+ "sources": [
+  {
+   "source": 0,
+   "position": [
+    -0.7,
+    -1.0,
+    0.1
+   ],
+   "d_min_m": 0.5477225575051661,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 1,
+   "position": [
+    -0.2,
+    -1.0,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 2,
+   "position": [
+    0.3,
+    -1.0,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 3,
+   "position": [
+    0.8,
+    -1.0,
+    0.1
+   ],
+   "d_min_m": 0.5916079783099616,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 4,
+   "position": [
+    -0.95,
+    -1.0,
+    -0.1
+   ],
+   "d_min_m": 0.6800735254367721,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 5,
+   "position": [
+    -0.45,
+    -1.0,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 6,
+   "position": [
+    0.05,
+    -1.0,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 7,
+   "position": [
+    0.55,
+    -1.0,
+    -0.1
+   ],
+   "d_min_m": 0.51234753829798,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 8,
+   "position": [
+    1.0,
+    -0.7,
+    0.1
+   ],
+   "d_min_m": 0.5477225575051661,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 9,
+   "position": [
+    1.0,
+    -0.2,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 10,
+   "position": [
+    1.0,
+    0.3,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 11,
+   "position": [
+    1.0,
+    0.8,
+    0.1
+   ],
+   "d_min_m": 0.5916079783099616,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 12,
+   "position": [
+    1.0,
+    -0.95,
+    -0.1
+   ],
+   "d_min_m": 0.6800735254367721,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 13,
+   "position": [
+    1.0,
+    -0.45,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 14,
+   "position": [
+    1.0,
+    0.05,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 15,
+   "position": [
+    1.0,
+    0.55,
+    -0.1
+   ],
+   "d_min_m": 0.51234753829798,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 16,
+   "position": [
+    0.7,
+    1.0,
+    0.1
+   ],
+   "d_min_m": 0.5477225575051661,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 17,
+   "position": [
+    0.2,
+    1.0,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 18,
+   "position": [
+    -0.3,
+    1.0,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 19,
+   "position": [
+    -0.8,
+    1.0,
+    0.1
+   ],
+   "d_min_m": 0.5916079783099616,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 20,
+   "position": [
+    0.95,
+    1.0,
+    -0.1
+   ],
+   "d_min_m": 0.6800735254367721,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 21,
+   "position": [
+    0.45,
+    1.0,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 22,
+   "position": [
+    -0.05,
+    1.0,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 23,
+   "position": [
+    -0.55,
+    1.0,
+    -0.1
+   ],
+   "d_min_m": 0.51234753829798,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 24,
+   "position": [
+    -1.0,
+    0.7,
+    0.1
+   ],
+   "d_min_m": 0.5477225575051661,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 25,
+   "position": [
+    -1.0,
+    0.2,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 26,
+   "position": [
+    -1.0,
+    -0.3,
+    0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 27,
+   "position": [
+    -1.0,
+    -0.8,
+    0.1
+   ],
+   "d_min_m": 0.5916079783099616,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 28,
+   "position": [
+    -1.0,
+    0.95,
+    -0.1
+   ],
+   "d_min_m": 0.6800735254367721,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 29,
+   "position": [
+    -1.0,
+    0.45,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 30,
+   "position": [
+    -1.0,
+    -0.05,
+    -0.1
+   ],
+   "d_min_m": 0.5099019513592785,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  },
+  {
+   "source": 31,
+   "position": [
+    -1.0,
+    -0.55,
+    -0.1
+   ],
+   "d_min_m": 0.51234753829798,
+   "qualifies": {
+    "125": true,
+    "250": true,
+    "500": false,
+    "1000": false
+   }
+  }
+ ]
+}

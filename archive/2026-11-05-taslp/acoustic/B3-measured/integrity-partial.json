@@ -1,0 +1,29 @@
+{
+ "S4": {
+  "status": "verified",
+  "source": "complete downloaded chunks",
+  "md5": "a705e3f028cfab4303511c52f75749ef",
+  "md5_matches_zenodo": true,
+  "npy_header": {
+   "descr": "<f4",
+   "fortran_order": false,
+   "shape": [
+    1074,
+    8,
+    100096
+   ]
+  },
+  "header_bytes": 128,
+  "box_sha256": "cedadb7d95d308819a506216663488bee4f477ae296fec6eac3cd00db8f9f346",
+  "registered_box_sha256": "cedadb7d95d308819a506216663488bee4f477ae296fec6eac3cd00db8f9f346",
+  "box_matches_registered": true
+ },
+ "S7": {
+  "status": "pending",
+  "source": "pending (121 of 206 chunks)"
+ },
+ "S8": {
+  "status": "pending",
+  "source": "pending (24 of 206 chunks)"
+ }
+}

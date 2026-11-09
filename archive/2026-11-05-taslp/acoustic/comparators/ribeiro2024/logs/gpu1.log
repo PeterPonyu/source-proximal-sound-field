@@ -1,0 +1,61 @@
+MODE=gpu T=Float64 device=NVIDIA GeForce RTX 5070 Ti
+┌ Warning: Verbosity toggle: incompatible_ad_backend 
+│  The selected optimization algorithm requires second order derivatives, but `AutoZygote` ADtype was provided. So a `SecondOrder` with `AutoZygote` for inner and `AutoForwardDiff` for outer will be created, for choosing another pair an explicit `SecondOrder` ADtype is recommended.
+└ @ OptimizationBase ~/taslp/ribeiro2024/julia-depot/packages/OptimizationBase/Wu9uV/src/cache.jl:124
+ERROR: LoadError: MethodError: no method matching NeuralWeightPlaneWaveKernel(::Float64, ::Chain{Tuple{Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDACore.DeviceMemory}}, Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDA
+The type `NeuralWeightPlaneWaveKernel` exists, but no method is defined for this combination of argument types when trying to construct it.
+
+Closest candidates are:
+  NeuralWeightPlaneWaveKernel(::U, !Matched::NamedTuple, ::AbstractVector{<:Real}, ::AbstractMatrix{<:Real}) where U<:Real
+   @ Main.PCNK ~/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel/PCNK/src/Kernels/PlaneWaveISFK/Implementation.jl:158
+  NeuralWeightPlaneWaveKernel(::T, ::Chain, !Matched::AbstractVector{T}, !Matched::AbstractMatrix{T}) where T<:AbstractFloat
+   @ Main.PCNK ~/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel/PCNK/src/Kernels/PlaneWaveISFK/Implementation.jl:122
+  NeuralWeightPlaneWaveKernel(::U, !Matched::AbstractMatrix{<:Real}; σ, W) where U<:Real
+   @ Main.PCNK ~/taslp/ribeiro2024/PhysicsConstrainedNeuralKernel/PCNK/src/Kernels/PlaneWaveISFK/Implementation.jl:165
+  ...
+
+Stacktrace:
+  [1] macro expansion
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/compiler/interface2.jl:0 [inlined]
+  [2] _pullback(::Zygote.Context{false}, ::Type{NeuralWeightPlaneWaveKernel}, ::Float64, ::Chain{Tuple{Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDACore.DeviceMemory}}, Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDA
+    @ Zygote ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/compiler/interface2.jl:87
+  [3] reconstruct
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Functors/A5Gls/src/functor.jl:40 [inlined]
+  [4] _pullback(ctx::Zygote.Context{false}, f::Main.PCNK.var"#reconstruct#47", args::@NamedTuple{k::Float64, W::Chain{Tuple{Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuArray{Float32, 1, CUDACore.DeviceMemory}}, Dense{typeof(tanh), CuArray{Float32, 2, CUDACore.DeviceMemory}, CuA
+    @ Zygote ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/compiler/interface2.jl:0
+  [5] DefaultWalk
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Functors/A5Gls/src/walks.jl:73 [inlined]
+  [6] _pullback(::Zygote.Context{false}, ::Functors.DefaultWalk, ::Functors.var"#recurse#27"{Functors.CachedWalk{Functors.ExcludeWalk{Functors.DefaultWalk, Base.Fix1{typeof(Adapt.adapt), CUDADevice{Nothing, Missing}}, typeof(MLDataDevices.isleaf)}, Functors.NoKeyword, Functors.WalkCache{Any, Any, Fu
+    @ Zygote ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/compiler/interface2.jl:0
+  [7] _apply
+    @ ./boot.jl:946 [inlined]
+  [8] adjoint
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/lib/lib.jl:211 [inlined]
+  [9] _pullback
+    @ ~/taslp/ribeiro2024/julia-depot/packages/ZygoteRules/fKghs/src/adjoint.jl:68 [inlined]
+ [10] ExcludeWalk
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Functors/A5Gls/src/walks.jl:126 [inlined]
+ [11] _apply
+    @ ./boot.jl:946 [inlined]
+ [12] adjoint
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/lib/lib.jl:211 [inlined]
+ [13] _pullback
+    @ ~/taslp/ribeiro2024/julia-depot/packages/ZygoteRules/fKghs/src/adjoint.jl:68 [inlined]
+ [14] CachedWalk
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Functors/A5Gls/src/walks.jl:177 [inlined]
+ [15] _pullback(::Zygote.Context{false}, ::Functors.CachedWalk{Functors.ExcludeWalk{Functors.DefaultWalk, Base.Fix1{typeof(Adapt.adapt), CUDADevice{Nothing, Missing}}, typeof(MLDataDevices.isleaf)}, Functors.NoKeyword, Functors.WalkCache{Any, Any, Functors.ExcludeWalk{Functors.DefaultWalk, Base.Fix1
+    @ Zygote ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/compiler/interface2.jl:0
+ [16] _apply
+    @ ./boot.jl:946 [inlined]
+ [17] adjoint
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/lib/lib.jl:211 [inlined]
+ [18] _pullback
+    @ ~/taslp/ribeiro2024/julia-depot/packages/ZygoteRules/fKghs/src/adjoint.jl:68 [inlined]
+ [19] recurse
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Functors/A5Gls/src/walks.jl:54 [inlined]
+ [20] #737
+    @ ~/taslp/ribeiro2024/julia-depot/packages/Zygote/3V19T/src/lib/array.jl:223 [inlined]
+ [21] map
+    @ ./tuple.jl:356 [inlined]
+ [22] ∇map(cx::Zygote.Context{false}, f::Functors.var"#recurse#27"{Functors.CachedWalk{Functors.ExcludeWalk{Functors.DefaultWalk, Base.Fix1{typeof(Adapt.adapt), CUDADevice{Nothing, Missing}}, typeof(MLDataDevices.isleaf)}, Functors.NoKeyword, Functors.WalkCache{Any, Any, Functors.ExcludeWalk{Funct
+GPU1_DONE

@@ -1,0 +1,18 @@
+{
+ "tasks": 3168,
+ "workers": 20,
+ "commit": "f4fc90a311f8956e03068bbe238b02ed1e816ae4",
+ "study_tree_dirty": true,
+ "started": "2026-11-07T03:49:37-0800",
+ "inputs": {
+  "studies/TB-M2/primary/rows.jsonl": "4c3a262d646fe32ac73ff387414a59a6740833152135dae3bed445b0c8d07faa",
+  "studies/TB-S2/primary/rows.jsonl": "121c3009620d99539fcb84413a9fb7b90176359972ddf8e6a10fa46ebc0f6c73",
+  "common/estimators.py": "3c6bbc9aa746fe4a438150b5d835796114e97768e5a3f52acfcd9fa3087d9e60",
+  "common/v2.py": "4473270dd4bc451f5ecf301f6e9771367c45df358fdbcdaf9c2c1af889bc71c7",
+  "common/problems_v2.py": "3cb8ab5e23441074011cbc620d6ab5b8ab28b66e912293665fcdfb8531b032bf",
+  "common/sim.py": "e4b1a56ae0cb8b80ca3b10fe898545d29e781704e663e5b35837c7f37ed02d95",
+  "V2-dev/cubature_diag.py": "d34a4459c048e8e605cb2dbef3b71f4208b14a4bac4ef9f3f3bac1c8734ab4c4",
+  "posthoc/review3/adk_fix.py": "48aa036ea7004860a89660d254477f0779b7174b6ad194c35c72c249c4aa96ee",
+  "posthoc/review3/refit.py": "0f59518beec017ee3aba67957abf0611506f2e8cb1fc7172d5e4594590fa5a94"
+ }
+}

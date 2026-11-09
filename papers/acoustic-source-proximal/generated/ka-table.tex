@@ -1,0 +1,45 @@
+\begin{longtable}{@{}p{13.2cm}rr@{}}
+\caption{Known-answer checks inherited from the studies of the earlier single-frequency estimator, run before every registered run}\label{tab:s-ka}\\
+\toprule
+Check & Value & Bound\\
+\midrule\endfirsthead
+\toprule
+Check & Value & Bound\\
+\midrule\endhead
+image sum equals the earlier registered image-source implementation, $R=1$ & 0 & $\le$ $1.0\times10^{-12}$\\
+image sum equals the earlier registered image-source implementation, $R=0.8$ & $4.7\times10^{-16}$ & $\le$ $1.0\times10^{-12}$\\
+image sum equals the earlier registered image-source implementation, $R=0.8\mathrm{i}$ & $3.7\times10^{-16}$ & $\le$ $1.0\times10^{-12}$\\
+image sum equals the earlier registered image-source implementation, $R=-0.8$ & $4.2\times10^{-16}$ & $\le$ $1.0\times10^{-12}$\\
+impedance wall with $\zeta$ $\to$ infinity equals the rigid image sum & $6.0\times10^{-8}$ & $\le$ $1.0\times10^{-6}$\\
+first-order angle-dependent image sum equals brute force & $1.2\times10^{-16}$ & $\le$ $1.0\times10^{-12}$\\
+zero-order image sum equals the analytic direct monopole-dipole field & $4.7\times10^{-17}$ & $\le$ $1.0\times10^{-12}$\\
+dipole far field equals $\cos\vartheta$ times monopole & $1.7\times10^{-3}$ & $\le$ $2.0\times10^{-3}$\\
+rigid box modal sum equals image sum with bulk loss (centre) & $8.1\times10^{-4}$ & $\le$ $2.0\times10^{-3}$\\
+sinc represents the source-free remainder, $R=0.8$ (centre) & $3.7\times10^{-3}$ & $\le$ $5.0\times10^{-2}$\\
+sinc cannot represent the full field with the source inside (centre) & $1.9\times10^{-1}$ & $\ge$ $1.1\times10^{-2}$\\
+rigid box modal sum equals image sum with bulk loss (near-wall) & $5.2\times10^{-4}$ & $\le$ $2.0\times10^{-3}$\\
+sinc represents the source-free remainder, $R=0.8$ (near-wall) & $1.4\times10^{-2}$ & $\le$ $5.0\times10^{-2}$\\
+sinc cannot represent the full field with the source inside (near-wall) & $6.8\times10^{-2}$ & $\ge$ $4.2\times10^{-2}$\\
+sinc evidence equals the earlier registered implementation & $1.7\times10^{-11}$ & $\le$ $1.0\times10^{-8}$\\
+point-source evidence equals the earlier registered implementation (12 weight/ridge pairs, relative) & $4.4\times10^{-8}$ & $\le$ $1.0\times10^{-6}$\\
+point-source posterior mean equals the earlier registered implementation & $3.6\times10^{-8}$ & $\le$ $1.0\times10^{-6}$\\
+exact recovery of a pure point-source field: NMSE ($K=1$) & $1.2\times10^{-14}$ & $\le$ $1.0\times10^{-8}$\\
+exact recovery: localization error in wavelengths & $1.4\times10^{-7}$ & $\le$ $1.0\times10^{-4}$\\
+exact recovery: penalized evidence selects $K=1$ & 0 & $\le$ 0\\
+analytic evidence gradient equals finite differences ($K=1$) & $8.9\times10^{-9}$ & $\le$ $1.0\times10^{-5}$\\
+analytic evidence gradient equals finite differences ($K=2$) & $1.4\times10^{-8}$ & $\le$ $1.0\times10^{-5}$\\
+two-source field: $K=2$ NMSE & $1.3\times10^{-14}$ & $\le$ $1.0\times10^{-6}$\\
+two-source field: penalized evidence selects $K=2$ & 0 & $\le$ 0\\
+sinc kernel recovers a noise-free plane wave (96 microphones) & $1.1\times10^{-2}$ & $\le$ $2.0\times10^{-2}$\\
+sinc plane-wave error falls at least tenfold with 288 microphones & $2.2\times10^{-6}$ & $\le$ $1.1\times10^{-3}$\\
+squared-exponential kernel recovers a smooth 125 Hz plane wave & $1.1\times10^{-6}$ & $\le$ $1.0\times10^{-3}$\\
+adaptive kernel recovers a single plane wave (anisotropic weighting) & $1.2\times10^{-7}$ & $\le$ $1.0\times10^{-4}$\\
+adaptive kernel with uniform weights equals the sinc kernel (quadrature) & $2.5\times10^{-3}$ & $\le$ $5.0\times10^{-3}$\\
+sparse Bayesian learning (fixed point) recovers a dictionary-sparse field & $1.7\times10^{-27}$ & $\le$ $1.0\times10^{-4}$\\
+prior-region reference recovers a point-source field & $4.3\times10^{-12}$ & $\le$ $1.0\times10^{-4}$\\
+multiple-region kernel recovers a point-source field & $2.2\times10^{-12}$ & $\le$ $1.0\times10^{-3}$\\
+multiple-region analytic gradient equals finite differences & $2.0\times10^{-9}$ & $\le$ $1.0\times10^{-5}$\\
+adaptive-kernel analytic gradient equals finite differences & $9.5\times10^{-9}$ & $\le$ $1.0\times10^{-5}$\\
+true-coordinate reference recovers a point-source field & $1.6\times10^{-14}$ & $\le$ $1.0\times10^{-10}$\\
+\bottomrule
+\end{longtable}

@@ -1,0 +1,9 @@
+[fetch 2026-11-05T09:35:37Z] start
+[fetch 2026-11-05T09:35:38Z] Mxyz.npy size=103232 md5=d1aad2e13b7b32b6f5484df5b4ac8d93 expected=d1aad2e13b7b32b6f5484df5b4ac8d93 ok=true seconds=1
+[fetch 2026-11-05T09:35:38Z] Setup.npz size=2854 md5=6ed01cadfdc6b4ed51236dbdd2af3f54 expected=6ed01cadfdc6b4ed51236dbdd2af3f54 ok=true seconds=0
+[fetch 2026-11-05T09:50:51Z] S4_Mrir.npy size=3440099456 md5=a705e3f028cfab4303511c52f75749ef expected=a705e3f028cfab4303511c52f75749ef ok=true seconds=913
+[fetch 2026-11-05T09:51:30Z] S7_Mrir.npy size=3440099456 md5=f33f021d2550711d1371b6d65c5abbfb expected=f33f021d2550711d1371b6d65c5abbfb ok=true seconds=952
+[fetch 2026-11-05T09:51:42Z] S32-M441_npy.zip size=3531528616 md5=9818fc66b36513590e7abd071243d8e9 expected=9818fc66b36513590e7abd071243d8e9 ok=true seconds=964
+[fetch 2026-11-05T09:51:56Z] S8_Mrir.npy size=3440099456 md5=25b297c591162d71059f53b6e955057c expected=25b297c591162d71059f53b6e955057c ok=true seconds=978
+[fetch 2026-11-05T09:51:56Z] symlink /home/zeyufu/Desktop/data/external/acoustic-geometry-20261104/mp-rir -> /root/taslp/data/mp-rir
+[fetch 2026-11-05T09:51:56Z] ALL MD5 OK

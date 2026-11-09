@@ -1,0 +1,238 @@
+{
+ "note": "post hoc descriptive, not a registered rule",
+ "problems": 48,
+ "ind_cv_ext-vs-ribeiro_official": {
+  "per_cell": {
+   "1000Hz-M48": {
+    "mean": -1.8610808291217769,
+    "low": -3.6033616072463484,
+    "high": -0.11880005099720536,
+    "units": 6,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "500Hz-M48": {
+    "mean": -1.1615977479315511,
+    "low": -4.523368183850189,
+    "high": 2.200172687987086,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M48": {
+    "mean": -0.22085982717085115,
+    "low": -2.0424927132494375,
+    "high": 1.6007730589077351,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M48": {
+    "mean": 0.5167508057871829,
+    "low": -1.6265552741114409,
+    "high": 2.6600568856858064,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M24": {
+    "mean": 2.0531599795727007,
+    "low": -5.258072491318021,
+    "high": 9.364392450463422,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M24": {
+    "mean": -1.6255665853372585,
+    "low": -8.593934968617003,
+    "high": 5.342801797942486,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M24": {
+    "mean": 0.3433950323812874,
+    "low": -5.171073055477935,
+    "high": 5.857863120240509,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "1000Hz-M24": {
+    "mean": -3.9965775475563436,
+    "low": -6.768468811636401,
+    "high": -1.2246862834762857,
+    "units": 6,
+    "cls": "win",
+    "non_inferior": true
+   }
+  },
+  "wins": 2,
+  "ties": 6,
+  "losses": 0,
+  "non_inferior": 2,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -0.7440470899220765,
+   "low": -1.8044539974964717,
+   "high": 0.3163598176523187
+  }
+ },
+ "j_cv_ext-vs-ind_cv_ext": {
+  "per_cell": {
+   "1000Hz-M48": {
+    "mean": -0.17714048149189102,
+    "low": -1.4658839591117592,
+    "high": 1.111602996127977,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M48": {
+    "mean": -0.34990110655710244,
+    "low": -1.1895707989925512,
+    "high": 0.48976858587834643,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M48": {
+    "mean": -0.46159173383303137,
+    "low": -0.9986643062522733,
+    "high": 0.07548083858621052,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": true
+   },
+   "125Hz-M48": {
+    "mean": -0.5943391107395228,
+    "low": -2.8164955956046605,
+    "high": 1.627817374125615,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M24": {
+    "mean": -1.902390305102015,
+    "low": -9.556354431211517,
+    "high": 5.751573821007487,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M24": {
+    "mean": -2.9883770583177864,
+    "low": -7.330173505848244,
+    "high": 1.3534193892126711,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M24": {
+    "mean": -1.516434217521639,
+    "low": -7.016826319378608,
+    "high": 3.9839578843353296,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "1000Hz-M24": {
+    "mean": -0.14346525543321484,
+    "low": -0.7285734417875057,
+    "high": 0.441642930921076,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   }
+  },
+  "wins": 0,
+  "ties": 8,
+  "losses": 0,
+  "non_inferior": 1,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -1.0167049086245254,
+   "low": -1.6218094816932536,
+   "high": -0.41160033555579745
+  }
+ },
+ "j_cv_ext-vs-ribeiro_official": {
+  "per_cell": {
+   "1000Hz-M48": {
+    "mean": -2.0382213106136677,
+    "low": -4.4528166933287805,
+    "high": 0.376374072101445,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M48": {
+    "mean": -1.5114988544886536,
+    "low": -4.674345231029668,
+    "high": 1.6513475220523608,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M48": {
+    "mean": -0.6824515610038825,
+    "low": -2.1609231688463506,
+    "high": 0.7960200468385855,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M48": {
+    "mean": -0.07758830495233988,
+    "low": -0.6286915651053439,
+    "high": 0.47351495520066406,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "125Hz-M24": {
+    "mean": 0.15076967447068546,
+    "low": -0.8207345991297741,
+    "high": 1.122273948071145,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "500Hz-M24": {
+    "mean": -4.613943643655045,
+    "low": -11.619717010822926,
+    "high": 2.3918297235128367,
+    "units": 6,
+    "cls": "tie",
+    "non_inferior": false
+   },
+   "250Hz-M24": {
+    "mean": -1.1730391851403514,
+    "low": -2.1758498436283773,
+    "high": -0.17022852665232535,
+    "units": 6,
+    "cls": "win",
+    "non_inferior": true
+   },
+   "1000Hz-M24": {
+    "mean": -4.140042802989559,
+    "low": -6.77995808071606,
+    "high": -1.500127525263057,
+    "units": 6,
+    "cls": "win",
+    "non_inferior": true
+   }
+  },
+  "wins": 2,
+  "ties": 6,
+  "losses": 0,
+  "non_inferior": 2,
+  "undefined_problems": 0,
+  "pooled": {
+   "mean": -1.7607519985466016,
+   "low": -2.6392611074257943,
+   "high": -0.8822428896674089
+  }
+ }
+}

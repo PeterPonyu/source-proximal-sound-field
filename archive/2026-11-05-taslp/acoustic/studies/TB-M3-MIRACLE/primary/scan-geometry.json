@@ -1,0 +1,45 @@
+{
+ "status": "geometry only; no estimate or outcome is read",
+ "A1-250": {
+  "nodes": 3072,
+  "step_m": 0.3267218418261084,
+  "step_wavelengths": 0.24348034184798353,
+  "quarter_wavelength_m": 0.3354704525079242,
+  "cap_binds": false
+ },
+ "A1-500": {
+  "nodes": 11250,
+  "step_m": 0.18321428447961807,
+  "step_wavelengths": 0.27307067300553156,
+  "quarter_wavelength_m": 0.16773522625396203,
+  "cap_binds": true
+ },
+ "A1-1000": {
+  "nodes": 9792,
+  "step_m": 0.1911801229352541,
+  "step_wavelengths": 0.5698866219245889,
+  "quarter_wavelength_m": 0.08386761312698102,
+  "cap_binds": true
+ },
+ "R2-250": {
+  "nodes": 3072,
+  "step_m": 0.32719511576072513,
+  "step_wavelengths": 0.24333998454093117,
+  "quarter_wavelength_m": 0.3361501772694584,
+  "cap_binds": false
+ },
+ "R2-500": {
+  "nodes": 11250,
+  "step_m": 0.18321428447961807,
+  "step_wavelengths": 0.2725185004628948,
+  "quarter_wavelength_m": 0.16807508863472917,
+  "cap_binds": true
+ },
+ "R2-1000": {
+  "nodes": 9792,
+  "step_m": 0.1911801229352541,
+  "step_wavelengths": 0.5687342618356078,
+  "quarter_wavelength_m": 0.08403754431736458,
+  "cap_binds": true
+ }
+}

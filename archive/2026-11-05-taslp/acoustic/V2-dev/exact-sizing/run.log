@@ -1,0 +1,6 @@
+{"source": "S7", "band": 500.0, "M": 24, "seconds": {"mo26_cap5_cubature": 2.7, "gsmf_cubature": 3.0, "mo26_cap5_series": 71.9, "gsmf_series": 86.0}}
+{"source": "S7", "band": 500.0, "M": 48, "seconds": {"mo26_cap5_cubature": 5.3, "gsmf_cubature": 4.8, "mo26_cap5_series": 148.0, "gsmf_series": 149.8}}
+{"source": "S7", "band": 500.0, "M": 96, "seconds": {"gsmf_cubature": 7.5, "gsmf_series": 334.2}}
+{"source": "S7", "band": 500.0, "M": 192, "seconds": {"gsmf_cubature": 27.3, "gsmf_series": 1059.3}}
+{"source": "S4", "band": 1000.0, "M": 96, "seconds": {"gsmf_cubature": 8.5, "gsmf_series": 310.2}}
+{"source": "S4", "band": 1000.0, "M": 192, "seconds": {"gsmf_cubature": 24.0, "gsmf_series": 1011.5}}

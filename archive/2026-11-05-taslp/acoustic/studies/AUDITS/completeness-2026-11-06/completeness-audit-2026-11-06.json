@@ -1,0 +1,133 @@
+{
+ "TB-M2-EXACT (M 24/48)": {
+  "expected": 512,
+  "rows": 512,
+  "distinct_keys": 512,
+  "missing": 0,
+  "extra": 0,
+  "duplicates": 0,
+  "error_rows": 0,
+  "nonfinite": {
+   "gsmf_exact": 0,
+   "mo26_cap5_exact": 0
+  },
+  "primary_nonfinite_on_these_keys": 0,
+  "replay_bit_identical": {
+   "gsmf": 512,
+   "mo26_cap5": 512
+  },
+  "draws_per_source_cell": {
+   "2": 256
+  },
+  "complete_and_balanced": true
+ },
+ "TB-M2-EXACT-HI (M 96/192)": {
+  "expected": 512,
+  "rows": 512,
+  "distinct_keys": 512,
+  "missing": 0,
+  "extra": 0,
+  "duplicates": 0,
+  "error_rows": 0,
+  "nonfinite": {
+   "gsmf_exact": 0
+  },
+  "primary_nonfinite_on_these_keys": 0,
+  "replay_bit_identical": {
+   "gsmf": 512
+  },
+  "draws_per_source_cell": {
+   "2": 256
+  },
+  "complete_and_balanced": true
+ },
+ "combined 16-cell gsmf panel": {
+  "distinct_keys": 1024,
+  "expected": 1024,
+  "overlap": 0,
+  "complete": true
+ },
+ "TB-PROX mo26-prox": {
+  "expected": 128,
+  "rows": 128,
+  "distinct_keys": 128,
+  "missing": 0,
+  "extra": 0,
+  "duplicates": 0,
+  "error_rows": 0,
+  "nonfinite": {
+   "mo26_prox": 0
+  },
+  "primary_nonfinite_on_these_keys": 0,
+  "draws_per_source_cell": {
+   "1": 128
+  },
+  "complete_and_balanced": true
+ },
+ "TB-PROX amendment 1 gsmf-prox": {
+  "expected": 128,
+  "rows": 128,
+  "distinct_keys": 128,
+  "missing": 0,
+  "extra": 0,
+  "duplicates": 0,
+  "error_rows": 0,
+  "nonfinite": {
+   "gsmf_prox": 0
+  },
+  "primary_nonfinite_on_these_keys": 0,
+  "draws_per_source_cell": {
+   "1": 128
+  },
+  "complete_and_balanced": true
+ },
+ "TB-PROX-S2 mo26-prox (paper stop)": {
+  "expected": 128,
+  "rows": 128,
+  "distinct_keys": 128,
+  "missing": 0,
+  "extra": 0,
+  "duplicates": 0,
+  "error_rows": 0,
+  "nonfinite": {
+   "mo26_prox_s2": 0
+  },
+  "primary_nonfinite_on_these_keys": 0,
+  "draws_per_source_cell": {
+   "1": 128
+  },
+  "complete_and_balanced": true
+ },
+ "receipts": {
+  "TB-M2-EXACT": {
+   "status": "complete",
+   "n_errors": 0,
+   "not_run": 0,
+   "launch_commit": "bf0b0117f6"
+  },
+  "TB-M2-EXACT-HI": {
+   "status": "complete",
+   "n_errors": 0,
+   "not_run": 0,
+   "launch_commit": "8e174693e6"
+  },
+  "TB-PROX": {
+   "status": "partial",
+   "n_errors": 128,
+   "not_run": 0,
+   "launch_commit": "196f5f95da"
+  },
+  "TB-PROX-A1": {
+   "status": "complete",
+   "n_errors": 0,
+   "not_run": 0,
+   "launch_commit": "8e174693e6"
+  },
+  "TB-PROX-S2": {
+   "status": "complete",
+   "n_errors": 0,
+   "not_run": 0,
+   "launch_commit": "8e174693e6"
+  }
+ }
+}

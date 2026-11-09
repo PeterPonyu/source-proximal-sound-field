@@ -1,0 +1,170 @@
+{
+ "study": "TB-PROX-S2",
+ "n_rows": 128,
+ "n_errors": 0,
+ "registered_rows": {
+  "rows_sha256_matches_receipt": true,
+  "protocol_commit": "f4d1e18f4fa760edc45437b580d787456ffa2357",
+  "status": "complete"
+ },
+ "tb_prox_rows": {
+  "rows_sha256_matches_receipt": true,
+  "protocol_commit": "196f5f95da9ae5ce2b9dd7c21057825182536caf",
+  "status": "partial"
+ },
+ "arms": {
+  "MeshRIR": {
+   "problems": 128,
+   "nonfinite_or_missing": {
+    "j_cv_ext": 0,
+    "mo26_cap5": 0,
+    "mo26_prox": 0,
+    "mo26_prox_s2": 0
+   },
+   "pooled": {
+    "j_cv_ext-vs-mo26_prox_s2": {
+     "mean": -10.974606105525114,
+     "low": -11.39968264876454,
+     "high": -10.549529562285688,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "mo26_prox_s2-vs-mo26_cap5": {
+     "mean": 9.408834056951775,
+     "low": 8.895828798302853,
+     "high": 9.921839315600698,
+     "units": 32,
+     "problems_left_out": 0
+    },
+    "mo26_prox_s2-vs-mo26_prox": {
+     "mean": -0.00027395987512456553,
+     "low": -0.0010656136086965508,
+     "high": 0.0005176938584474198,
+     "units": 32,
+     "problems_left_out": 0
+    }
+   },
+   "cells": {
+    "(1000.0, 24)": {
+     "j_cv_ext-vs-mo26_prox_s2": {
+      "mean": -9.785885300624297,
+      "low": -10.895679847246106,
+      "high": -8.67609075400249,
+      "units": 32,
+      "cls": "win"
+     },
+     "mo26_prox_s2-vs-mo26_cap5": {
+      "mean": 8.602353795212956,
+      "low": 7.503907135991991,
+      "high": 9.70080045443392,
+      "units": 32,
+      "cls": "loss"
+     },
+     "mo26_prox_s2-vs-mo26_prox": {
+      "mean": -0.0014893095006245013,
+      "low": -0.0054388282632246345,
+      "high": 0.002460209261975632,
+      "units": 32,
+      "cls": "tie"
+     }
+    },
+    "(125.0, 24)": {
+     "j_cv_ext-vs-mo26_prox_s2": {
+      "mean": -7.5598423698811565,
+      "low": -8.484303078713548,
+      "high": -6.635381661048765,
+      "units": 32,
+      "cls": "win"
+     },
+     "mo26_prox_s2-vs-mo26_cap5": {
+      "mean": 6.466793956663548,
+      "low": 5.35707428997984,
+      "high": 7.576513623347257,
+      "units": 32,
+      "cls": "loss"
+     },
+     "mo26_prox_s2-vs-mo26_prox": {
+      "mean": 0.00039347000012623923,
+      "low": -0.0006499780859614572,
+      "high": 0.0014369180862139356,
+      "units": 32,
+      "cls": "tie"
+     }
+    },
+    "(250.0, 24)": {
+     "j_cv_ext-vs-mo26_prox_s2": {
+      "mean": -14.130134484672276,
+      "low": -15.02970801380674,
+      "high": -13.230560955537811,
+      "units": 32,
+      "cls": "win"
+     },
+     "mo26_prox_s2-vs-mo26_cap5": {
+      "mean": 12.040685186703357,
+      "low": 10.849125213518215,
+      "high": 13.232245159888498,
+      "units": 32,
+      "cls": "loss"
+     },
+     "mo26_prox_s2-vs-mo26_prox": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "units": 32,
+      "cls": "tie"
+     }
+    },
+    "(500.0, 24)": {
+     "j_cv_ext-vs-mo26_prox_s2": {
+      "mean": -12.422562266922725,
+      "low": -13.613079624345653,
+      "high": -11.232044909499797,
+      "units": 32,
+      "cls": "win"
+     },
+     "mo26_prox_s2-vs-mo26_cap5": {
+      "mean": 10.525503289227242,
+      "low": 9.175272699357466,
+      "high": 11.875733879097018,
+      "units": 32,
+      "cls": "loss"
+     },
+     "mo26_prox_s2-vs-mo26_prox": {
+      "mean": 0.0,
+      "low": 0.0,
+      "high": 0.0,
+      "units": 32,
+      "cls": "tie"
+     }
+    }
+   },
+   "rules": {
+    "primary_vs_mo26_prox_s2": {
+     "rule": "j_cv_ext pooled superior to mo26_prox_s2 (upper bound < 0)",
+     "passed": true
+    }
+   },
+   "stronger_reading": {
+    "mo26_prox_s2": "registered stronger"
+   },
+   "report_against_prox_s2": false,
+   "stop_deviation": {
+    "reading": "mo26_prox_s2 minus mo26_prox (paper stop minus registered stop), descriptive",
+    "mean": -0.00027395987512456553,
+    "low": -0.0010656136086965508,
+    "high": 0.0005176938584474198,
+    "units": 32,
+    "problems_left_out": 0
+   },
+   "stop": {
+    "rule": "ask the user before any manuscript work if j_cv_ext shows a pooled loss to mo26_prox_s2 (lower bound > 0)",
+    "triggered": false
+   },
+   "stage2_lengths": {
+    "bins": 768,
+    "median": 71.5,
+    "at_cap": 351
+   }
+  }
+ }
+}

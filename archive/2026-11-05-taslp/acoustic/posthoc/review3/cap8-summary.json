@@ -1,0 +1,92 @@
+{
+ "status": "post hoc",
+ "rows": 3072,
+ "errors": 0,
+ "gate_failed": 0,
+ "TB-M2": {
+  "problems": 1024,
+  "cells": 16,
+  "K8_hist": [
+   12,
+   281,
+   314,
+   145,
+   88,
+   70,
+   45,
+   37,
+   32
+  ],
+  "share_at_8": 0.03125,
+  "share_changed": 0.111328125,
+  "cap8_minus_registered": {
+   "classes": {
+    "win": 0,
+    "tie": 16,
+    "loss": 0
+   },
+   "pooled": {
+    "mean": 0.004922356983041217,
+    "low": -0.0010359998999667202,
+    "high": 0.010880713866049154,
+    "units": 32
+   }
+  },
+  "cap8_vs_best_generic": {
+   "classes": {
+    "win": 13,
+    "tie": 3,
+    "loss": 0
+   },
+   "pooled_vs_per_problem_oracle": {
+    "mean": -0.6664251959409278,
+    "low": -0.7582627367736691,
+    "high": -0.5745876551081864,
+    "units": 32
+   }
+  }
+ },
+ "TB-S2": {
+  "problems": 2016,
+  "cells": 63,
+  "K8_hist": [
+   0,
+   36,
+   67,
+   99,
+   105,
+   122,
+   226,
+   331,
+   1030
+  ],
+  "share_at_8": 0.5109126984126984,
+  "share_changed": 0.7872023809523809,
+  "cap8_minus_registered": {
+   "classes": {
+    "win": 31,
+    "tie": 32,
+    "loss": 0
+   },
+   "pooled": {
+    "mean": -0.18148977372639843,
+    "low": -0.20784819964689477,
+    "high": -0.1551313478059021,
+    "units": 32
+   }
+  },
+  "cap8_vs_best_generic": {
+   "classes": {
+    "win": 63,
+    "tie": 0,
+    "loss": 0
+   },
+   "pooled_vs_per_problem_oracle": {
+    "mean": -5.07900859067477,
+    "low": -5.220764227690825,
+    "high": -4.9372529536587155,
+    "units": 32
+   }
+  }
+ }
+}

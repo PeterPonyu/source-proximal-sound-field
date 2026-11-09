@@ -1,0 +1,523 @@
+{
+ "summary": {
+  "problems": 18,
+  "errors": 0,
+  "refine_radius_m": 0.2,
+  "balls_refined": 8,
+  "max_abs_change_db": 3.268496584496461e-13,
+  "max_radius_m": 0.5,
+  "seconds": 1388.7
+ },
+ "rows": [
+  {
+   "kind": "sim",
+   "cell": "A2-f125-M24",
+   "seed": 400920,
+   "M_mics": 24,
+   "k_max": 3.0565037023173836,
+   "methods": {
+    "gsmf": {
+     "db_registered": -25.440012443320093,
+     "db_refined": -25.440012443320093,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.04901920815078813,
+     "max_kR": 0.14982739119755037
+    },
+    "mo26_cap5": {
+     "db_registered": -21.912741810011394,
+     "db_refined": -21.912741810011394,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.049993419682521224,
+     "max_kR": 0.1528050723511329
+    }
+   }
+  },
+  {
+   "kind": "sim",
+   "cell": "A2-f125-M24",
+   "seed": 400921,
+   "M_mics": 24,
+   "k_max": 3.0565037023173836,
+   "methods": {
+    "gsmf": {
+     "db_registered": -24.61928015187567,
+     "db_refined": -24.61928015187567,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.05256656832219491,
+     "max_kR": 0.16066991069490844
+    },
+    "mo26_cap5": {
+     "db_registered": -21.000987184388016,
+     "db_refined": -21.000987184388016,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.05647754173199187,
+     "max_kR": 0.17262381540161767
+    }
+   }
+  },
+  {
+   "kind": "sim",
+   "cell": "A2-f250-M48",
+   "seed": 400920,
+   "M_mics": 48,
+   "k_max": 6.113007404634767,
+   "methods": {
+    "gsmf": {
+     "db_registered": -22.398758106105987,
+     "db_refined": -22.398758106105987,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.03660568877839683,
+     "max_kR": 0.22377084655409563
+    },
+    "mo26_cap5": {
+     "db_registered": -20.096699073052253,
+     "db_refined": -20.096699073052253,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.049440595833935695,
+     "max_kR": 0.3022307284224037
+    }
+   }
+  },
+  {
+   "kind": "sim",
+   "cell": "A2-f250-M48",
+   "seed": 400921,
+   "M_mics": 48,
+   "k_max": 6.113007404634767,
+   "methods": {
+    "gsmf": {
+     "db_registered": -23.753190542192996,
+     "db_refined": -23.753190542192996,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.04306307758762995,
+     "max_kR": 0.2632449121595434
+    },
+    "mo26_cap5": {
+     "db_registered": -20.753133728281167,
+     "db_refined": -20.753133728281167,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.048640521735110284,
+     "max_kR": 0.2973398695320275
+    }
+   }
+  },
+  {
+   "kind": "sim",
+   "cell": "A2-f1000-M24",
+   "seed": 400920,
+   "M_mics": 24,
+   "k_max": 24.45202961853907,
+   "methods": {
+    "gsmf": {
+     "db_registered": -7.571832624832511,
+     "db_refined": -7.571832624832511,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.015400873148839311,
+     "max_kR": 0.37658260638678187
+    },
+    "mo26_cap5": {
+     "db_registered": -4.64697894037851,
+     "db_refined": -4.64697894037851,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.03609650355895645,
+     "max_kR": 0.8826327741493041
+    }
+   }
+  },
+  {
+   "kind": "sim",
+   "cell": "A2-f1000-M24",
+   "seed": 400921,
+   "M_mics": 24,
+   "k_max": 24.45202961853907,
+   "methods": {
+    "gsmf": {
+     "db_registered": -0.9871793962400405,
+     "db_refined": -0.9871793962400393,
+     "change_db": 1.2212453270876722e-15,
+     "balls_refined": 6,
+     "near_targets_refined": 0,
+     "max_radius": 0.3981016736474743,
+     "max_kR": 9.734393915218016
+    },
+    "mo26_cap5": {
+     "db_registered": -5.949493732605747,
+     "db_refined": -5.949493732605747,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.052265741870661665,
+     "max_kR": 1.2780034682563366
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S4",
+   "band": 125.0,
+   "M": 48,
+   "seed": 400938,
+   "M_mics": 48,
+   "k_max": 2.9855609248960326,
+   "methods": {
+    "gsmf": {
+     "db_registered": -23.0824623936911,
+     "db_refined": -23.0824623936911,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.046164003709915025,
+     "max_kR": 0.13782544561307777
+    },
+    "mo26_cap5": {
+     "db_registered": -23.47856905744033,
+     "db_refined": -23.47856905744033,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.10269926756149986,
+     "max_kR": 0.3066149202470566
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S4",
+   "band": 250.0,
+   "M": 48,
+   "seed": 400938,
+   "M_mics": 48,
+   "k_max": 5.979902911335877,
+   "methods": {
+    "gsmf": {
+     "db_registered": -19.09112309421763,
+     "db_refined": -19.09112309421763,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.057499162769687404,
+     "max_kR": 0.3438394108458292
+    },
+    "mo26_cap5": {
+     "db_registered": -16.799102861871205,
+     "db_refined": -16.799102861871205,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.05093689310569573,
+     "max_kR": 0.30459767537715426
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S4",
+   "band": 500.0,
+   "M": 48,
+   "seed": 400938,
+   "M_mics": 48,
+   "k_max": 11.951024761127941,
+   "methods": {
+    "gsmf": {
+     "db_registered": -6.317886049978055,
+     "db_refined": -6.317886049978055,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.006544600011449389,
+     "max_kR": 0.07821467678850987
+    },
+    "mo26_cap5": {
+     "db_registered": -5.731551263127964,
+     "db_refined": -5.731551263127964,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.12317112199461129,
+     "max_kR": 1.4720211288135099
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S4",
+   "band": 1000.0,
+   "M": 48,
+   "seed": 400938,
+   "M_mics": 48,
+   "k_max": 23.910830583799697,
+   "methods": {
+    "gsmf": {
+     "db_registered": -3.334606967096768,
+     "db_refined": -3.334606967096768,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.009607464452731975,
+     "max_kR": 0.22972245486915213
+    },
+    "mo26_cap5": {
+     "db_registered": -3.1055860652655016,
+     "db_refined": -3.1055860652655016,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.015225073650596452,
+     "max_kR": 0.36404415668528456
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S7",
+   "band": 125.0,
+   "M": 48,
+   "seed": 400946,
+   "M_mics": 48,
+   "k_max": 2.9988176341864596,
+   "methods": {
+    "gsmf": {
+     "db_registered": -24.136947200991862,
+     "db_refined": -24.136947200991862,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.04325129833922282,
+     "max_kR": 0.12970275616112092
+    },
+    "mo26_cap5": {
+     "db_registered": -21.524208641739698,
+     "db_refined": -21.52420864173937,
+     "change_db": 3.268496584496461e-13,
+     "balls_refined": 1,
+     "near_targets_refined": 0,
+     "max_radius": 0.5,
+     "max_kR": 1.4994088170932298
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S7",
+   "band": 250.0,
+   "M": 48,
+   "seed": 400946,
+   "M_mics": 48,
+   "k_max": 6.006455320238173,
+   "methods": {
+    "gsmf": {
+     "db_registered": -18.896562177432358,
+     "db_refined": -18.896562177432358,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.022186016901278728,
+     "max_kR": 0.13325931925157963
+    },
+    "mo26_cap5": {
+     "db_registered": -17.597352492104555,
+     "db_refined": -17.597352492104395,
+     "change_db": 1.5987211554602254e-13,
+     "balls_refined": 1,
+     "near_targets_refined": 0,
+     "max_radius": 0.49875954605185524,
+     "max_kR": 2.995776928902742
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S7",
+   "band": 500.0,
+   "M": 48,
+   "seed": 400946,
+   "M_mics": 48,
+   "k_max": 12.00409058861109,
+   "methods": {
+    "gsmf": {
+     "db_registered": -8.917554860848664,
+     "db_refined": -8.917554860848664,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.014333807958831383,
+     "max_kR": 0.17206432921756654
+    },
+    "mo26_cap5": {
+     "db_registered": -8.172914677514589,
+     "db_refined": -8.172914677514589,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.021266782479290303,
+     "max_kR": 0.25528838340968796
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S7",
+   "band": 1000.0,
+   "M": 48,
+   "seed": 400946,
+   "M_mics": 48,
+   "k_max": 24.01700122908744,
+   "methods": {
+    "gsmf": {
+     "db_registered": -4.530330815443845,
+     "db_refined": -4.530330815443845,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.005086450600057527,
+     "max_kR": 0.12216129031327419
+    },
+    "mo26_cap5": {
+     "db_registered": -3.888683160489917,
+     "db_refined": -3.888683160489917,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.02104815836030551,
+     "max_kR": 0.5055136452094845
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S8",
+   "band": 125.0,
+   "M": 48,
+   "seed": 400954,
+   "M_mics": 48,
+   "k_max": 2.9766406774095637,
+   "methods": {
+    "gsmf": {
+     "db_registered": -20.852154381073156,
+     "db_refined": -20.852154381073156,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.04687921105997394,
+     "max_kR": 0.13954256656598674
+    },
+    "mo26_cap5": {
+     "db_registered": -20.84084178698128,
+     "db_refined": -20.84084178698128,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.04945928406707046,
+     "max_kR": 0.14722251682959667
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S8",
+   "band": 250.0,
+   "M": 48,
+   "seed": 400954,
+   "M_mics": 48,
+   "k_max": 5.96203618034092,
+   "methods": {
+    "gsmf": {
+     "db_registered": -19.02614747870399,
+     "db_refined": -19.02614747870399,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.0533976330568579,
+     "max_kR": 0.31835862022955513
+    },
+    "mo26_cap5": {
+     "db_registered": -17.570045007263218,
+     "db_refined": -17.570045007263218,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.01431047301283594,
+     "max_kR": 0.08531955786032021
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S8",
+   "band": 500.0,
+   "M": 48,
+   "seed": 400954,
+   "M_mics": 48,
+   "k_max": 11.915317535160048,
+   "methods": {
+    "gsmf": {
+     "db_registered": -9.403075231078947,
+     "db_refined": -9.403075231078947,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.005750945729738552,
+     "max_kR": 0.06852434449730757
+    },
+    "mo26_cap5": {
+     "db_registered": -8.93757855288364,
+     "db_refined": -8.93757855288364,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.026488042484587818,
+     "max_kR": 0.31561343708867357
+    }
+   }
+  },
+  {
+   "kind": "meas",
+   "source": "S8",
+   "band": 1000.0,
+   "M": 48,
+   "seed": 400954,
+   "M_mics": 48,
+   "k_max": 23.83938989584189,
+   "methods": {
+    "gsmf": {
+     "db_registered": -5.402235133738555,
+     "db_refined": -5.402235133738555,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.005000000000000002,
+     "max_kR": 0.11919694947920949
+    },
+    "mo26_cap5": {
+     "db_registered": -4.818178035792807,
+     "db_refined": -4.818178035792807,
+     "change_db": 0.0,
+     "balls_refined": 0,
+     "near_targets_refined": 0,
+     "max_radius": 0.029489936702309476,
+     "max_kR": 0.7030220990500534
+    }
+   }
+  }
+ ]
+}

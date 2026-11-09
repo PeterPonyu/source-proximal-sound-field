@@ -1,0 +1,1 @@
+{"mode": "fixed", "tau": 0.001, "Q": 1209, "stage1_s": 41.8, "survivors_stage1": 103, "total_s": 128.9, "final_regions": 55, "nmse_db": -21.33, "rec_tail": [0.00238, 0.00238, 0.00238]}

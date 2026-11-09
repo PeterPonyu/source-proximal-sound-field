@@ -1,0 +1,38 @@
+50/1536 tasks, 3660 s, errors 0
+100/1536 tasks, 4098 s, errors 0
+150/1536 tasks, 4383 s, errors 0
+200/1536 tasks, 4511 s, errors 0
+250/1536 tasks, 5367 s, errors 0
+300/1536 tasks, 5593 s, errors 0
+350/1536 tasks, 6372 s, errors 0
+400/1536 tasks, 6649 s, errors 0
+450/1536 tasks, 6844 s, errors 0
+500/1536 tasks, 7110 s, errors 0
+550/1536 tasks, 7367 s, errors 0
+600/1536 tasks, 7525 s, errors 0
+650/1536 tasks, 7669 s, errors 0
+700/1536 tasks, 7779 s, errors 0
+750/1536 tasks, 7882 s, errors 0
+800/1536 tasks, 7989 s, errors 0
+850/1536 tasks, 8069 s, errors 0
+900/1536 tasks, 8166 s, errors 0
+950/1536 tasks, 8240 s, errors 0
+1000/1536 tasks, 8323 s, errors 0
+/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/common/mprir.py:84: RuntimeWarning: invalid value encountered in sqrt
+  centre_sd_m=np.sqrt(np.diag(cov)[:3]).tolist(), c_sd=float(np.sqrt(cov[3, 3])))
+/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/common/mprir.py:84: RuntimeWarning: invalid value encountered in sqrt
+  centre_sd_m=np.sqrt(np.diag(cov)[:3]).tolist(), c_sd=float(np.sqrt(cov[3, 3])))
+/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/common/mprir.py:84: RuntimeWarning: invalid value encountered in sqrt
+  centre_sd_m=np.sqrt(np.diag(cov)[:3]).tolist(), c_sd=float(np.sqrt(cov[3, 3])))
+1050/1536 tasks, 8411 s, errors 0
+1100/1536 tasks, 8473 s, errors 0
+1150/1536 tasks, 8524 s, errors 0
+1200/1536 tasks, 8567 s, errors 0
+1250/1536 tasks, 8628 s, errors 0
+1300/1536 tasks, 8698 s, errors 0
+1350/1536 tasks, 8754 s, errors 0
+1400/1536 tasks, 8776 s, errors 0
+1450/1536 tasks, 8807 s, errors 0
+1500/1536 tasks, 8839 s, errors 0
+1536/1536 tasks, 8882 s, errors 0
+done 0 errors

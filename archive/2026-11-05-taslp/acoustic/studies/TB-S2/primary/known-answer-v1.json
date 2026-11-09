@@ -1,0 +1,316 @@
+{
+  "passed": true,
+  "n": 35,
+  "tests": [
+    {
+      "test": "image sum equals frozen walls.image_green, R=1.0",
+      "value": 0.0,
+      "tolerance": 1e-12,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "image sum equals frozen walls.image_green, R=0.8",
+      "value": 4.73327685081357e-16,
+      "tolerance": 1e-12,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "image sum equals frozen walls.image_green, R=0.8j",
+      "value": 3.691745177039246e-16,
+      "tolerance": 1e-12,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "image sum equals frozen walls.image_green, R=-0.8",
+      "value": 4.211683402947918e-16,
+      "tolerance": 1e-12,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "impedance wall with zeta -> infinity equals the rigid image sum",
+      "value": 5.999308887610418e-08,
+      "tolerance": 1e-06,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "first-order angle-dependent image sum equals brute force",
+      "value": 1.2210307724712096e-16,
+      "tolerance": 1e-12,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "zero-order image sum equals the analytic direct monopole-dipole field",
+      "value": 4.739116256558533e-17,
+      "tolerance": 1e-12,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "dipole far field equals cos(theta) times monopole",
+      "value": 0.001746884655376685,
+      "tolerance": 0.002,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "rigid box modal sum equals image sum with bulk loss (centre)",
+      "value": 0.0008061614469948246,
+      "tolerance": 0.002,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "sinc represents the source-free remainder, R = 0.8 (centre)",
+      "value": 0.0037281914203664878,
+      "tolerance": 0.05,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "sinc cannot represent the full field with the source inside (centre)",
+      "value": 0.1868566557528031,
+      "tolerance": 0.011184574261099464,
+      "relation": ">=",
+      "passed": true
+    },
+    {
+      "test": "rigid box modal sum equals image sum with bulk loss (near-wall)",
+      "value": 0.0005232949118658976,
+      "tolerance": 0.002,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "sinc represents the source-free remainder, R = 0.8 (near-wall)",
+      "value": 0.013950885851881816,
+      "tolerance": 0.05,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "sinc cannot represent the full field with the source inside (near-wall)",
+      "value": 0.06803131169690453,
+      "tolerance": 0.04185265755564545,
+      "relation": ">=",
+      "passed": true
+    },
+    {
+      "test": "sinc evidence equals frozen Estimator.unaware_scores",
+      "value": 1.7053025658242404e-11,
+      "tolerance": 1e-08,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "point-source evidence equals frozen source_scores (12 weight/ridge pairs, relative)",
+      "value": 4.429492056898237e-08,
+      "tolerance": 1e-06,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "point-source posterior mean equals frozen source_scores prediction",
+      "value": 3.597936014734279e-08,
+      "tolerance": 1e-06,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "exact recovery of a pure point-source field: NMSE (K = 1)",
+      "value": 1.2283229624385006e-14,
+      "tolerance": 1e-08,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "exact recovery: localisation error in wavelengths",
+      "value": 1.4395368832215696e-07,
+      "tolerance": 0.0001,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "exact recovery: penalised evidence selects K = 1",
+      "value": 0.0,
+      "tolerance": 0.0,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "analytic evidence gradient equals finite differences (K = 1)",
+      "value": 8.907959567254934e-09,
+      "tolerance": 1e-05,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "analytic evidence gradient equals finite differences (K = 2)",
+      "value": 1.4124724694912759e-08,
+      "tolerance": 1e-05,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "two-source field: K = 2 NMSE",
+      "value": 1.3326063486855486e-14,
+      "tolerance": 1e-06,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "two-source field: penalised evidence selects K = 2",
+      "value": 0.0,
+      "tolerance": 0.0,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "sinc kernel recovers a noise-free plane wave (96 microphones)",
+      "value": 0.01093327440956813,
+      "tolerance": 0.02,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "sinc plane-wave error falls at least tenfold with 288 microphones",
+      "value": 2.1854690697247722e-06,
+      "tolerance": 0.001093327440956813,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "RBF recovers a smooth 125 Hz plane wave",
+      "value": 1.1219714581411208e-06,
+      "tolerance": 0.001,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "adaptive kernel recovers a single plane wave (anisotropic weighting)",
+      "value": 1.1932455080944411e-07,
+      "tolerance": 0.0001,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "adaptive kernel with uniform weights equals the sinc kernel (quadrature)",
+      "value": 0.002510387100645255,
+      "tolerance": 0.005,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "SBL (fixed point) recovers a dictionary-sparse field",
+      "value": 1.713989361215961e-27,
+      "tolerance": 0.0001,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "prior-region reference recovers a point-source field",
+      "value": 4.285188344534154e-12,
+      "tolerance": 0.0001,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "multiple-region kernel recovers a point-source field",
+      "value": 2.212112404643486e-12,
+      "tolerance": 0.001,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "multiple-region analytic gradient equals finite differences",
+      "value": 1.954872441969656e-09,
+      "tolerance": 1e-05,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "adaptive-kernel analytic gradient equals finite differences",
+      "value": 9.457898757586998e-09,
+      "tolerance": 1e-05,
+      "relation": "<=",
+      "passed": true
+    },
+    {
+      "test": "oracle recovers a point-source field",
+      "value": 1.6400051922701888e-14,
+      "tolerance": 1e-10,
+      "relation": "<=",
+      "passed": true
+    }
+  ],
+  "rigid_decomposition": {
+    "centre": {
+      "remainder": 0.0037281914203664878,
+      "full": 0.1868566557528031
+    },
+    "near-wall": {
+      "remainder": 0.013950885851881816,
+      "full": 0.06803131169690453
+    }
+  },
+  "process_seconds_per_code_path": {
+    "base": {
+      "build_seconds": 13.706020242999998,
+      "prop": 1.914,
+      "prop_cv": 6.934,
+      "prop_k1_menu": 2.719,
+      "prop_bic_room": 1.704,
+      "sinc_ev": 0.003,
+      "sinc_loo": 0.006,
+      "rbf": 0.12,
+      "adk": 0.442,
+      "sbl_mackay": 0.328,
+      "sbl_em": 4.96,
+      "oracle": 0.053,
+      "mo25": 0.131,
+      "mo26": 1.284,
+      "mo26_greedy": 1.544
+    },
+    "A2-f1000-M192": {
+      "build_seconds": 15.676529475999999,
+      "prop": 7.666,
+      "prop_cv": 20.354,
+      "prop_k1_menu": 8.739,
+      "prop_bic_room": 5.172,
+      "sinc_ev": 0.003,
+      "sinc_loo": 0.017,
+      "rbf": 0.153,
+      "adk": 3.73,
+      "sbl_mackay": 1.619,
+      "sbl_em": 32.215,
+      "oracle": 0.398,
+      "mo25": 0.789,
+      "mo26": 4.853,
+      "mo26_greedy": 4.018
+    },
+    "A2-f125-M24": {
+      "build_seconds": 12.436302984999998,
+      "prop": 0.374,
+      "prop_cv": 1.447,
+      "prop_k1_menu": 1.182,
+      "prop_bic_room": 0.441,
+      "sinc_ev": 0.002,
+      "sinc_loo": 0.002,
+      "rbf": 0.025,
+      "adk": 0.055,
+      "sbl_mackay": 0.019,
+      "sbl_em": 0.209,
+      "oracle": 0.016,
+      "mo25": 0.04,
+      "mo26": 0.496,
+      "mo26_greedy": 0.488
+    }
+  },
+  "wall_seconds": 183.4,
+  "note": "Development seeds 400000-400099 only; no production field is generated."
+}

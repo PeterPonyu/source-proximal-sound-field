@@ -1,0 +1,5 @@
+ffce6029ccad7350b22970e70b6e472fd768d4b91ba91a07caaf8a2d049d7924  /root/taslp/data/mp-rir/Mxyz.npy
+f5c84626d673405ea04705f29256ede66289935de766e0c6ae67fb11d95dce54  /root/taslp/data/mp-rir/S4_Mrir.npy
+582b6e283be2408de309fba182a0d0a01c6b382894d817738fe8c9b7ea02f965  /root/taslp/data/mp-rir/S7_Mrir.npy
+8adb234640a9cf76323b7f41b929bd1e702e37d59490c0073bdd6360ca75a772  /root/taslp/data/mp-rir/S8_Mrir.npy
+74d3068d73fbbc9737188a113aea7a0e28fff14f23a80a1925fe1ced49045f0f  /root/taslp/data/mp-rir/Setup.npz

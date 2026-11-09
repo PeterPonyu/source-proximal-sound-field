@@ -1,0 +1,392 @@
++ B=/root/taslp/ribeiro2024
++ mkdir -p /root/taslp/ribeiro2024/env_gpu
++ cp -n /root/taslp/ribeiro2024/env/Project.toml /root/taslp/ribeiro2024/env/Manifest.toml /root/taslp/ribeiro2024/env_gpu/
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
++ export JULIA_DEPOT_PATH=/root/taslp/ribeiro2024/julia-depot JULIA_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 JULIA_NUM_PRECOMPILE_TASKS=2
++ JULIA_DEPOT_PATH=/root/taslp/ribeiro2024/julia-depot
++ JULIA_NUM_THREADS=4
++ OPENBLAS_NUM_THREADS=4
++ JULIA_NUM_PRECOMPILE_TASKS=2
++ /root/taslp/ribeiro2024/julia-1.11.9/bin/julia --project=/root/taslp/ribeiro2024/env_gpu -e 'using Pkg; Pkg.add(["CUDA","cuDNN"]); Pkg.precompile(); Pkg.status()'
+    Updating registry at `~/taslp/ribeiro2024/julia-depot/registries/General.toml`
+   Resolving package versions...
+   Installed NVTX_jll ─────────────── v3.2.2+0
+   Installed CUDATools ────────────── v6.4.1
+   Installed cuFFT ────────────────── v6.4.1
+   Installed Enzyme_jll ───────────── v0.0.305+0
+   Installed CUPTI ────────────────── v6.4.1
+   Installed LLVMLoopInfo ─────────── v1.0.0
+   Installed cuSPARSE ─────────────── v6.4.1
+   Installed cuDNN ────────────────── v6.4.1
+   Installed tree_sitter_spirv_jll ── v0.1.0+0
+   Installed demumble_jll ─────────── v1.3.0+0
+   Installed tree_sitter_ptx_jll ──── v0.1.0+0
+   Installed CUDA_Driver_jll ──────── v13.5.0+0
+   Installed CUDA_Runtime_jll ─────── v0.25.0+3
+   Installed GPUArrays ────────────── v11.5.16
+   Installed cuRAND ───────────────── v6.4.1
+   Installed cuSOLVER ─────────────── v6.4.1
+   Installed tree_sitter_gcn_jll ──── v0.1.0+0
+   Installed MSVCRuntime_jll ──────── v14.51.36247+0
+   Installed CUDA_Compiler_jll ────── v0.6.4+0
+   Installed CUDA_Runtime_Discovery ─ v2.1.1
+   Installed LMDB_jll ─────────────── v1.0.3+0
+   Installed CUDACore ─────────────── v6.4.1
+   Installed Enzyme ───────────────── v0.13.218
+   Installed EnzymeCore ───────────── v0.8.27
+   Installed NVTX ─────────────────── v1.0.3
+   Installed GPUArraysCore ────────── v0.2.1
+   Installed NVPTX_LLVM_Backend_jll ─ v23.1.2+2
+   Installed CompilerCaching ──────── v0.5.3
+   Installed Adapt ────────────────── v4.8.0
+   Installed tree_sitter_llvm_jll ─── v1.1.0+0
+   Installed Random123 ────────────── v1.7.1
+   Installed LMDB ─────────────────── v3.0.1
+   Installed NVML ─────────────────── v6.4.1
+   Installed JuliaNVTXCallbacks_jll ─ v0.2.1+0
+   Installed GPUToolbox ───────────── v3.5.1
+   Installed GPUCompiler ──────────── v2.10.0
+   Installed cuBLAS ───────────────── v6.4.1
+   Installed CUDNN_jll ────────────── v9.28.0+0
+   Installed CUDA ─────────────────── v6.4.1
+    Updating `~/taslp/ribeiro2024/env_gpu/Project.toml`
+⌃ [052768ef] + CUDA v6.4.1
+⌃ [02a925ec] + cuDNN v6.4.1
+    Updating `~/taslp/ribeiro2024/env_gpu/Manifest.toml`
+Precompiling CUDA_Driver_jll...
+   2287.6 ms  ✓ CUDA_Driver_jll
+  1 dependency successfully precompiled in 13 seconds. 6 already precompiled.
+Precompiling CUDA_Runtime_jll...
+    900.2 ms  ✓ MSVCRuntime_jll
+   4717.7 ms  ✓ CUDA_Compiler_jll
+   5218.8 ms  ✓ CUDA_Runtime_jll
+  3 dependencies successfully precompiled in 20 seconds. 27 already precompiled.
+  [6a4ca0a5] - AcceleratedKernels v0.5.11
+  [79e6a3ab] ↑ Adapt v4.7.4 ⇒ v4.8.0
+  [dce04be8] - ArgCheck v2.5.0
+⌃ [052768ef] + CUDA v6.4.1
+⌅ [bd0ed864] + CUDACore v6.4.1
+⌅ [9ec180c6] + CUDATools v6.4.1
+  [1af6417a] + CUDA_Runtime_Discovery v2.1.1
+⌅ [9e67e8f6] + CUPTI v6.4.1
+  [9db33cc3] + CompilerCaching v0.5.3
+  [7da242da] ↑ Enzyme v0.13.205 ⇒ v0.13.218
+  [f151be2c] ↑ EnzymeCore v0.8.26 ⇒ v0.8.27
+⌅ [0c68f7d7] ↓ GPUArrays v12.2.0 ⇒ v11.5.16
+⌅ [46192b85] ↓ GPUArraysCore v0.2.2 ⇒ v0.2.1
+⌃ [61eb1bfa] ↑ GPUCompiler v1.23.0 ⇒ v2.10.0
+  [096a3bc2] + GPUToolbox v3.5.1
+  [8b046642] + LLVMLoopInfo v1.0.0
+  [11f193de] + LMDB v3.0.1
+⌅ [611af6d1] + NVML v6.4.1
+  [5da4648a] + NVTX v1.0.3
+  [74087812] + Random123 v1.7.1
+⌅ [182d3088] + cuBLAS v6.4.1
+⌃ [02a925ec] + cuDNN v6.4.1
+⌅ [533571aa] + cuFFT v6.4.1
+⌅ [20fd9a0b] + cuRAND v6.4.1
+⌅ [887afef0] + cuSOLVER v6.4.1
+⌅ [b26da814] + cuSPARSE v6.4.1
+  [d1e2174e] + CUDA_Compiler_jll v0.6.4+0
+  [4ee394cb] + CUDA_Driver_jll v13.5.0+0
+⌅ [76a88914] + CUDA_Runtime_jll v0.25.0+3
+→ [62b44479] + CUDNN_jll v9.28.0+0
+⌅ [7cc45869] ↑ Enzyme_jll v0.0.294+0 ⇒ v0.0.305+0
+  [9c1d0b0a] + JuliaNVTXCallbacks_jll v0.2.1+0
+  [6206cf0b] + LMDB_jll v1.0.3+0
+  [ce32ce21] + MSVCRuntime_jll v14.51.36247+0
+  [ef6e0fe3] + NVPTX_LLVM_Backend_jll v23.1.2+2
+  [e98f9f5b] + NVTX_jll v3.2.2+0
+  [1e29f10c] + demumble_jll v1.3.0+0
+  [8b5cbfcf] + tree_sitter_gcn_jll v0.1.0+0
+  [44208993] + tree_sitter_llvm_jll v1.1.0+0
+  [71e3f6e6] + tree_sitter_ptx_jll v0.1.0+0
+  [f0e86581] + tree_sitter_spirv_jll v0.1.0+0
+        Info Packages marked with → are not downloaded, use `instantiate` to download
+        Info Packages marked with ⌃ and ⌅ have new versions available. Those with ⌃ may be upgradable, but those with ⌅ are restricted by compatibility constraints from upgrading. To see why use `status --outdated -m`
+Precompiling project...
+   1035.6 ms  ✓ LLVMLoopInfo
+   1831.1 ms  ✓ GPUToolbox
+   1275.8 ms  ✓ EnzymeCore
+   1080.1 ms  ✓ Adapt
+   3632.8 ms  ✓ CUDA_Runtime_Discovery
+   2198.1 ms  ✓ Random123
+   1301.2 ms  ✓ tree_sitter_spirv_jll
+    991.2 ms  ✓ MSVCRuntime_jll
+   4968.3 ms  ✓ CUDA_Driver_jll
+   1372.4 ms  ✓ NVTX_jll
+   1431.6 ms  ✓ tree_sitter_gcn_jll
+   1296.0 ms  ✓ demumble_jll
+   1791.5 ms  ✓ LMDB_jll
+   1326.5 ms  ✓ NVPTX_LLVM_Backend_jll
+   1290.2 ms  ✓ tree_sitter_llvm_jll
+   1316.0 ms  ✓ JuliaNVTXCallbacks_jll
+   1463.1 ms  ✓ tree_sitter_ptx_jll
+   2740.6 ms  ✓ Enzyme_jll
+   1483.4 ms  ✓ EnzymeCore → EnzymeCoreChainRulesCoreExt
+   1152.4 ms  ✓ Optimisers → OptimisersEnzymeCoreExt
+   1002.6 ms  ✓ ADTypes → ADTypesEnzymeCoreExt
+   1066.5 ms  ✓ FindFirstFunctions → FindFirstFunctionsEnzymeCoreExt
+   1346.0 ms  ✓ Adapt → AdaptStaticArraysExt
+   1384.4 ms  ✓ Adapt → AdaptSparseArraysExt
+   1538.4 ms  ✓ MLDataDevices
+   1077.5 ms  ✓ GPUArraysCore
+    947.1 ms  ✓ StructArrays → AdaptExt
+   1114.8 ms  ✓ Optimisers → OptimisersAdaptExt
+    974.6 ms  ✓ EnzymeCore → AdaptExt
+   2580.0 ms  ✓ PreallocationTools
+   9186.4 ms  ✓ SciMLOperators
+   2712.6 ms  ✓ LMDB
+   8307.2 ms  ✓ CUDA_Compiler_jll
+   2846.9 ms  ✓ NVTX
+   1338.6 ms  ✓ MLDataDevices → ChainRulesCoreExt
+   8695.1 ms  ✓ KernelAbstractions
+   7707.1 ms  ✓ MLDataDevices → ReverseDiffExt
+   1404.9 ms  ✓ MLDataDevices → FillArraysExt
+    967.2 ms  ✓ StructArrays → GPUArraysCoreExt
+   1816.8 ms  ✓ MLDataDevices → SparseArraysExt
+    905.3 ms  ✓ ArrayInterface → ArrayInterfaceGPUArraysCoreExt
+   1340.7 ms  ✓ DifferentiationInterface → DifferentiationInterfaceGPUArraysCoreExt
+   1352.2 ms  ✓ PreallocationTools → PreallocationToolsEnzymeCoreExt
+   3050.2 ms  ✓ PreallocationTools → PreallocationToolsForwardDiffExt
+   1669.8 ms  ✓ SciMLOperators → SciMLOperatorsSparseArraysExt
+   2030.3 ms  ✓ CompilerCaching
+   6470.2 ms  ✓ PreallocationTools → PreallocationToolsReverseDiffExt
+   2395.3 ms  ✓ KernelAbstractions → SparseArraysExt
+   1767.9 ms  ✓ KernelAbstractions → LinearAlgebraExt
+   1610.9 ms  ✓ KernelAbstractions → EnzymeExt
+   1857.9 ms  ✓ StructArrays → KernelAbstractionsExt
+   9938.4 ms  ✓ CUDA_Runtime_jll
+   8636.8 ms  ✓ RecursiveArrayTools
+  12102.5 ms  ✓ ChainRules
+  32052.9 ms  ✓ NNlib
+  11717.5 ms  ✓ GPUArrays
+  51619.0 ms  ✓ GPUCompiler
+   1580.6 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsStatisticsExt
+   7923.5 ms  ✓ CUDNN_jll
+   1906.8 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsFastBroadcastExt
+   1846.8 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsStructArraysExt
+   1935.5 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsSparseArraysExt
+   2314.0 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsKernelAbstractionsExt
+   1669.1 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsTablesExt
+   1964.8 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsForwardDiffExt
+   1765.8 ms  ✓ MLDataDevices → RecursiveArrayToolsExt
+   1727.6 ms  ✓ ArrayInterface → ArrayInterfaceChainRulesExt
+   2622.6 ms  ✓ MLDataDevices → ChainRulesExt
+   3052.9 ms  ✓ NNlib → NNlibEnzymeCoreExt
+   2421.4 ms  ✓ NNlib → NNlibSpecialFunctionsExt
+   2967.0 ms  ✓ NNlib → NNlibFFTWExt
+   2773.8 ms  ✓ NNlib → NNlibForwardDiffExt
+  10182.6 ms  ✓ MLUtils
+   4731.3 ms  ✓ SparseConnectivityTracer → SparseConnectivityTracerNNlibExt
+   2796.1 ms  ✓ OneHotArrays
+   6200.6 ms  ✓ GPUArrays → JLD2Ext
+  44688.3 ms  ✓ Zygote
+   5241.5 ms  ✓ SparseMatrixColorings → SparseMatrixColoringsGPUArraysExt
+   5362.1 ms  ✓ MLDataDevices → GPUArraysSparseArraysExt
+  52052.7 ms  ✓ CUDACore
+  24535.5 ms  ✓ SciMLBase
+  13856.8 ms  ✓ Tracker
+   4674.7 ms  ✓ MLDataDevices → MLUtilsExt
+   3099.2 ms  ✓ MLDataDevices → OneHotArraysExt
+   7367.4 ms  ✓ Zygote → ZygoteDistancesExt
+   4215.0 ms  ✓ DifferentiationInterface → DifferentiationInterfaceZygoteExt
+   4280.6 ms  ✓ MLDataDevices → ZygoteExt
+   7898.4 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsZygoteExt
+  16969.9 ms  ✓ cuFFT
+ 155407.4 ms  ✓ Enzyme
+  12503.7 ms  ✓ CUDACore → EnzymeCoreExt
+  10942.0 ms  ✓ CUDACore → SpecialFunctionsExt
+  15603.5 ms  ✓ cuRAND
+  10222.3 ms  ✓ CUDACore → ChainRulesCoreExt
+  22023.8 ms  ✓ CUPTI
+  20228.1 ms  ✓ NVML
+  23179.4 ms  ✓ cuDNN
+  25969.1 ms  ✓ cuSPARSE
+   4248.3 ms  ✓ SciMLBase → SciMLBaseDistributionsExt
+   3283.3 ms  ✓ SciMLBase → SciMLBaseStaticArraysExt
+   3122.7 ms  ✓ SciMLBase → SciMLBaseReactantCoreExt
+   4226.4 ms  ✓ SciMLBase → SciMLBaseChainRulesCoreExt
+   3029.5 ms  ✓ SciMLBase → SciMLBaseDifferentiationInterfaceExt
+   3614.1 ms  ✓ SciMLBase → SciMLBaseForwardDiffExt
+   3462.3 ms  ✓ SciMLBase → SciMLBaseFunctionPropertiesExt
+  35406.5 ms  ✓ cuBLAS
+   3481.7 ms  ✓ Tracker → TrackerPDMatsExt
+   4046.3 ms  ✓ FastPower → FastPowerTrackerExt
+   3632.2 ms  ✓ DifferentiationInterface → DifferentiationInterfaceTrackerExt
+   3233.6 ms  ✓ ArrayInterface → ArrayInterfaceTrackerExt
+   3598.8 ms  ✓ MLDataDevices → TrackerExt
+   3168.5 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsTrackerExt
+   6187.5 ms  ✓ Zygote → ZygoteTrackerExt
+   5467.8 ms  ✓ SciMLBase → SciMLBaseTrackerExt
+  50736.4 ms  ✓ LinearSolve
+  12361.1 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsReverseDiffExt
+  10036.1 ms  ✓ Enzyme → EnzymeSpecialFunctionsExt
+   7762.0 ms  ✓ Enzyme → EnzymeStaticArraysExt
+   7012.3 ms  ✓ Enzyme → EnzymeChainRulesCoreExt
+   5969.2 ms  ✓ Enzyme → EnzymeLogExpFunctionsExt
+   8201.4 ms  ✓ Enzyme → EnzymeOrderedCollectionsExt
+   8879.2 ms  ✓ Enzyme → EnzymeGPUArraysExt
+   7262.1 ms  ✓ Enzyme → EnzymeBFloat16sExt
+   7339.9 ms  ✓ Enzyme → EnzymeGPUArraysCoreExt
+   7285.1 ms  ✓ QuadGK → QuadGKEnzymeExt
+   8187.9 ms  ✓ FastPower → FastPowerEnzymeExt
+   7451.5 ms  ✓ FunctionWrappersWrappers → FunctionWrappersWrappersEnzymeExt
+   7400.4 ms  ✓ DifferentiationInterface → DifferentiationInterfaceEnzymeExt
+   8358.8 ms  ✓ SciMLBase → SciMLBaseEnzymeExt
+ 138539.5 ms  ✓ Flux
+   9657.6 ms  ✓ SciMLBase → SciMLBaseZygoteExt
+   8648.8 ms  ✓ OptimizationBase
+   5152.3 ms  ✓ SciMLJacobianOperators
+  33569.5 ms  ✓ CUDATools
+   7641.3 ms  ✓ SciMLBase → SciMLBaseReverseDiffExt
+   9584.6 ms  ✓ cuBLAS → EnzymeCoreExt
+   3367.4 ms  ✓ ArrayInterface → ArrayInterfaceGPUArraysCoreTrackerExt
+   5759.5 ms  ✓ LinearSolve → LinearSolveKernelAbstractionsExt
+   5908.2 ms  ✓ LinearSolve → LinearSolveForwardDiffExt
+   5077.4 ms  ✓ LinearSolve → LinearSolveChainRulesCoreExt
+  27247.2 ms  ✓ cuSOLVER
+   5000.5 ms  ✓ LinearSolve → LinearSolveEnzymeExt
+   5555.9 ms  ✓ OptimizationBase → OptimizationZygoteExt
+  13381.9 ms  ✓ Flux → FluxEnzymeExt
+   9505.5 ms  ✓ OptimizationBase → OptimizationReverseDiffExt
+   5462.6 ms  ✓ OptimizationBase → OptimizationMLUtilsExt
+   4071.2 ms  ✓ OptimizationBase → OptimizationChainRulesCoreExt
+   3934.9 ms  ✓ OptimizationBase → OptimizationMLDataDevicesExt
+   4546.0 ms  ✓ Optimization
+   3215.3 ms  ✓ OptimizationOptimJL
+  16394.4 ms  ✓ LineSearch
+  17433.5 ms  ✓ NonlinearSolveBase
+  13827.1 ms  ✓ LinearSolve → LinearSolveCUDAExt
+  11184.0 ms  ✓ CUDA
+   2811.6 ms  ✓ LineSearch → LineSearchLineSearchesExt
+   3411.9 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseSparseMatrixColoringsExt
+   8015.9 ms  ✓ OptimizationBase → OptimizationEnzymeExt
+   4490.2 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseTrackerExt
+   3286.5 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseSparseArraysExt
+  11114.0 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseForwardDiffExt
+   2623.2 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseLineSearchExt
+   4687.6 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseLinearSolveExt
+   2882.1 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseChainRulesCoreExt
+   9063.6 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseReverseDiffExt
+   5486.6 ms  ✓ BracketingNonlinearSolve
+  15368.5 ms  ✓ Atomix → AtomixCUDAExt
+  12138.5 ms  ✓ SparseMatrixColorings → SparseMatrixColoringsCUDAExt
+  12648.0 ms  ✓ ArrayInterface → ArrayInterfaceCUDAExt
+  11300.3 ms  ✓ MLDataDevices → CUDAExt
+  13185.7 ms  ✓ RecursiveArrayTools → RecursiveArrayToolsCUDAExt
+  10731.8 ms  ✓ Zygote → ZygoteCUDAExt
+  26090.6 ms  ✓ NNlib → NNlibCUDAExt
+    712.4 ms  ✓ Flux → FluxCUDAExt
+  12591.0 ms  ✓ Enzyme → EnzymeCUDAExt
+  17966.5 ms  ✓ NonlinearSolveSpectralMethods
+  48265.3 ms  ✓ NonlinearSolveQuasiNewton
+   8751.9 ms  ✓ NonlinearSolveBase → NonlinearSolveBaseEnzymeExt
+   3882.9 ms  ✓ BracketingNonlinearSolve → BracketingNonlinearSolveForwardDiffExt
+   9301.4 ms  ✓ DiffEqBase
+   8720.8 ms  ✓ MLDataDevices → cuDNNExt
+  87308.9 ms  ✓ NonlinearSolveFirstOrder
+   2481.7 ms  ✓ NonlinearSolveSpectralMethods → NonlinearSolveSpectralMethodsForwardDiffExt
+   3216.9 ms  ✓ NonlinearSolveQuasiNewton → NonlinearSolveQuasiNewtonForwardDiffExt
+   1941.5 ms  ✓ BracketingNonlinearSolve → BracketingNonlinearSolveChainRulesCoreExt
+  11892.1 ms  ✓ SimpleNonlinearSolve
+   3202.8 ms  ✓ DiffEqBase → DiffEqBaseChainRulesCoreExt
+  43640.2 ms  ✓ NNlib → NNlibCUDACUDNNExt
+   4725.8 ms  ✓ DiffEqBase → DiffEqBaseTrackerExt
+  12090.4 ms  ✓ DiffEqBase → DiffEqBaseCUDAExt
+   9229.6 ms  ✓ DiffEqBase → DiffEqBaseReverseDiffExt
+   3317.2 ms  ✓ DiffEqBase → DiffEqBaseSparseArraysExt
+   9371.6 ms  ✓ DiffEqBase → DiffEqBaseForwardDiffExt
+   6664.3 ms  ✓ OrdinaryDiffEqCore
+   9045.4 ms  ✓ DiffEqCallbacks
+   4751.6 ms  ✓ SimpleNonlinearSolve → SimpleNonlinearSolveTrackerExt
+   3498.8 ms  ✓ SimpleNonlinearSolve → SimpleNonlinearSolveChainRulesCoreExt
+  11690.2 ms  ✓ SimpleNonlinearSolve → SimpleNonlinearSolveReverseDiffExt
+   5957.8 ms  ✓ DiffEqBase → DiffEqBaseEnzymeExt
+   7543.8 ms  ✓ NNlib → NNlibEnzymeCoreCUDNNExt
+   8788.5 ms  ✓ DiffEqNoiseProcess
+   3859.2 ms  ✓ OrdinaryDiffEqCore → OrdinaryDiffEqCoreSparseArraysExt
+  42636.1 ms  ✓ OrdinaryDiffEqVerner
+  25361.0 ms  ✓ OrdinaryDiffEqTsit5
+   2649.2 ms  ✓ DiffEqCallbacks → DiffEqCallbacksFunctorsExt
+   4552.0 ms  ✓ DiffEqNoiseProcess → DiffEqNoiseProcessOptimExt
+  10539.2 ms  ✓ DiffEqNoiseProcess → DiffEqNoiseProcessReverseDiffExt
+ 115194.6 ms  ✓ NonlinearSolve
+   6391.4 ms  ✓ OrdinaryDiffEqDifferentiation
+   4672.6 ms  ✓ OrdinaryDiffEqDifferentiation → OrdinaryDiffEqDifferentiationSparseArraysExt
+  30744.8 ms  ✓ SciMLSensitivity
+  11663.2 ms  ✓ OrdinaryDiffEqNonlinearSolve
+  78644.6 ms  ✓ OrdinaryDiffEqRosenbrock
+ 125100.9 ms  ✓ OrdinaryDiffEqSDIRK
+  66863.0 ms  ✓ OrdinaryDiffEqBDF
+ 184688.9 ms  ✓ OrdinaryDiffEqDefault
+  16170.5 ms  ✓ OrdinaryDiffEq
+  216 dependencies successfully precompiled in 1514 seconds. 270 already precompiled.
+Status `~/taslp/ribeiro2024/env_gpu/Project.toml`
+  [c9d4266f] ArrayAllocators v0.3.0
+⌃ [052768ef] CUDA v6.4.1
+  [082447d4] ChainRules v1.74.10
+  [31c24e10] Distributions v0.25.134
+  [7a1cc6ca] FFTW v1.10.0
+  [587475ba] Flux v0.16.15
+  [f6369f11] ForwardDiff v1.4.7
+  [d9f16b24] Functors v0.5.4
+  [14197337] GenericLinearAlgebra v0.4.2
+  [033835bb] JLD2 v0.6.7
+⌅ [63c18a36] KernelAbstractions v0.9.45
+  [ec8451be] KernelFunctions v0.11.1
+  [c5712dd9] Lebedev v1.2.0
+  [15e1cf62] NPZ v0.4.3
+  [3bd65402] Optimisers v0.4.11
+  [7f7a1694] Optimization v5.9.1
+  [36348300] OptimizationOptimJL v0.4.23
+  [1dea7af3] OrdinaryDiffEq v7.8.1
+  [92933f4c] ProgressMeter v1.13.0
+  [1ed8b502] SciMLSensitivity v7.119.14
+  [276daf66] SpecialFunctions v2.9.1
+  [fd094767] Suppressor v0.2.8
+  [e88e6eb3] Zygote v0.7.15
+⌃ [02a925ec] cuDNN v6.4.1
+Info Packages marked with ⌃ and ⌅ have new versions available. Those with ⌃ may be upgradable, but those with ⌅ are restricted by compatibility constraints from upgrading. To see why use `status --outdated`
++ echo GPU_SETUP_RC=0
+GPU_SETUP_RC=0
++ CUDA_VISIBLE_DEVICES=0
++ /root/taslp/ribeiro2024/julia-1.11.9/bin/julia --project=/root/taslp/ribeiro2024/env_gpu -e 'using CUDA, cuDNN; CUDA.versioninfo(); println(CUDA.functional()); x=CUDA.rand(Float64,4,4); println(sum(x*x))'
+CUDA toolchain: 
+- runtime 13.4.0, artifact installation
+- driver 595.99.2 for CUDA 13.5, forward-compatible
+- compiler 13.5.37, artifact installation
+
+CUDA libraries: 
+- cuBLAS: 13.8.0
+- cuSPARSE: 12.8.6
+- cuSOLVER: 12.3.5
+- cuFFT: 12.4.0
+- cuRAND: 10.4.4
+- cuDNN: 9.28.0
+- CUPTI: 2026.3.1 (API 13.4.1)
+- NVML: 13.0.0+595.99.2
+
+Julia packages: 
+- CUDACore: 6.4.1
+- GPUArrays: 11.5.16
+- GPUCompiler: 2.10.0
+- KernelAbstractions: 0.9.45
+- CUDA_Driver_jll: 13.5.0+0
+- CUDA_Compiler_jll: 0.6.4+0
+- CUDA_Runtime_jll: 0.25.0+3
+- NVPTX_LLVM_Backend_jll: 23.1.2+2
+
+Toolchain:
+- Julia: 1.11.9
+- LLVM: 16.0.6
+
+1 device:
+  0: NVIDIA GeForce RTX 5070 Ti (sm_120, 15.245 GiB / 15.921 GiB available)
+     compiles to sm_120a / PTX 9.4 (LLVM: sm_120a / PTX 9.2)
+true
+16.626467205254272
++ du -sh /root/taslp/ribeiro2024/julia-depot
+7.1G	/root/taslp/ribeiro2024/julia-depot
++ echo GPU_SETUP_DONE
+GPU_SETUP_DONE
