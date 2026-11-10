@@ -1,0 +1,88 @@
+{
+ "studies_present": [
+  "mesh",
+  "miracle",
+  "sim"
+ ],
+ "studies_pending": [],
+ "per_set": {
+  "mesh:mesh": {
+   "problems": 1024,
+   "pooled95": {
+    "all_cells": {
+     "mean": -0.005605338678233037,
+     "low": -0.020676250945831875,
+     "high": 0.0094655735893658,
+     "units": 32
+    }
+   },
+   "classes_changed": [],
+   "orders_changed": 181,
+   "stable": true
+  },
+  "miracle:A1": {
+   "problems": 768,
+   "pooled95": {
+    "all_cells": {
+     "mean": -0.4282506505347219,
+     "low": -0.5051382441484406,
+     "high": -0.3513630569210032,
+     "units": 32
+    }
+   },
+   "classes_changed": [
+    "500Hz-M48",
+    "500Hz-M96",
+    "500Hz-M192"
+   ],
+   "orders_changed": 170,
+   "stable": false
+  },
+  "miracle:R2": {
+   "problems": 768,
+   "pooled95": {
+    "all_cells": {
+     "mean": -0.18739763332520204,
+     "low": -0.25765921272459236,
+     "high": -0.11713605392581175,
+     "units": 32
+    }
+   },
+   "classes_changed": [
+    "250Hz-M24",
+    "1000Hz-M192"
+   ],
+   "orders_changed": 135,
+   "stable": false
+  },
+  "sim:sim": {
+   "problems": 2048,
+   "pooled95": {
+    "source_proximal": {
+     "mean": -0.020323149540492063,
+     "low": -0.036863547163213724,
+     "high": -0.003782751917770402,
+     "units": 32
+    },
+    "all_cells": {
+     "mean": -0.020061771573510058,
+     "low": -0.036311955615933436,
+     "high": -0.0038115875310866833,
+     "units": 32
+    }
+   },
+   "classes_changed": [],
+   "orders_changed": 171,
+   "stable": true
+  }
+ },
+ "problems": 4608,
+ "orders_changed": 657,
+ "classes_changed": 5,
+ "verdicts": {
+  "mesh": "stable",
+  "miracle": "not stable: A1, R2",
+  "sim": "stable"
+ },
+ "verdict": "not stable or checks failed in: miracle"
+}

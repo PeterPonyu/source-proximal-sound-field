@@ -29,6 +29,21 @@ def git(*a):
     return subprocess.check_output(['git', '-C', str(ROOT), *a])
 
 
+def reference_rows(path, n):
+    """The laptop development rows of the cross-machine check tasks (cross_check.py), with their task tuples."""
+    ref = [json.loads(l) for l in open(path) if '"error"' not in l]
+    pick = []
+    for kind, M in (('sim', 48), ('sim', 96), ('sim', 24), ('meas', 48), ('meas', 96), ('meas', 24)):
+        cand = [r for r in ref if r['kind'] == kind and r['M_mics'] == M]
+        if cand:
+            pick.append(cand[0])
+    pick = pick[:n]
+    for r in pick:
+        r['_task'] = (['sim', r['cell'], r['seed']] if r['kind'] == 'sim' else
+                      ['meas', r['source'], r['band'], r['M'], r['draw'], r['seed']])
+    return pick
+
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('commit'); ap.add_argument('out'); ap.add_argument('--reference-tasks', type=int, default=6)
     ap.add_argument('--reference-rows', default='V2-dev/dev1-box/rows.jsonl')
@@ -37,16 +52,7 @@ def main():
              if not any(f.startswith(f'{STUDY}/{e}') for e in EXCLUDE)]
     manifest = json.loads(git('show', f'{a.commit}:{STUDY}/FROZEN-INPUTS.json'))
     files += [f for f in manifest['files'] if not f.startswith(STUDY)]
-    ref = [json.loads(l) for l in open(ROOT / STUDY / a.reference_rows) if '"error"' not in l]
-    pick = []
-    for kind, M in (('sim', 48), ('sim', 96), ('sim', 24), ('meas', 48), ('meas', 96), ('meas', 24)):
-        cand = [r for r in ref if r['kind'] == kind and r['M_mics'] == M]
-        if cand:
-            pick.append(cand[0])
-    pick = pick[:a.reference_tasks]
-    for r in pick:
-        r['_task'] = (['sim', r['cell'], r['seed']] if r['kind'] == 'sim' else
-                      ['meas', r['source'], r['band'], r['M'], r['draw'], r['seed']])
+    pick = reference_rows(ROOT / STUDY / a.reference_rows, a.reference_tasks)
     sha = {}
     with tarfile.open(a.out, 'w:gz') as tar:
         def add(name, data):

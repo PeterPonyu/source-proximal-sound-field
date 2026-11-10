@@ -1,0 +1,12 @@
+{
+ "C1_sphere_fit_band": true,
+ "C1_sim_fit_band": true,
+ "C1_sim_extend": true,
+ "C1_sim_cv": true,
+ "C2_scaled_objective_consistent": true,
+ "C2_not_worse_than_start": true,
+ "C3_reset_lowers_objective": true,
+ "C4_sphere_404008_K1_max_db": -26.73490822335016,
+ "C4_pass": true,
+ "all_pass": true
+}

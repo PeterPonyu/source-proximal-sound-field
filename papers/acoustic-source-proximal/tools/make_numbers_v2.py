@@ -462,6 +462,9 @@ put('abs-m3-A1-phrase', f"won {WORDS[_a1['wins']]} of 12 conditions and lost {WO
 put('abs-m3-R2-phrase', f"won {WORDS[_r2['wins']]} and lost {WORDS[_r2['losses']]}" if _r2['wins'] != _r2['losses'] else f"won and lost {WORDS[_r2['wins']]} each")
 put('abs-m3-A1', f"{-M3['A1']['pooled_vs_best_generic_cell']['mean']:.2f}")
 put('abs-m3-R2-phrase2', f"won {WORDS[_r2['wins']]} and lost {WORDS[_r2['losses']]}")
+# the same counts in the accuracy wording of the revised abstract (a win is "more accurate", a loss "less accurate")
+put('abs-m3-A1-acc', f"was more accurate in {WORDS[_a1['wins']]} of 12 conditions and less accurate in {WORDS[_a1['losses']]}")
+put('abs-m3-R2-acc', f"was more accurate in {WORDS[_r2['wins']]} and less accurate in {WORDS[_r2['losses']]}")
 put('m3-stop', 'yes' if M3['stop_rule']['triggered'] else 'no')
 
 # (1) every registered outcome, failures included
@@ -485,12 +488,12 @@ rule_rows = [
      f"shared: {wtl(pg)}, pooled {tex_iv(pg['pooled'])}; per-bin: {V['meas-M2-mo26']} and {V['meas-M2-mo26-undef']} undefined condition; pooled undefined"),
     ('', 'No loss to the sinc kernel', 'pass' if RM['M3']['passed'] else 'fail', f"{wtl(RM['M3'])}"),
     ('', 'Evidence-chosen remainder kernel beats the best generic estimator in every 125--250~Hz condition', 'pass' if RM['M4']['passed'] else 'fail', f"{wtl(RM['M4'])} of {RM['M4']['cells']}"),
-    ('Anechoic grid', 'Primary scenario: beats the best generic estimator in $\\geq 9$ of 12 conditions, loses in none',
+    ('Anechoic grid', 'Near configuration: beats the best generic estimator in $\\geq 9$ of 12 conditions, loses in none',
      'pass' if _m3r['G1']['passed'] else 'fail', f"{wtl(M3['A1']['best_generic'])}; pooled {tex_iv(M3['A1']['pooled_vs_best_generic_cell'])} per condition, {tex_iv(M3['A1']['pooled_vs_best_generic_task'])} oracle"),
-    ('', 'Primary scenario: no loss to the sinc kernel', 'pass' if _m3r['G2']['passed'] else 'fail', wtl(M3['A1']['sinc'])),
-    ('', 'Primary scenario: pooled superior to the shared five-ball variant', 'pass' if _m3r['G3']['passed'] else 'fail',
+    ('', 'Near configuration: no loss to the sinc kernel', 'pass' if _m3r['G2']['passed'] else 'fail', wtl(M3['A1']['sinc'])),
+    ('', 'Near configuration: pooled superior to the shared five-ball variant', 'pass' if _m3r['G3']['passed'] else 'fail',
      f"{wtl(M3['A1']['gsmf'])}; pooled {tex_iv(M3['A1']['gsmf']['pooled'])}"),
-    ('', 'Second scenario, farther and with a reflector: beats the best generic estimator in $\\geq 9$ of 12 conditions, loses in none',
+    ('', 'Reflector configuration: beats the best generic estimator in $\\geq 9$ of 12 conditions, loses in none',
      'pass' if _m3r['G4']['passed'] else 'fail', f"{wtl(M3['R2']['best_generic'])}; pooled {tex_iv(M3['R2']['pooled_vs_best_generic_cell'])} per condition, {tex_iv(M3['R2']['pooled_vs_best_generic_task'])} oracle"),
     ('Follow-ups', 'Room-grid win rule, corrected sparse Bayesian comparators', 'pass' if fix['M1_corrected']['passed'] else 'fail',
      f"{wtl(fix['M1_corrected'])}; pooled {tex_iv(fix['pooled_vs_task_best_generic'])} oracle"),
@@ -563,6 +566,9 @@ for name, keys in RT:
     _rt.append(name + ' & ' + ' & '.join(f'{v:,.0f}' for v in vals))
 lines = [r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule', r'Estimator & $M=24$ & $48$ & $96$ & $192$\\', r'\midrule']
 lines += [row + r'\\' for row in _rt]          # one column wide: the supplement is double-column
+# two point baselines timed post hoc and scaled to the recording machine (values: make_numbers_upgrade.py, keys up-rt-*)
+lines += [name + r'$^\dagger$ & ' + ' & '.join(rf'\vn{{up-rt-{key}-{M}}}' for M in (24, 48, 96, 192)) + r'\\'
+                          for name, key in (('Arrival-time point', 'at'), ('Single fitted point', 'k1'))]
 lines += [r'\bottomrule', r'\end{tabular}']
 (OUT / 'v2-runtime-table.tex').write_text('\n'.join(lines) + '\n')
 prim = {M: np.median([t_prop(r) for r in m2rows if r['M'] == M]) for M in (24, 192)}
@@ -638,6 +644,51 @@ for k in range(_h):
     lines.append(_mrows[k] + ' & ' + _mrows[_h + k] + r'\\')
 lines += [r'\bottomrule', r'\end{tabular}']
 (OUT / 'v2-meas-cells-table.tex').write_text('\n'.join(lines) + '\n')
+
+# (5b) every condition of the simulation and the room grid as plain CSV for the public archive (the paper's
+# supplement no longer prints these two tables); intervals are Bonferroni-corrected Student-t, as registered
+import csv
+_READ = {'sinc_ev': 'sinc kernel', 'rbf': 'squared-exponential kernel', 'adk_standin': 'adaptive kernel',
+         'sbl_em_common': 'sparse Bayesian (expectation-maximization)', 'sbl_mackay_common': 'sparse Bayesian (fixed point)',
+         'sbl_em_guard': 'sparse Bayesian (expectation-maximization, target-guarded)',
+         'sbl_mackay_guard': 'sparse Bayesian (fixed point, target-guarded)'}
+
+
+def _csv_cols(prefix, d):
+    if d is None or d.get('mean') is None or not math.isfinite(d['mean']):
+        return {f'{prefix}_mean_db': 'undefined', f'{prefix}_low_db': '', f'{prefix}_high_db': '', f'{prefix}_class': 'undefined'}
+    return {f'{prefix}_mean_db': f"{d['mean']:.4f}", f'{prefix}_low_db': f"{d['low']:.4f}" if d.get('low') is not None else '',
+            f'{prefix}_high_db': f"{d['high']:.4f}" if d.get('high') is not None else '', f'{prefix}_class': d.get('cls', '')}
+
+
+def _write_csv(path, rows):
+    with open(path, 'w', newline='') as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()), lineterminator='\n')
+        w.writeheader(); w.writerows(rows)
+
+
+_simcsv = []
+for c in CELLS:
+    d = C[c]['comparisons']; bg = C[c]['best_generic']
+    r = {'condition': sim_label(c), 'source_proximal': 'no' if c == 'A1-beside1.2' else 'yes',
+         'best_generic_estimator': _READ.get(bg, bg)}
+    for pre, key in (('vs_best_generic', 'j_cv_ext-vs-' + bg), ('vs_shared_five_ball', 'j_cv_ext-vs-gsmf'),
+                     ('vs_per_bin_five_ball', 'j_cv_ext-vs-mo26_cap5'), ('vs_sinc_kernel', 'j_cv_ext-vs-sinc_ev')):
+        r.update(_csv_cols(pre, d[key]))
+    r['percent_at_cap_of_five'] = f"{100 * C[c]['cap_bound_fraction']:.1f}"
+    _simcsv.append(r)
+_write_csv(OUT / 'every-condition-simulation.csv', _simcsv)
+_meascsv = []
+for c in MCELLS:
+    d = MC[c]['comparisons']; bg = MC[c]['best_generic']
+    r = {'condition': meas_label(c), 'best_generic_estimator_registered': _READ.get(bg, bg)}
+    for pre, dd in (('vs_best_generic_registered', d['j_cv_ext-vs-' + bg]), ('vs_best_generic_corrected', fixc[c]),
+                    ('vs_shared_five_ball_cubature', d['j_cv_ext-vs-gsmf']),
+                    ('vs_shared_five_ball_exact', exb[c]['comparisons']['j_cv_ext-vs-gsmf_exact']),
+                    ('vs_per_bin_five_ball', d['j_cv_ext-vs-mo26_cap5']), ('vs_arrival_time_point', d['j_cv_ext-vs-two_stage_point'])):
+        r.update(_csv_cols(pre, dd))
+    _meascsv.append(r)
+_write_csv(OUT / 'every-condition-room-grid.csv', _meascsv)
 
 # (6) the six simulation conditions where non-inferiority to the group-sparse kernel fails
 lines = [r'\begin{tabular}{@{}lrl@{}}', r'\toprule', r'Condition & Proposed $-$ group-sparse (dB) & Class\\', r'\midrule']

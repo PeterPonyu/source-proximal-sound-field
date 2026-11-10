@@ -1,0 +1,245 @@
+{
+ "job": "m4",
+ "command": [
+  "python3",
+  "-B",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/studies/TB-M4-MIRACLE-A2/run_m4.py",
+  "run",
+  "/root/taslp/out/extract-a2",
+  "/root/taslp/out/m4",
+  "--workers",
+  "122"
+ ],
+ "exit_code": 0,
+ "started": "2026-11-10T03:25:44Z",
+ "finished": "2026-11-10T05:48:20Z",
+ "registration_commit": "76f2e2ab2311a16fec2b8bd7a37e4b4813e1b386",
+ "capsule_listing_sha256": "9ffd367ec90496a6d3506d2d8d85e548af26335b486cb643bda9b964371c1701",
+ "machine": {
+  "record": "machine.txt",
+  "record_sha256": "c42aed0a786264d5163e3f1d45416f7f0d6dae07e7577b5833d2f921c75fe892",
+  "cpu_model": "AMD EPYC 7B13 64-Core Processor",
+  "nproc": 256,
+  "mem_total_gib": 503.6,
+  "hostname": "aee1ce94dd9d",
+  "single_machine": true
+ },
+ "python": "3.13.5",
+ "threads": {
+  "OPENBLAS_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Haswell"
+ },
+ "post_hoc": false,
+ "registered": true,
+ "counts": {
+  "rows": 768,
+  "good": 768,
+  "distinct": 768,
+  "duplicates": 0,
+  "errors_open": 0,
+  "errors_superseded": 0,
+  "comparator_errors": 0,
+  "expected": 768,
+  "scenarios": [
+   "A2"
+  ]
+ },
+ "complete": true,
+ "outputs": {
+  "m4/finished.json": "2cadd4c8a504c6e4f8903cce2f925df43b35cb236757dd3d1fd4fe31c5ced7d3",
+  "m4/rows.jsonl": "7b940f4d9665f639e2db780cd944fea608bfa08e916257a60b0506a805f28816",
+  "m4/started.json": "4136e16b526e99b8d592dd2d203fd70e07d21cf371d512a3ca4e2b3190c36139"
+ },
+ "inputs": {
+  "studies/TB-M4-MIRACLE-A2/run_m4.py": "1edff3ba9ea181a2061124c40b3e0246781412560f567d3edf5d09c42acd6d1e",
+  "studies/TB-M4-MIRACLE-A2/PROTOCOL.md": "d4fedc27ee9be337f476d0c5828a4cf853193001c3b2a761a8849ee99b2edd48",
+  "posthoc/upgrade-mfsbl/mfsbl.py": "8bcc5727265020e77125d4b2dc47d0a4c9d97afa7d169805f19adc9b47cbb1c2",
+  "studies/TB-M3-MIRACLE/run_m3.py": "4b31dc6f5dfcc68fcb0adaa58529c1b8c0fc568ea973e738dea13aab4570a07f"
+ },
+ "numpy": "2.2.6",
+ "scipy": "1.16.3",
+ "cross_machine_check": {
+  "passed": true,
+  "sha256": "271e10ce7ab9e8af7054eeb1fe00e0b72eeed631e7999383e9fe70e1d3487564"
+ },
+ "a2": {
+  "download": {
+   "file": "A2.h5",
+   "url": "https://api-depositonce.tu-berlin.de/server/api/core/bitstreams/27b81b48-24a7-4db8-acc0-5dc085c94caf/content",
+   "doi": "10.14279/depositonce-18318",
+   "bytes": 1074811504,
+   "md5": "bb9d5f12d39f53eadf9c448348d51036",
+   "md5_expected": "bb9d5f12d39f53eadf9c448348d51036",
+   "started": "2026-11-10T03:16:27Z",
+   "finished": "2026-11-10T03:17:23Z"
+  },
+  "prep_receipt": {
+   "scenario": "A2",
+   "file": "A2.h5",
+   "md5": "bb9d5f12d39f53eadf9c448348d51036",
+   "sources": [
+    2,
+    3,
+    4,
+    6,
+    7,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    34,
+    36,
+    38,
+    39,
+    44,
+    45,
+    50,
+    52,
+    53,
+    54,
+    58,
+    60,
+    63
+   ],
+   "hdf5_items": {
+    "data": "group",
+    "data/impulse_response": [
+     4096,
+     64,
+     1024
+    ],
+    "data/location": "group",
+    "data/location/receiver": [
+     64,
+     3
+    ],
+    "data/location/source": [
+     4096,
+     3
+    ],
+    "data/location/source_raw": [
+     4096,
+     3
+    ],
+    "metadata": "group",
+    "metadata/c0": [
+     4096
+    ],
+    "metadata/sampling_rate": [],
+    "metadata/temperature": [
+     4096
+    ]
+   },
+   "layout": {
+    "shape": [
+     4096,
+     64,
+     1024
+    ],
+    "position_axis": 0,
+    "microphone_axis": 1,
+    "time_axis": 2
+   },
+   "qualification": {
+    "grid_64x64": true,
+    "spacing_m": [
+     0.0232,
+     0.023299999999999987
+    ],
+    "spacing_ok": true,
+    "planar_std_mm": 0.0,
+    "planar_ok": true,
+    "region_a_m": 0.986941739941832,
+    "d_over_a": [
+     1.4963591348485346,
+     1.6798386031622234
+    ],
+    "plane_to_array_m": 1.4739999771118164,
+    "passed": true
+   },
+   "extract_sha256": "3c2d4902f064cdeccbd6d1a609703de6b560c5733680f3bc01d2e6fb6911e536",
+   "c0": 345.05291748046875,
+   "n_time": 1024,
+   "latency_s_median_per_source": [
+    -2.8739769550862986e-05,
+    -2.9877493417460738e-05,
+    -2.8877492955473386e-05,
+    -3.0349131035966627e-05,
+    -2.974596837152909e-05,
+    -3.2002676096807604e-05,
+    -3.2412034785092234e-05,
+    -3.161083247466608e-05,
+    -3.185152485072132e-05,
+    -3.199836192400215e-05,
+    -3.252132354903802e-05,
+    -3.2146162773862355e-05,
+    -3.269377788038975e-05,
+    -3.42760249702357e-05,
+    -3.446220393643184e-05,
+    -3.424423177583475e-05,
+    -3.304631002909366e-05,
+    -3.375016327902651e-05,
+    -3.1967024865521033e-05,
+    -3.0168113729518546e-05,
+    -3.1847364242651444e-05,
+    -3.362949621558194e-05,
+    -3.419653233153845e-05,
+    -3.2973699726449035e-05,
+    -3.24413699836117e-05,
+    -3.0222142528305886e-05,
+    -2.994756629300186e-05,
+    -2.9983609667640944e-05,
+    -3.044442015169742e-05,
+    -3.0205858105194702e-05,
+    -3.163848483571461e-05,
+    -3.0744653998306115e-05,
+    -2.9916161390946237e-05,
+    -3.374190057268446e-05,
+    -3.341316884068746e-05,
+    -3.334199916444659e-05,
+    -3.2381325009667346e-05,
+    -3.627406221207944e-05,
+    -3.495570042075149e-05,
+    -3.4601225376368165e-05,
+    -3.15362270030305e-05,
+    -3.1833187857067784e-05,
+    -3.3945273702805714e-05,
+    -3.4989507249038806e-05,
+    -3.782142676497964e-05,
+    -3.812609473670403e-05,
+    -3.6587043078114244e-05,
+    -3.388567643237538e-05,
+    -3.364567308732167e-05,
+    -3.227891900373439e-05,
+    -3.269854213224909e-05,
+    -3.0870771163513805e-05,
+    -3.0535143371289604e-05,
+    -2.9892131277689353e-05,
+    -3.0738839342550964e-05,
+    -3.1471110534898004e-05,
+    -2.8717791754242182e-05,
+    -2.929733261894992e-05,
+    -2.9318860642683388e-05,
+    -3.1357613313498164e-05,
+    -2.9012002074411958e-05,
+    -2.8067394848135634e-05,
+    -2.8851689551297015e-05,
+    -2.9715018011455645e-05
+   ],
+   "arrival_residual_ms_median": 0.004201551655532137
+  },
+  "extract_sha256": "3c2d4902f064cdeccbd6d1a609703de6b560c5733680f3bc01d2e6fb6911e536"
+ }
+}

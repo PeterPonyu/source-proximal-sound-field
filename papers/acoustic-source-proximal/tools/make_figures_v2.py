@@ -209,7 +209,13 @@ def inside(artist):
     return artist
 
 
+MARGIN_DB, MARGIN_C = 0.1, '#D2D2D2'    # practical margin of the decision rules, drawn as a band about zero
+
+
 def zero_line(ax, vertical=False):
+    """Zero line of a paired-difference axis, with the +/-0.1 dB practical-margin band behind it."""
+    band = dict(color=MARGIN_C, lw=0, zorder=0.5, gid=BG)
+    (ax.axvspan if vertical else ax.axhspan)(-MARGIN_DB, MARGIN_DB, **band)
     kw = dict(color=INK, lw=0.6, zorder=1, gid=BG)
     return ax.axvline(0.0, **kw) if vertical else ax.axhline(0.0, **kw)
 
@@ -221,7 +227,7 @@ def fixed_ticks(ax, axis, lo, hi, nbins=4, steps=(1, 2, 2.5, 5, 10)):
     return vals
 
 
-def draw_interval(ax, x, v, color, marker, ms=3.4, lw=0.8):
+def draw_interval(ax, x, v, color, marker, ms=3.4, lw=0.8, loss_color=None):
     """Interval line and mean marker of one registered comparison: filled marker for a win, open marker for a tie
     and a vermillion cross for a loss (class read from the summary). Returns False for an undefined value."""
     if not defined(v):
@@ -229,7 +235,7 @@ def draw_interval(ax, x, v, color, marker, ms=3.4, lw=0.8):
     ax.plot([x, x], [v['low'], v['high']], color=color, lw=lw, solid_capstyle='butt', zorder=2)
     cls = v['cls']
     if cls == 'loss':
-        ax.plot([x], [v['mean']], ls='none', marker='x', ms=ms + 0.9, mew=1.1, color=VERMILLION, zorder=4)
+        ax.plot([x], [v['mean']], ls='none', marker='x', ms=ms + 0.9, mew=1.1, color=loss_color or VERMILLION, zorder=4)
     elif cls in ('win', 'tie'):
         ax.plot([x], [v['mean']], ls='none', marker=marker, ms=ms, mew=0.8, mec=color,
                 mfc=color if cls == 'win' else 'white', zorder=3)
@@ -749,23 +755,29 @@ def fig_absolute(S: Path, path: Path):
 
 
 def fig_miracle(S: Path, path: Path):
-    """Second measured study (TB-M3-MIRACLE): per-condition paired differences with Bonferroni intervals, both scenarios."""
+    """Anechoic grid, three configurations (near, far, far with a reflector): per-condition paired differences with
+    Bonferroni intervals against the best generic estimator, the gridded multi-frequency sparse model (better variant of
+    the condition) and the arrival-time point model."""
     sm = jload(S / 'studies' / 'TB-M3-MIRACLE' / 'primary' / 'summary.json')
+    m4 = jload(S / 'studies' / 'TB-M4-MIRACLE-A2' / 'primary' / 'summary.json')
+    mf = jload(S / 'posthoc' / 'upgrade-mfsbl' / 'summary-seen.json')
     bands, Ms = (250, 500, 1000), (24, 48, 96, 192)
     pos = {f'{f}Hz-M{M}': b * 5 + m for b, f in enumerate(bands) for m, M in enumerate(Ms)}
     c = list(pos)
-    styles = ((BLUE, 'o', -0.25), (ORANGE, 's', 0.0), (INK, '^', 0.25))
-    labels = ('Best generic', NAME['gsmf'], NAME['two_stage_point'])
-    # both legends sit in one row above the panel titles, so the plotting areas stay free of legend boxes
+    styles = ((BLUE, 'o', -0.27), (ORANGE, 's', 0.0), (INK, '^', 0.27))
+    labels = ('Best generic', 'Gridded multi-frequency sparse', NAME['two_stage_point'])
+    table = dict(A1=sm['A1']['cells_table'], A2=m4['A2']['cells_table'], R2=sm['R2']['cells_table'])
+    grid = dict(A1=mf['sets']['A1']['better_variant']['by_cell'], A2=m4['A2']['mfsbl']['better_variant']['by_cell'],
+                R2=mf['sets']['R2']['better_variant']['by_cell'])
     fig = plt.figure(figsize=(DW, 2.22))
-    w, hgt = 3.03, 1.02
-    lefts = (0.48, 0.48 + w + 0.55)
+    w, hgt = 1.84, 1.02
+    lefts = tuple(0.48 + i * (w + 0.52) for i in range(3))
     axes = {}
-    for i, (letter, sc) in enumerate((('a', 'A1'), ('b', 'R2'))):
-        T = sm[sc]['cells_table']
-        assert set(T) == set(pos), 'MIRACLE cells differ from the registered design'
+    for i, (letter, sc) in enumerate((('a', 'A1'), ('b', 'A2'), ('c', 'R2'))):
+        T, G = table[sc], grid[sc]
+        assert set(T) == set(pos) == set(G), 'anechoic conditions differ from the design'
         series = (lambda k: ivl(T[k]['comparisons'][f"j_cv_ext-vs-{T[k]['best_generic']}"]),
-                  lambda k: ivl(T[k]['comparisons']['j_cv_ext-vs-gsmf']),
+                  lambda k: ivl(G[k]),
                   lambda k: ivl(T[k]['comparisons']['j_cv_ext-vs-two_stage_point']))
         ax = axes_in(fig, lefts[i], 0.70, w, hgt)
         axes[letter] = ax
@@ -775,18 +787,19 @@ def fig_miracle(S: Path, path: Path):
         for get, (col, mk, off) in zip(series, styles):
             for k in c:
                 v = get(k)
-                assert draw_interval(ax, pos[k] + off, v, col, mk, ms=3.3), 'undefined MIRACLE interval'
+                assert draw_interval(ax, pos[k] + off, v, col, mk, ms=2.6, lw=0.7, loss_color=col), 'undefined interval'
                 lows.append(v['low']); highs.append(v['high'])
         span = max(highs) - min(lows)
-        ax.set_xlim(-0.65, 13.65)
+        ax.set_xlim(-0.75, 13.75)
         ax.set_ylim(min(lows) - 0.05 * span, max(highs) + 0.08 * span)
         ylo, yhi = ax.get_ylim()
         fixed_ticks(ax, 'y', ylo, yhi, nbins=4)
-        ax.set_ylabel('Difference (dB)')
+        if i == 0:
+            ax.set_ylabel('Difference (dB)')
         ax.set_xticks([pos[k] for k in c])
         blend = ax.get_xaxis_transform()
         ax.set_xticklabels([k.split('-M')[1] for k in c], rotation=90, fontsize=FS)
-        ax.annotate('Microphones $M$ within each band', xy=(0.5, 0), xycoords='axes fraction',
+        ax.annotate('Microphones $M$ in each band', xy=(0.5, 0), xycoords='axes fraction',
                     xytext=(0, -33.5), textcoords='offset points', ha='center', va='top', fontsize=FS_LABEL,
                     annotation_clip=False)
         for bi, f in enumerate(bands):
@@ -795,13 +808,14 @@ def fig_miracle(S: Path, path: Path):
                         annotation_clip=False)
     fig.canvas.draw()
     r = renderer(fig)
-    for k, t in (('a', 'Grid 0.74 m from the sources'), ('b', 'Grid 1.47 m away, with a reflector')):
+    for k, t in (('a', 'Near, 0.74 m'), ('b', 'Far, 1.47 m'), ('c', 'Far, with a reflector')):
         header(fig, axes[k], k, t, x_in=axes[k].yaxis.get_tightbbox(r).x0 / fig.dpi)
     hs = [Line2D([], [], ls='none', marker=mk, ms=3.6, mew=0.8, mec=col, mfc=col) for col, mk, _ in styles]
     hh, ll = class_handles(INK)
+    hh[2] = Line2D([], [], ls='none', marker='x', ms=4.3, mew=1.1, color=INK)   # here a loss keeps its series colour
     spacer = Line2D([], [], ls='none')
     fig.legend(hs + [spacer] + hh, list(labels) + [''] + ll, loc='upper center', bbox_to_anchor=(0.5, 1.0), ncol=7,
-               borderaxespad=0.0, borderpad=0.0, handletextpad=0.35, columnspacing=1.2, fontsize=FS)
+               borderaxespad=0.0, borderpad=0.0, handletextpad=0.35, columnspacing=1.0, fontsize=FS)
     return fig
 
 

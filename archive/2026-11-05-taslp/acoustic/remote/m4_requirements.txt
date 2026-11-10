@@ -1,0 +1,6 @@
+# Box lock file for the 2026-11-09 run (m4_box_setup.sh): the laptop stack, CPython 3.13.5, x86-64 Linux wheels only.
+# Hashes are the PyPI SHA-256 of the cp313 manylinux x86_64 wheels, read from pypi.org/pypi/<pkg>/<ver>/json on 2026-11-09.
+# numpy and scipy bundle scipy-openblas 0.3.29, as on the laptop. h5py is used only by miracle_prep.py to read A2.h5.
+numpy==2.2.6 --hash=sha256:1bc23a79bfabc5d056d106f9befb8d50c31ced2fbc70eedb8155aec74a45798f
+scipy==1.16.3 --hash=sha256:7dc1360c06535ea6116a2220f760ae572db9f661aba2d88074fe30ec2aa1ff88
+h5py==3.16.0 --hash=sha256:9300ad32dea9dfc5171f94d5f6948e159ed93e4701280b0f508773b3f582f402

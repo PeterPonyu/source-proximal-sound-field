@@ -1,0 +1,111 @@
+{
+ "mode": "dry",
+ "dry_tasks": "per-M:2",
+ "tasks": [
+  [
+   "A1",
+   2,
+   250.0,
+   24,
+   0,
+   414000
+  ],
+  [
+   "A1",
+   2,
+   500.0,
+   24,
+   0,
+   414000
+  ],
+  [
+   "A1",
+   2,
+   250.0,
+   48,
+   0,
+   414002
+  ],
+  [
+   "A1",
+   2,
+   500.0,
+   48,
+   0,
+   414002
+  ],
+  [
+   "A1",
+   2,
+   250.0,
+   96,
+   0,
+   414004
+  ],
+  [
+   "A1",
+   2,
+   500.0,
+   96,
+   0,
+   414004
+  ],
+  [
+   "A1",
+   2,
+   250.0,
+   192,
+   0,
+   414006
+  ],
+  [
+   "A1",
+   2,
+   500.0,
+   192,
+   0,
+   414006
+  ]
+ ],
+ "task_check": {
+  "tasks": 768,
+  "seeds": [
+   414000,
+   414255
+  ],
+  "distinct_seeds": 256,
+  "seeds_equal_a1": true,
+  "overlap_with_r2_seeds": 0,
+  "passed": true
+ },
+ "environment": {
+  "node": "aee1ce94dd9d",
+  "cpu": "x86_64",
+  "python": "3.13.5",
+  "numpy": "2.2.6",
+  "scipy": "1.16.3",
+  "numpy_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"10.2.1\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.1.0\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"10.2.1\",\n      \"commands\": \"c++\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"build\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.29\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\"\n    },\n    \"lapack\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.29\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.13.0/lib/python3.13/site-packages/scipy_openblas64/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.29  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/tmp/build-env-m3m9aqh7/bin/python\",\n    \"version\": \"3.13\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"SSE\",\n      \"SSE2\",\n      \"SSE3\"\n    ],\n    \"found\": [\n      \"SSSE3\",\n      \"SSE41\",\n      \"POPCNT\",\n      \"SSE42\",\n      \"AVX\",\n      \"F16C\",\n      \"FMA3\",\n      \"AVX2\"\n    ],\n    \"not found\": [\n      \"AVX512F\",\n      \"AVX512CD\",\n      \"AVX512_KNL\",\n      \"AVX512_KNM\",\n      \"AVX512_SKX\",\n      \"AVX512_CLX\",\n      \"AVX512_CNL\",\n      \"AVX512_ICL\"\n    ]\n  }\n}\n"
+ },
+ "extract_a1": "e3c36c2ce15cefedd8eb65bfeea4c60b468241b85fd1e216def70c5423b923ba",
+ "m3_rows": "32660f080999d77a7cfcff5ad687494cd6b3d77aa1edffa2f11dafbfad39d0f4",
+ "inputs": {
+  "common/estimators.py": "3c6bbc9aa746fe4a438150b5d835796114e97768e5a3f52acfcd9fa3087d9e60",
+  "common/v2.py": "4473270dd4bc451f5ecf301f6e9771367c45df358fdbcdaf9c2c1af889bc71c7",
+  "common/methods_v2.py": "ed7255012283f3f2db4e4590ac2f8e2cd38b626a01ddb115f81564ed1b931cb8",
+  "common/problems_v2.py": "3cb8ab5e23441074011cbc620d6ab5b8ab28b66e912293665fcdfb8531b032bf",
+  "common/sbl_guard.py": "bd40aa37ee19faea06a5c96f72bfd4a40a1f2c26e4cb4bd77f2587c86f2252cd",
+  "common/fields.py": "10ed7e2e2523c65d2f09974f0e2069a13b1f86e6e00d32b10962ddbcb31229ae",
+  "common/mprir.py": "36ac6b76a9d9333a167c1ca922685f0051e37bcde31fcfb6b569844438c940c7",
+  "posthoc/review3/adk_fix.py": "48aa036ea7004860a89660d254477f0779b7174b6ad194c35c72c249c4aa96ee",
+  "analyze_v2.py": "9f9df7b5e96f540422ec19f12445d8ed5838c01f3c8f91d230a702f0ffc05730",
+  "studies/TB-M3-MIRACLE/run_m3.py": "4b31dc6f5dfcc68fcb0adaa58529c1b8c0fc568ea973e738dea13aab4570a07f",
+  "studies/TB-M3-MIRACLE/miracle_prep.py": "d611509dbdfbe2cde8b8ed4ecf0fb58db2d7b73c8dd70f077d1d88012725a3c8",
+  "studies/TB-M3-MIRACLE/analyze_m3.py": "18a03c67b11329d50e8f8a7bcb913bc03216d60e276026a55e2842ef3f059931",
+  "posthoc/upgrade-mfsbl/mfsbl.py": "8bcc5727265020e77125d4b2dc47d0a4c9d97afa7d169805f19adc9b47cbb1c2",
+  "posthoc/upgrade-mfsbl/PLAN.md": "4a129c6420fed4e2fb2987e318cc1d1ac27bf0fbf7bb94c129cee89fca16ead5",
+  "posthoc/upgrade-mfsbl/checks.json": "8404d11ea42690899a91f945b070dc31be292832f35eeea8d1969798dd0da242",
+  "studies/TB-M4-MIRACLE-A2/run_m4.py": "1edff3ba9ea181a2061124c40b3e0246781412560f567d3edf5d09c42acd6d1e",
+  "studies/TB-M4-MIRACLE-A2/analyze_m4.py": "f8b93109ad79cb0b92472aecffbcb1f6f23ecaf282f7e0e5994322a773189850",
+  "studies/TB-M4-MIRACLE-A2/PROTOCOL.md": "d4fedc27ee9be337f476d0c5828a4cf853193001c3b2a761a8849ee99b2edd48"
+ }
+}

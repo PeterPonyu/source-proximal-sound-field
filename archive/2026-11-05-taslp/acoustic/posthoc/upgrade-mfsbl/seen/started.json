@@ -1,0 +1,13 @@
+{
+ "tasks": 4608,
+ "sets": [
+  "A1",
+  "R2",
+  "room",
+  "sim"
+ ],
+ "dev": false,
+ "workers": 122,
+ "post_hoc": true,
+ "started": "2026-11-10T06:55:06+0000"
+}

@@ -1,0 +1,62 @@
+{
+ "job": "revfit-miracle",
+ "command": [
+  "python3",
+  "-B",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/posthoc/upgrade-revfit/revfit.py",
+  "miracle",
+  "/root/taslp/out/revfit-miracle.jsonl",
+  "--workers",
+  "122"
+ ],
+ "exit_code": 0,
+ "started": "2026-11-10T03:25:19Z",
+ "finished": "2026-11-10T06:55:04Z",
+ "registration_commit": "76f2e2ab2311a16fec2b8bd7a37e4b4813e1b386",
+ "capsule_listing_sha256": "9ffd367ec90496a6d3506d2d8d85e548af26335b486cb643bda9b964371c1701",
+ "machine": {
+  "record": "machine.txt",
+  "record_sha256": "c42aed0a786264d5163e3f1d45416f7f0d6dae07e7577b5833d2f921c75fe892",
+  "cpu_model": "AMD EPYC 7B13 64-Core Processor",
+  "nproc": 256,
+  "mem_total_gib": 503.6,
+  "hostname": "aee1ce94dd9d",
+  "single_machine": true
+ },
+ "python": "3.13.5",
+ "threads": {
+  "OPENBLAS_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Haswell"
+ },
+ "post_hoc": true,
+ "registered": false,
+ "counts": {
+  "rows": 1536,
+  "good": 1536,
+  "distinct": 1536,
+  "duplicates": 0,
+  "errors_open": 0,
+  "errors_superseded": 0,
+  "comparator_errors": 0,
+  "expected": 1536
+ },
+ "complete": true,
+ "outputs": {
+  "revfit-miracle.jsonl": "222a6670896b534e7c8a72a525f83bfebc02fe844ba79f0d8b7615d2b9b246f6"
+ },
+ "inputs": {
+  "posthoc/upgrade-revfit/revfit.py": "8e31b14182160a128d18eb2ed398b8eecb9f3640d252d0db559073742a4a20c3",
+  "upgrade-v3/v3.py": "b371b99c490f3c1874baf383914df88f49c063bd84ba859627923baf776eb791",
+  "studies/TB-M3-MIRACLE/primary/rows.jsonl": "32660f080999d77a7cfcff5ad687494cd6b3d77aa1edffa2f11dafbfad39d0f4",
+  "studies/TB-M3-MIRACLE/extract/miracle-A1.npz": "e3c36c2ce15cefedd8eb65bfeea4c60b468241b85fd1e216def70c5423b923ba",
+  "studies/TB-M3-MIRACLE/extract/miracle-R2.npz": "d8b94fc29242673fe9c39c8daeb992b060b9c436f55d3e5531528ce24945c540"
+ },
+ "numpy": "2.2.6",
+ "scipy": "1.16.3",
+ "cross_machine_check": {
+  "passed": true,
+  "sha256": "271e10ce7ab9e8af7054eeb1fe00e0b72eeed631e7999383e9fe70e1d3487564"
+ }
+}

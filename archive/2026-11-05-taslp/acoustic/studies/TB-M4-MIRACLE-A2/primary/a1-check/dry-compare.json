@@ -1,0 +1,213 @@
+{
+ "task_list": {
+  "tasks": 768,
+  "seeds": [
+   414000,
+   414255
+  ],
+  "distinct_seeds": 256,
+  "seeds_equal_a1": true,
+  "overlap_with_r2_seeds": 0,
+  "passed": true
+ },
+ "dry_tasks": "per-M:2",
+ "problems": 8,
+ "reproduced_1e6": true,
+ "worst_rel": 0.0,
+ "elapsed_s": 3460,
+ "cases": [
+  {
+   "source": 2,
+   "band": 250.0,
+   "M": 24,
+   "draw": 0,
+   "seed": 414000,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -32.508455970497266,
+    "mfsbl_mackay": -38.77655500214657
+   },
+   "seconds": {
+    "m3_methods_box": 273.7,
+    "m3_methods_here": 240.8,
+    "total_here": 247.1,
+    "mfsbl_here": {
+     "mfsbl_em": 5.48,
+     "mfsbl_mackay": 0.66
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 500.0,
+   "M": 24,
+   "draw": 0,
+   "seed": 414000,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -11.626265948395062,
+    "mfsbl_mackay": -25.519278413420622
+   },
+   "seconds": {
+    "m3_methods_box": 317.1,
+    "m3_methods_here": 266.1,
+    "total_here": 276.2,
+    "mfsbl_here": {
+     "mfsbl_em": 8.7,
+     "mfsbl_mackay": 1.31
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 250.0,
+   "M": 48,
+   "draw": 0,
+   "seed": 414002,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -43.309059657115974,
+    "mfsbl_mackay": -47.45203232033778
+   },
+   "seconds": {
+    "m3_methods_box": 452.5,
+    "m3_methods_here": 346.4,
+    "total_here": 364.8,
+    "mfsbl_here": {
+     "mfsbl_em": 16.05,
+     "mfsbl_mackay": 2.16
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 500.0,
+   "M": 48,
+   "draw": 0,
+   "seed": 414002,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -24.34613386576752,
+    "mfsbl_mackay": -34.9191641037767
+   },
+   "seconds": {
+    "m3_methods_box": 469.5,
+    "m3_methods_here": 385.2,
+    "total_here": 414.4,
+    "mfsbl_here": {
+     "mfsbl_em": 25.82,
+     "mfsbl_mackay": 3.21
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 250.0,
+   "M": 96,
+   "draw": 0,
+   "seed": 414004,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -50.93598736415998,
+    "mfsbl_mackay": -51.26096756615239
+   },
+   "seconds": {
+    "m3_methods_box": 930.4,
+    "m3_methods_here": 601.5,
+    "total_here": 649.8,
+    "mfsbl_here": {
+     "mfsbl_em": 42.97,
+     "mfsbl_mackay": 5.21
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 500.0,
+   "M": 96,
+   "draw": 0,
+   "seed": 414004,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -37.29347997671716,
+    "mfsbl_mackay": -43.469720955340094
+   },
+   "seconds": {
+    "m3_methods_box": 1082.7,
+    "m3_methods_here": 708.8,
+    "total_here": 784.7,
+    "mfsbl_here": {
+     "mfsbl_em": 67.32,
+     "mfsbl_mackay": 8.42
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 250.0,
+   "M": 192,
+   "draw": 0,
+   "seed": 414006,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -53.25434413252715,
+    "mfsbl_mackay": -53.47837974911005
+   },
+   "seconds": {
+    "m3_methods_box": 3546.6,
+    "m3_methods_here": 1981.9,
+    "total_here": 2323.3,
+    "mfsbl_here": {
+     "mfsbl_em": 299.27,
+     "mfsbl_mackay": 41.98
+    }
+   }
+  },
+  {
+   "source": 2,
+   "band": 500.0,
+   "M": 192,
+   "draw": 0,
+   "seed": 414006,
+   "max_rel": 0.0,
+   "values": 180,
+   "info_equal": true,
+   "mfsbl_error": false,
+   "mfsbl_db": {
+    "mfsbl_em": -45.255980774776646,
+    "mfsbl_mackay": -45.50653688433519
+   },
+   "seconds": {
+    "m3_methods_box": 4209.8,
+    "m3_methods_here": 2347.5,
+    "total_here": 2695.4,
+    "mfsbl_here": {
+     "mfsbl_em": 318.02,
+     "mfsbl_mackay": 29.74
+    }
+   }
+  }
+ ],
+ "passed": true
+}

@@ -1,6 +1,6 @@
 # Registration record
 
-Every confirmatory study was registered by a commit to the project repository before its first output, together with the SHA-256 of every frozen input (`archive/2026-11-05-taslp/acoustic/FROZEN-INPUTS.json`). Post hoc analyses had a plan committed before their script. Each run records the registration commit and its start time in `started.json` next to its results.
+Every confirmatory study was registered by a commit to the project repository before its first output, together with the SHA-256 of every frozen input (`archive/2026-11-05-taslp/acoustic/FROZEN-INPUTS.json`). Post hoc analyses had a plan committed before their script, with three exceptions: the plans of the spherical-array fitting analysis, the exact ball predictor and the run times of the point baselines (`posthoc/upgrade-wp1`, `upgrade-wp2`, `upgrade-timing`) were written before their code but were not committed before it, so they are not listed. Each run records the registration commit and its start time in `started.json` next to its results.
 
 The table lists every registered document: the time of the commit that added it (UTC), the commit in the project repository, and the SHA-256 of the document as committed. The documents themselves are not public; these checksums identify them.
 
@@ -37,3 +37,11 @@ Paths are relative to `archive/2026-11-05-taslp/acoustic/`. The two studies of t
 | 2026-11-07 12:59 | `posthoc/review3/PLAN-F-CAP8.md` | `f906c35` | `6b8d41576d653ade4978fae9a199170c289f049fa0eb45a9a1e5459218f92798` | no |
 | 2026-11-07 13:08 | `studies/TB-M3-MIRACLE/PROTOCOL.md` | `916cf1e` | `3c3037b856bbc56f006fb32bb264a2f35c4feb41aa20939072b85e5949ce1889` | no |
 | 2026-11-09 06:35 | `posthoc/review4/PLAN.md` | `f78265c` | `52a27e3dcc25ba18c2223347a50b80b4eac581c2ef9b8c27aa196751e1eace67` | no |
+| 2026-11-10 03:02 | `posthoc/upgrade-revfit/PLAN.md` | `0a89ff0` | `0a26b5629e9f135893e70d0f9a8384343fad7bd10517a4b78c6c56a6ca66a137` | no |
+| 2026-11-10 03:02 | `upgrade-v3/PLAN-3b.md` | `0a89ff0` | `974379a3471039c435839229202e5c5dbd4b94afac5ba528911651ebcb07cfb6` | no |
+| 2026-11-10 03:02 | `upgrade-v3/PLAN.md` | `0a89ff0` | `279f6f2aacc63e5f4af4842e0a9e96d3e7307b909f641c6d1f0f05c1b709739f` | no |
+| 2026-11-10 03:03 | `posthoc/upgrade-mfsbl/PLAN.md` | `76f2e2a` | `4a129c6420fed4e2fb2987e318cc1d1ac27bf0fbf7bb94c129cee89fca16ead5` | no |
+| 2026-11-10 03:03 | `studies/TB-M4-MIRACLE-A2/PROTOCOL.md` | `76f2e2a` | `d4fedc27ee9be337f476d0c5828a4cf853193001c3b2a761a8849ee99b2edd48` | no |
+| 2026-11-10 13:51 | `posthoc/upgrade-timing/PLAN.md` | `1b571e7` | `577841232929526e89bc6f53dbbed6dcdbd73c5d776e843e949acb76b333590a` | no |
+| 2026-11-10 13:51 | `posthoc/upgrade-wp1/PLAN.md` | `1b571e7` | `f9a1b6e3ba4dc9472f5889d31b292b4a6dfc7c96cda15be537f3a7156520ee4d` | no |
+| 2026-11-10 13:51 | `posthoc/upgrade-wp2/PLAN.md` | `1b571e7` | `967cc0a448aa01b593485c422d7108171721e12405ce64568b4c943ab549570b` | no |

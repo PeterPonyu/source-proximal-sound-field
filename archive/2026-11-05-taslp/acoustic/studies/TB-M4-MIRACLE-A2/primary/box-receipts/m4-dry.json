@@ -1,0 +1,65 @@
+{
+ "job": "m4-dry",
+ "command": [
+  "python3",
+  "-B",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/studies/TB-M4-MIRACLE-A2/run_m4.py",
+  "dry",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/studies/TB-M3-MIRACLE/extract",
+  "/root/taslp/out/m4-dry",
+  "--workers",
+  "8",
+  "--dry-tasks",
+  "per-M:2"
+ ],
+ "exit_code": 0,
+ "started": "2026-11-10T03:25:19Z",
+ "finished": "2026-11-10T04:23:02Z",
+ "registration_commit": "76f2e2ab2311a16fec2b8bd7a37e4b4813e1b386",
+ "capsule_listing_sha256": "9ffd367ec90496a6d3506d2d8d85e548af26335b486cb643bda9b964371c1701",
+ "machine": {
+  "record": "machine.txt",
+  "record_sha256": "c42aed0a786264d5163e3f1d45416f7f0d6dae07e7577b5833d2f921c75fe892",
+  "cpu_model": "AMD EPYC 7B13 64-Core Processor",
+  "nproc": 256,
+  "mem_total_gib": 503.6,
+  "hostname": "aee1ce94dd9d",
+  "single_machine": true
+ },
+ "python": "3.13.5",
+ "threads": {
+  "OPENBLAS_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Haswell"
+ },
+ "post_hoc": false,
+ "registered": true,
+ "counts": {
+  "rows": 8,
+  "good": 8,
+  "distinct": 8,
+  "duplicates": 0,
+  "errors_open": 0,
+  "errors_superseded": 0,
+  "comparator_errors": 0,
+  "expected": 8
+ },
+ "complete": true,
+ "outputs": {
+  "m4-dry/dry-compare.json": "54610ce7fb0db3946cc42a36731bb59986887b1ed2868b9a7868b576bb6ad1e3",
+  "m4-dry/rows.jsonl": "5ae3c6e1172ad366109c2f2764725aa1b03bb0f009ad5991f4fa94dbbbea0a02",
+  "m4-dry/started.json": "a1f1f3906c23a980ab5683254d19e4f235071d09292c6c0f73ff01b6a8559aca"
+ },
+ "inputs": {
+  "studies/TB-M4-MIRACLE-A2/run_m4.py": "1edff3ba9ea181a2061124c40b3e0246781412560f567d3edf5d09c42acd6d1e",
+  "studies/TB-M3-MIRACLE/primary/rows.jsonl": "32660f080999d77a7cfcff5ad687494cd6b3d77aa1edffa2f11dafbfad39d0f4",
+  "studies/TB-M3-MIRACLE/extract/miracle-A1.npz": "e3c36c2ce15cefedd8eb65bfeea4c60b468241b85fd1e216def70c5423b923ba"
+ },
+ "numpy": "2.2.6",
+ "scipy": "1.16.3",
+ "cross_machine_check": {
+  "passed": true,
+  "sha256": "271e10ce7ab9e8af7054eeb1fe00e0b72eeed631e7999383e9fe70e1d3487564"
+ }
+}

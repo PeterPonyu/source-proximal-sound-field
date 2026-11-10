@@ -1,0 +1,41 @@
+{
+ "D1_one_se_outside": true,
+ "D1_one_se_within": true,
+ "D1_one_se_argmin_when_clear": true,
+ "D2_v3_fit_unchanged": true,
+ "D2_v3_cv_unchanged": true,
+ "D2_v3_extend_unchanged": true,
+ "D3_v2_switch": true,
+ "D4_restart_not_worse": true,
+ "D4_stats": {
+  "single": [
+   {
+    "J": 3,
+    "nit": 148,
+    "cap": false,
+    "success": true
+   },
+   {
+    "J": 3,
+    "nit": 380,
+    "cap": false,
+    "success": true
+   }
+  ],
+  "restarts": [
+   {
+    "J": 3,
+    "nit": 148,
+    "cap": false,
+    "success": true
+   },
+   {
+    "J": 3,
+    "nit": 380,
+    "cap": false,
+    "success": true
+   }
+  ]
+ },
+ "all_pass": true
+}

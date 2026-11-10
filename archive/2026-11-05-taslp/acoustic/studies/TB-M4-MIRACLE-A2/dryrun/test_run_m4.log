@@ -1,0 +1,11 @@
+1/1 tasks, 135 s, errors 0, comparator errors 0
+done {"tasks": 1, "distinct_tasks": 1, "errors": 0, "mfsbl_errors": 0, "elapsed_s_this_session": 135, "finished": "2026-11-09T18:30:55-0800", "rows_sha256": "d8610aa7f9ffb0e089d2c2afb522babbe85170c4b6e41b389a3b9bed69164d57"}
+1/1 tasks, 139 s, errors 0, comparator errors 1
+done {"tasks": 2, "distinct_tasks": 2, "errors": 0, "mfsbl_errors": 1, "elapsed_s_this_session": 139, "finished": "2026-11-09T18:33:14-0800", "rows_sha256": "5f8ca45dd6e079b11f93469bfcc05822a5089ae5fed8afe934d3cf3de974e590"}
+rows 2 keys [('A2', 2, 250.0, 24, 0), ('A2', 2, 500.0, 24, 0)]
+mfsbl_error rows [(False, ['mfsbl_em', 'mfsbl_mackay']), (True, [])]
+finished {'tasks': 2, 'distinct_tasks': 2, 'errors': 0, 'mfsbl_errors': 1, 'elapsed_s_this_session': 139, 'finished': '2026-11-09T18:33:14-0800', 'rows_sha256': '5f8ca45dd6e079b11f93469bfcc05822a5089ae5fed8afe934d3cf3de974e590'}
+seconds [(105.7, 112.9, 6.33), (112.5, 112.6, None)]
+2/2 tasks, 244 s, errors 0, comparator errors 0
+cross-machine check PASS worst 0.0
+{"problems": 2, "identical": 2, "passed": true, "worst_rel": 0.0, "note": "a mismatch is reported; it does not stop or change the registered run"}

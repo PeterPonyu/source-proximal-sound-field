@@ -1,0 +1,269 @@
+{
+ "problems": 20,
+ "identical": 20,
+ "passed": true,
+ "worst_rel": 0.0,
+ "cases": [
+  {
+   "key": [
+    "A2",
+    2,
+    250.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    2,
+    500.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    2,
+    250.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    2,
+    1000.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    2,
+    500.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    3,
+    250.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    3,
+    500.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    2,
+    1000.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    3,
+    250.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    3,
+    1000.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    3,
+    500.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    3,
+    1000.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    4,
+    250.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    4,
+    500.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    4,
+    250.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    4,
+    1000.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    4,
+    1000.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    4,
+    500.0,
+    24,
+    1
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    6,
+    250.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  },
+  {
+   "key": [
+    "A2",
+    6,
+    500.0,
+    24,
+    0
+   ],
+   "comparable": true,
+   "max_rel": 0.0,
+   "values": 192,
+   "info_equal": true
+  }
+ ],
+ "note": "a mismatch is reported; it does not stop or change the registered run"
+}

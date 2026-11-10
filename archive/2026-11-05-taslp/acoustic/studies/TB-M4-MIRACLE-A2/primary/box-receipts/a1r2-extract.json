@@ -1,0 +1,48 @@
+{
+ "job": "a1r2-extract",
+ "command": [
+  "python3",
+  "-B",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/remote/m4_receipt.py",
+  "rebuild",
+  "/root/taslp",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic"
+ ],
+ "exit_code": 0,
+ "started": "2026-11-10T03:25:18Z",
+ "finished": "2026-11-10T03:25:19Z",
+ "registration_commit": "76f2e2ab2311a16fec2b8bd7a37e4b4813e1b386",
+ "capsule_listing_sha256": "9ffd367ec90496a6d3506d2d8d85e548af26335b486cb643bda9b964371c1701",
+ "machine": {
+  "record": "machine.txt",
+  "record_sha256": "c42aed0a786264d5163e3f1d45416f7f0d6dae07e7577b5833d2f921c75fe892",
+  "cpu_model": "AMD EPYC 7B13 64-Core Processor",
+  "nproc": 256,
+  "mem_total_gib": 503.6,
+  "hostname": "aee1ce94dd9d",
+  "single_machine": true
+ },
+ "python": "3.13.5",
+ "threads": {
+  "OPENBLAS_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Haswell"
+ },
+ "post_hoc": false,
+ "registered": false,
+ "counts": null,
+ "complete": true,
+ "outputs": {
+  "extract-a1r2/match.json": "64451ca78c06ca96ec8fa4bce79c7ac845b382743ceb2c6f54b13189b09e2dba"
+ },
+ "inputs": {
+  "studies/TB-M3-MIRACLE/miracle_prep.py": "d611509dbdfbe2cde8b8ed4ecf0fb58db2d7b73c8dd70f077d1d88012725a3c8"
+ },
+ "numpy": "2.2.6",
+ "scipy": "1.16.3",
+ "cross_machine_check": {
+  "passed": true,
+  "sha256": "271e10ce7ab9e8af7054eeb1fe00e0b72eeed631e7999383e9fe70e1d3487564"
+ }
+}

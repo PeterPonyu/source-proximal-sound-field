@@ -1,0 +1,64 @@
+{
+ "job": "revfit-sim",
+ "command": [
+  "python3",
+  "-B",
+  "/root/taslp/capsule/archive/2026-11-05-taslp/acoustic/posthoc/upgrade-revfit/revfit.py",
+  "sim",
+  "/root/taslp/out/revfit-sim.jsonl",
+  "--workers",
+  "122"
+ ],
+ "exit_code": 0,
+ "started": "2026-11-10T09:47:10Z",
+ "finished": "2026-11-10T11:34:44Z",
+ "registration_commit": "76f2e2ab2311a16fec2b8bd7a37e4b4813e1b386",
+ "capsule_listing_sha256": "9ffd367ec90496a6d3506d2d8d85e548af26335b486cb643bda9b964371c1701",
+ "machine": {
+  "record": "machine.txt",
+  "record_sha256": "c42aed0a786264d5163e3f1d45416f7f0d6dae07e7577b5833d2f921c75fe892",
+  "cpu_model": "AMD EPYC 7B13 64-Core Processor",
+  "nproc": 256,
+  "mem_total_gib": 503.6,
+  "hostname": "aee1ce94dd9d",
+  "single_machine": true
+ },
+ "python": "3.13.5",
+ "threads": {
+  "OPENBLAS_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_CORETYPE": "Haswell"
+ },
+ "post_hoc": true,
+ "registered": false,
+ "counts": {
+  "rows": 2048,
+  "good": 2048,
+  "distinct": 2048,
+  "duplicates": 0,
+  "errors_open": 0,
+  "errors_superseded": 0,
+  "comparator_errors": 0,
+  "expected": 2048
+ },
+ "complete": true,
+ "outputs": {
+  "revfit-sim.jsonl": "30b7bc205875825e074197e72bd541b76e0b807ca30edb83e1e4de4bc79720bf"
+ },
+ "inputs": {
+  "posthoc/upgrade-revfit/revfit.py": "8e31b14182160a128d18eb2ed398b8eecb9f3640d252d0db559073742a4a20c3",
+  "upgrade-v3/v3.py": "b371b99c490f3c1874baf383914df88f49c063bd84ba859627923baf776eb791",
+  "posthoc/review3/refit.py": "0f59518beec017ee3aba67957abf0611506f2e8cb1fc7172d5e4594590fa5a94",
+  "studies/TB-M2/primary/rows.jsonl": "4c3a262d646fe32ac73ff387414a59a6740833152135dae3bed445b0c8d07faa",
+  "studies/TB-S2/primary/rows.jsonl": "121c3009620d99539fcb84413a9fb7b90176359972ddf8e6a10fa46ebc0f6c73",
+  "B3-measured/meshrir-prep/meshrir-prep.npz": "957f56233483acd45074d6423b16e444ae08a4ed62c8c1f940cb67df4ccbe6fe",
+  "B3-measured/heldout-prep/heldout.npz": "425a900e1b7df4f2f0b0a284a709f82e6ab1b8b976a05f9181da9d11b180cbe8"
+ },
+ "numpy": "2.2.6",
+ "scipy": "1.16.3",
+ "cross_machine_check": {
+  "passed": true,
+  "sha256": "271e10ce7ab9e8af7054eeb1fe00e0b72eeed631e7999383e9fe70e1d3487564"
+ }
+}

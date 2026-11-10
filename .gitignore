@@ -5,3 +5,4 @@ __pycache__/
 papers/acoustic-source-proximal/figures/
 papers/acoustic-source-proximal/generated/*
 !papers/acoustic-source-proximal/generated/ka-table.tex
+!papers/acoustic-source-proximal/generated/every-condition-*.csv
