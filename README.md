@@ -2,8 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24067791.svg)](https://doi.org/10.5281/zenodo.24067791)
 
-Code and per-problem results for the paper *Sound Field Estimation Next to Loudspeakers from Microphones Alone Using
-Point Sources Shared Across Frequency*. Every version is archived at Zenodo;
+Code and per-problem results for the paper *Source-Augmented Gaussian-Process Sound Field Estimation Near Loudspeakers
+with Band-Shared Point Sources and Cross-Validated Complexity*. Every version is archived at Zenodo;
 [doi:10.5281/zenodo.24067791](https://doi.org/10.5281/zenodo.24067791) resolves to the latest one.
 
 The estimator adds point-source fields to a homogeneous Helmholtz Gaussian process. A greedy evidence scan, summed
